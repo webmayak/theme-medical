@@ -2903,3 +2903,9 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     padding-bottom: 40px;
     margin-top: 40px;
 }
+
+.brands {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

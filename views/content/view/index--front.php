@@ -115,6 +115,15 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
+<div class="content-block content-block--main-catalog">
+    <div class="container">
+        <?= MainCatalog::widget([
+            'root' => CatalogCategory::findOne(54),
+            'onlyFirstLevel' => true,
+        ]) ?>
+    </div>
+</div>
+
 <div class="content-block content-block--fillwidth-bg">
 	<div class="container">
 		<div class="row">
@@ -128,13 +137,16 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
-<div class="content-block content-block--main-catalog">
-    <div class="container">
-        <?= MainCatalog::widget([
-            'root' => CatalogCategory::findOne(54),
-            'onlyFirstLevel' => true,
-        ]) ?>
-    </div>
+<div class="content-block">
+	<div class="container">
+		<div class="brands text-center">
+			<img src="/uploads/elfinder/brands/1.png" alt="" />
+			<img src="/uploads/elfinder/brands/2.png" alt="" />
+			<img src="/uploads/elfinder/brands/3.png" alt="" />
+			<img src="/uploads/elfinder/brands/4.jpg" alt="" />
+			<img src="/uploads/elfinder/brands/5.png" alt="" />
+		</div>
+	</div>
 </div>
 
 <div class="content-block content-block--video">
