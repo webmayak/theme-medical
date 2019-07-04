@@ -2897,3 +2897,9 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     font-weight: normal;
 }
 
+.content-block--fillwidth-bg {
+    background: #f7f7f7;
+    padding-top: 40px !important;
+    padding-bottom: 40px;
+    margin-top: 40px;
+}

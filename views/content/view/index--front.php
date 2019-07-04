@@ -115,6 +115,19 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
+<div class="content-block content-block--fillwidth-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<a href="/uploads/elfinder/lechenie-1.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-1.jpg" alt="" class="img-responsive" /></a>
+			</div>
+			<div class="col-md-6">
+				<a href="/uploads/elfinder/lechenie-2.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-2.jpg" alt="" class="img-responsive" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="content-block content-block--main-catalog">
     <div class="container">
         <?= MainCatalog::widget([
