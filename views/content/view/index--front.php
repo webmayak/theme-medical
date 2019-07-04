@@ -46,63 +46,71 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
-<div class="content-block">
+<div class="content-block features">
 	<div class="container">
-		<div class="features">
-			<div class="row">
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="feature__image">
-							<img src="/images/icon_bank_card.png"></img>
-						</div>
-						<div class="feature__title">
-							Оплата
-						</div>
-						<div class="feature__text">
-							<p>После подтверждения заказа и оформления договора поручения, мы выставляем Вам удобный для Вас счет к оплате. Вы оплачиваете услугу.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature feature--right">
-						<div class="feature__image">
-							<img src="/images/icon_phone.png"></img>
-						</div>
-						<div class="feature__title">
-							Делайте заказ
-						</div>
-						<div class="feature__text">
-							<p>Вы оставляете заявку на доставку лекарственного препарата из Индии через наш сайт, эл. почту, онлайн консультанта или звоните нам по телефону. Телефон горячей линии: 8(800) 511-02-30 (звонок бесплатный)</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature">
-						<div class="feature__image">
-							<img src="/images/icon_airplane.png"></img>
-						</div>
-						<div class="feature__title">
-							Доставка
-						</div>
-						<div class="feature__text">
-							<p>Доставка осуществляется после оплаты услуги напрямую из Индии почтой EMS. Срок доставки лекарств 9-18 дней в зависимости от Вашего местожительства.</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-6">
-					<div class="feature feature--right">
-						<div class="feature__image">
-							<img src="/images/icon_pills.png"></img>
-						</div>
-						<div class="feature__title">
-							Ваш заказ
-						</div>
-						<div class="feature__text">
-							<p>Вы получаете свой заказ прямо из Индии от производителя в офисе EMS почты или курьерской доставкой лично в руки.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+		<div class="kc-elm kc_col-sm-12 kc_column kc_col-sm-12">
+		    <div class="kc-col-container">
+		        <div class="kc-elm kc_row kc_row_inner">
+		            <div class="kc-elm kc_col-sm-4 kc_column_inner kc_col-sm-4 feature_left_side">
+		                <div class="kc_wrapper kc-col-inner-container">
+		                    <div class="em-feature kc-elm">
+		                        <div class="em_feature-icon">
+		                            <span><i class="fa fa-magnet"></i></span>
+		                        </div>
+		                        <div class="em_content_text">
+		                            <div class="em-feature-title">
+		                                <h2>Оплата</h2></div>
+		                            <div class="em-feature-desc">После подтверждения заказа и оформления договора поручения, мы выставляем Вам удобный для Вас счет к оплате. Вы оплачиваете услугу.</div>
+		                        </div>
+		                    </div>
+		                    <div class="em-feature kc-elm">
+		                        <div class="em_feature-icon">
+		                            <span><i class="fa fa-user-md"></i></span>
+		                        </div>
+		                        <div class="em_content_text">
+		                            <div class="em-feature-title">
+		                                <h2>Доставка</h2></div>
+		                            <div class="em-feature-desc">Доставка осуществляется после оплаты услуги напрямую из Индии почтой EMS. Срок доставки лекарств 9-18 дней в зависимости от Вашего местожительства.</div>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <div class="kc-elm kc_col-sm-4 kc_column_inner kc_col-sm-4">
+		                <div class="kc_wrapper kc-col-inner-container">
+		                    <div class="kc-elm kc_shortcode kc_single_image">
+
+		                        <img src="/images/smiling_doctor.png" class="" alt=""> </div>
+		                </div>
+		            </div>
+		            <div class="kc-elm kc_col-sm-4 kc_column_inner kc_col-sm-4">
+		                <div class="kc_wrapper kc-col-inner-container">
+
+		                    <div class="em-feature kc-elm">
+		                        <div class="em_feature-icon">
+		                            <span><i class="fa fa-stethoscope"></i></span>
+		                        </div>
+		                        <div class="em_content_text">
+		                            <div class="em-feature-title">
+		                                <h2>Делайте заказ</h2></div>
+		                            <div class="em-feature-desc">Вы оставляете заявку на доставку лекарственного препарата из Индии через наш сайт, эл. почту, онлайн консультанта или звоните нам по телефону. Телефон горячей линии: 8(800) 511-02-30 (звонок бесплатный)</div>
+		                        </div>
+		                    </div>
+
+		                    <div class="em-feature kc-elm">
+		                        <div class="em_feature-icon">
+		                            <span><i class="fa fa-flask"></i></span>
+		                        </div>
+		                        <div class="em_content_text">
+		                            <div class="em-feature-title">
+		                                <h2>Ваш заказ</h2></div>
+		                            <div class="em-feature-desc">Вы получаете свой заказ прямо из Индии от производителя в офисе EMS почты или курьерской доставкой лично в руки.</div>
+		                        </div>
+		                    </div>
+
+		                </div>
+		            </div>
+		        </div>
+		    </div>
 		</div>
 	</div>
 </div>

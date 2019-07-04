@@ -2883,48 +2883,17 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     padding: 0 15px;
 }
 
-.features {
-    background: url(../images/smiling_doctor.png) center;
-    background-repeat: no-repeat;
+.features .em-feature {
+    margin-bottom: 40px;
 }
 
-.features:after {
-    content: "";
-    clear: both;
-    display: block;
-}
+.features .em-feature .fa,
 
-.feature {
-    text-align: right;
-}
-
-.feature:after {
-    content: "";
-    clear: both;
-    display: block;
-}
-
-.feature__title {
-    font-size: 24px;
+.features .em-feature h2 {
     color: #15C9CD;
-    text-transform: uppercase;
 }
 
-.feature__text {
-    width: 50%;
-    margin-top: 10px;
+.features .em-feature h2 {
+    font-weight: normal;
 }
 
-.feature__image {
-    width: 50%;
-    float: right;
-}
-
-.feature--right {
-    float: right;
-}
-
-.feature--right .feature__title,
-.feature--right .feature__text {
-    text-align: left;
-}
