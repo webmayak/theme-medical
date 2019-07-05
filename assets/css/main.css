@@ -2909,3 +2909,75 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     justify-content: space-between;
     align-items: center;
 }
+
+.certificates {
+    background-color: #0482AA;
+    padding-top: 40px !important;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificates img {
+    height: 250px;
+}
+
+.certificates a + a {
+    margin-left: 40px;
+}
+
+.bordered-block {
+    padding: 30px;
+    border: 1px solid #15C9CD;
+}
+
+.bordered-block p:last-child {
+    margin-bottom: 0;
+}
+
+small, .small {
+    font-size: 90%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-flex__col-2 > div {
+    width: 50%;
+}
+
+.d-flex__col-2 > div + div {
+    margin-left: 30px;
+}
+
+.quality-protection {
+    padding: 0 60px;
+}
+
+.chemical-research {
+    background: url(../images/chemical-research-bg.png) center #0482AA;
+    background-repeat: no-repeat;
+    padding-top: 40px !important;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.chemical-research > div {
+    text-align: center;
+}
+
+.chemical-research > div + div {
+    margin-left: 50px;
+}
+
+.chemical-research__item-title {
+    font-size: 24px;
+    padding: 5px 0;
+}

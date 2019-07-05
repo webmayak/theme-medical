@@ -138,6 +138,69 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block">
+	<h2 class="text-center">Сертификаты на препараты</h2>
+	<div class="certificates">
+		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sovihep.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sovihep.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
+	</div>
+</div>
+
+<div class="content-block">
+	<h2 class="text-center">Задать вопрос врачу</h2>
+	<div class="text-center">
+		
+	</div>
+</div>
+
+<div class="content-block">
+	<div class="container">
+		<h2 class="text-center">Вы защищены от подделок</h2>
+		<div class="quality-protection d-flex d-flex__col-2">
+			<div class="bordered-block small">
+				<p>Мы с ответсвенностью ГАРАНТИРУЕМ отсутсвие подделок. И вот почему:</p>
+				<p>Мы являемся официальным представителем фармацевтической компании JC Pharm (Индия) и у нас вы можете купить оригинальные препараты софосбувир, даклатасвир и ледипасвир производства Индии.</p>
+				<p>Дженерики производятся по стандартам и конторлем Gilead Sciences и на их оборудовании.</p>
+			</div>
+			<div class="bordered-block small">
+				<p>Софосбувир-индия.рф - официальный сайт представительства компании JC Pharm в Росcии</p>
+				<p>JC Pharm является фармацевтической компанией зарегистированной в Индии</p>
+				<p>Являемся официальным дистрибютером компании NATCO и HETERO</p>
+				<p>Транспортировка дженерков осуществляется с соблюдением всех правил и температурного режима</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="content-block">
+	<h2 class="text-center">Химические исследования</h2>
+	<div class="chemical-research">
+		<div class="chemical-research__item">
+			<div><img src="/images/icon-doc.svg"></div>
+			<div class="chemical-research__item-title">Hepcinat</div>
+			<div><img src="/images/download-button.png"></div>
+		</div>
+		<div class="chemical-research__item">
+			<div><img src="/images/icon-doc.svg"></div>
+			<div class="chemical-research__item-title">Natdac</div>
+			<div><img src="/images/download-button.png"></div>
+		</div>
+		<div class="chemical-research__item">
+			<div><img src="/images/icon-doc.svg"></div>
+			<div class="chemical-research__item-title">Hepcinat LP</div>
+			<div><img src="/images/download-button.png"></div>
+		</div>
+		<div class="chemical-research__item">
+			<div><img src="/images/icon-doc.svg"></div>
+			<div class="chemical-research__item-title">Hepcinat Plus</div>
+			<div><img src="/images/download-button.png"></div>
+		</div>
+	</div>
+</div>
+
+<div class="content-block">
 	<div class="container">
 		<div class="brands text-center">
 			<img src="/uploads/elfinder/brands/1.png" alt="" />
