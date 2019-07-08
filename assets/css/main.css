@@ -2981,3 +2981,71 @@ small, .small {
     font-size: 24px;
     padding: 5px 0;
 }
+
+.table th,
+.table td {
+    vertical-align: middle !important;
+    text-align: center;
+    border: 1px solid #C4C4C4;
+}
+
+.table td {
+    color: #007477;
+    padding: 20px !important;
+}
+
+.table td > p:last-child {
+    margin-bottom: 0;
+}
+
+.table th {
+    background: linear-gradient(180deg, #05B5B9 0%, #15C9CD 100%);
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+    padding: 15px !important;
+    font-size: 16px;
+}
+
+.price-table strong {
+    font-size: 18px;
+}
+
+.fast-consult__block {
+    margin-top: 40px;
+}
+
+.fast-consult {
+    display: flex;
+}
+
+.fast-consult__text {
+    margin-left: 20px;
+}
+
+.fast-consult__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #007376;
+}
+
+.fast-consult__phone {
+    color: #8C8C8C;
+    font-size: 16px;
+}
+
+.fast-consult__social-icons {
+    text-align: right;
+}
+
+.fast-consult__social-icons > a {
+    display: inline-block;
+}
+
+.fast-consult__social-icons > a:hover {
+    opacity: 0.5;
+}
+
+.fast-consult__social-icons > a + a {
+    margin-left: 30px;
+}
