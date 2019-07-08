@@ -2901,7 +2901,7 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     background: #f7f7f7;
     padding-top: 40px !important;
     padding-bottom: 40px;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 
 .brands {
@@ -3048,4 +3048,37 @@ small, .small {
 
 .fast-consult__social-icons > a + a {
     margin-left: 30px;
+}
+
+.question {
+    background: url(../images/question-bg.png) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.question__title {
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    padding: 120px 60px 0;
+}
+
+.question__form {
+    padding: 30px 40px 30px 0;
+}
+
+.question__form .form-group {
+    margin-bottom: 10px;
+}
+
+.question__form .form-control {
+    border: 0 none;
+    font-size: 14px;
+}
+
+.content-block__title {
+    color: #007376;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 20px;
 }

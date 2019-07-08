@@ -39,7 +39,7 @@ $this->context->layout = '//front';
 <div class="content-block">
 	<div class="container">
 		<div class="text-center">
-			<h2>Быстрая доставка препаратов из Индии от ГЕПАТИТА С и др.</h2>
+			<div class="content-block__title text-center">Быстрая доставка препаратов из Индии от ГЕПАТИТА С и др.</div>
 			<p>Компания «ИНДИАВИР» занимается организацией доставки лекарственных препаратов от Гепатита С (Софосбувир, Даклатасвир, Ледипасвир, Велпатасвир) из Индии. Мы заключаем официальный договор с клиентом. Лекарства доставляются курьерской службой EMS к Вашему порогу. Мы уверены в качестве продукции на все 100%. Весь путь от завода до клиента находится под контролем. Все лекарства имеют лицензии и сертификаты. Нам доверяют более 25 городов России и стран СНГ. Заказывая препараты от Гепатита С в компании «INDIAVIR», вы получаете КАЧЕСТВО от производителя и ГАРАНТИЮ выздоровления от Гепатита С НАВСЕГДА. Сотни людей уже вылечились от этой страшной болезни, обратившись в компанию «Индиавир». Обратитесь и Вы! Мы не просто помогаем приобрести лекарства! Мы доводим до полного выздоровления, пока ваш лечащий врач не скажет: «Вы здоровы! Гепатита НЕТ!». Мир Вам и будьте здоровы!</p>
 			<p>Команда INDIAVIR.</p>
 		</div>
@@ -215,6 +215,53 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="content-block">
+	<div class="content-block__title text-center">Сертификаты на препараты</div>
+	<div class="certificates">
+		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sovihep.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sovihep.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
+		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
+	</div>
+</div>
+
+<div class="content-block">
+	<div class="container">
+		<div class="content-block__title text-center">Задать вопрос врачу</div>
+		<div class="question">
+			<div class="row">
+				<div class="col-md-5">
+					<div class="question__title">
+						На Ваш вопрос ответит квалифицированный специалист с большим опытом работы.
+					</div>
+				</div>
+				<div class="col-md-5 col-md-offset-2">
+					<div class="question__form">
+						<form>
+							<div class="form-group">
+								<input class="form-control" placeholder="Ваше имя" />
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Ваш телефон"/>
+							</div>
+							<div class="form-group">
+								<input class="form-control" placeholder="Ваш E-mail"/>
+							</div>
+							<div class="form-group">
+								<textarea rows="5" class="form-control" placeholder="Напишите здесь название и фирму производителя интересующих вас препаратов"></textarea>
+							</div>
+							<div class="form-group text-right">
+								<input type="submit" class="btn btn-primary" value="Отправить"/>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 <div class="content-block content-block--fillwidth-bg">
 	<div class="container">
 		<div class="row">
@@ -229,26 +276,8 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block">
-	<h2 class="text-center">Сертификаты на препараты</h2>
-	<div class="certificates">
-		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
-		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
-		<a href="/uploads/elfinder/certificates/sovihep.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sovihep.jpg" alt="" /></a>
-		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
-		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
-	</div>
-</div>
-
-<div class="content-block">
-	<h2 class="text-center">Задать вопрос врачу</h2>
-	<div class="text-center">
-		
-	</div>
-</div>
-
-<div class="content-block">
 	<div class="container">
-		<h2 class="text-center">Вы защищены от подделок</h2>
+		<div class="content-block__title text-center">Вы защищены от подделок</div>
 		<div class="quality-protection d-flex d-flex__col-2">
 			<div class="bordered-block small">
 				<p>Мы с ответсвенностью ГАРАНТИРУЕМ отсутсвие подделок. И вот почему:</p>
@@ -266,7 +295,19 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block">
-	<h2 class="text-center">Химические исследования</h2>
+	<div class="container">
+		<div class="brands text-center">
+			<img src="/uploads/elfinder/brands/1.png" alt="" />
+			<img src="/uploads/elfinder/brands/2.png" alt="" />
+			<img src="/uploads/elfinder/brands/3.png" alt="" />
+			<img src="/uploads/elfinder/brands/4.jpg" alt="" />
+			<img src="/uploads/elfinder/brands/5.png" alt="" />
+		</div>
+	</div>
+</div>
+
+<div class="content-block">
+	<div class="h2 content-block__title text-center">Химические исследования</div>
 	<div class="chemical-research">
 		<div class="chemical-research__item">
 			<div><img src="/images/icon-doc.svg"></div>
@@ -291,21 +332,8 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
-<div class="content-block">
-	<div class="container">
-		<div class="brands text-center">
-			<img src="/uploads/elfinder/brands/1.png" alt="" />
-			<img src="/uploads/elfinder/brands/2.png" alt="" />
-			<img src="/uploads/elfinder/brands/3.png" alt="" />
-			<img src="/uploads/elfinder/brands/4.jpg" alt="" />
-			<img src="/uploads/elfinder/brands/5.png" alt="" />
-		</div>
-	</div>
-</div>
-
 <div class="content-block content-block--video">
     <div class="container">
-        <div class="title-home">Видео</div>
         <div class="front-page-video-holder">
             <?= Block::widget([
                 'position' => 'front-video',
