@@ -29,39 +29,51 @@ use pantera\content\widgets\block\Block;
                     </a>
                 </div>
                 <div class="col-md-8 col-lg-6 top-panel__col-contacts">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <div class="top-panel__label">Главный офис</div>
-                            <div class="top-panel__phone">8 (3812) 208-404
-                                <?= LeadForm::widget([
-                                    'key' => 'callMe',
-                                    'text' => '<i class="fa fa-phone"></i>',
-                                    'options' => [
-                                        'class' => '',
-                                    ],
-                                ]) ?>
+                    <div class="creative_header_address">
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address first">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+
+                                    <h3>Телефон</h3>
+
+                                    <p>+8 (3812) 208-404</p>
+
+                                </div>
                             </div>
-                            <div class="top-panel__address"><a href="/contacts">г. Омск, 8 филиалов</a></div>
+
                         </div>
-                        <div class="col-sm-4">
-                            <div class="top-panel__label">Бесплатная консультация</div>
-                            <div class="top-panel__phone">+7 (983) 622-24-54
-                                <?= LeadForm::widget([
-                                    'key' => 'callMe',
-                                    'text' => '<i class="fa fa-phone"></i>',
-                                    'options' => [
-                                        'class' => '',
-                                    ],
-                                ]) ?>
-                            </div>
-                            <div class="top-panel__address"><a href="/contacts">indiavirexpress@gmail.com</a></div>
-                        </div>
-                        <div class="col-sm-4 text-center">
-                            <div class="top-panel__instagram">
-                                <div class="top-panel__label">Новости и информация<span class="hidden-md"> в нашем Instagram!</span></div>
-                                <div class="top-panel__instagram-link"><a href="https://www.instagram.com/deniss_smolin/" target="_blank"><i class="fa fa-instagram"></i>deniss_smolin</a></div>
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address ">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+
+                                    <h3>Бесплатная консультация</h3>
+
+                                    <p><a href="mailto:demo@example.com">+8(983) 622-24-54</a></p>
+
+                                </div>
                             </div>
                         </div>
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address ctrp">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+
+                                    <h3>Главный офис</h3>
+
+                                    <p><a href="/contacts">г.Омск, ул. Маршала Жукова<br/>74/2 (офис 315)</a></p>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="col-md-2 col-lg-3 top-panel__col-buttons">

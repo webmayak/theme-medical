@@ -587,10 +587,14 @@ header .top-panel {
     position: relative;
 }
 
-#logo {
+header #logo {
     width: 200px;
     max-width: 100%;
     margin-top: 32px;
+}
+
+.footer-middle #logo {
+    margin-bottom: 30px;
 }
 
 .top-panel__label {
@@ -3081,4 +3085,27 @@ small, .small {
     font-size: 36px;
     font-weight: 300;
     margin-bottom: 20px;
+}
+
+.footer-middle {
+    padding: 40px 0px;
+    background: url(../images/footer-bg.png) center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-middle:before {
+    background: rgba(0,0,0,.7);
+}
+
+.footer-middle .textwidget {
+    font-size: 12px;
+}
+
+.footer-middle .textwidget p {
+    color: #8C8C8C;
+}
+
+.creative_header_address {
+    margin-top: 20px;
 }
