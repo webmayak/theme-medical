@@ -18,6 +18,9 @@ use yii\web\View;
     <?= Yii::$app->seo->getH1() ?>
 </h1>
 <div class="content-block content-block--without-padding-top content-block--gray">
+    <?= $this->render('@theme/views/_question') ?>
+    <?= $this->render('@theme/views/_fast-consult') ?>
+    <br/>
     <div class="faq-page">
         <div class="panel-group" id="faq_category" role="tablist" aria-multiselectable="true">
             <?php if ($model->childrenActive) : ?>
