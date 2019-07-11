@@ -17,4 +17,9 @@ use yii\widgets\Breadcrumbs;
 	<?= Alert::widget() ?>
 	<?= $content ?>
 </div>
+<div class="content-block content-block__bottom-promo">
+    <div class="container">
+        <img src="/uploads/elfinder/bottom-promo.png" class="img-responsive" />
+    </div>
+</div>
 <?php $this->endContent() ?>

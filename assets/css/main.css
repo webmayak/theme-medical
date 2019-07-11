@@ -2047,15 +2047,6 @@ footer a:hover, footer a:focus {
     margin-bottom: 20px;
 }
 
-.editor-content table tr th:first-child,
-.editor-content table tr td:first-child {
-    width: 60%;
-}
-
-.editor-content table tr td:first-child {
-    text-align: left;
-}
-
 .calculator-material {
     color: #465372;
 }
@@ -2139,12 +2130,6 @@ footer a:hover, footer a:focus {
 .portfolio-page__price {
     font-size: 16px;
     margin-bottom: 25px;
-}
-
-.editor-content p {
-    font-size: 15px;
-    line-height: 1.5em;
-    color: #333;
 }
 
 .wsmenu > .wsmenu-list > li.active > .navtext:before,
@@ -3108,4 +3093,11 @@ small, .small {
 
 .creative_header_address {
     margin-top: 20px;
+}
+
+.content-block__bottom-promo {
+    background: #0482AA;
+    margin-bottom: -30px;
+    padding-top: 0 !important;
+    margin-top: 40px;
 }
