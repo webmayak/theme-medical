@@ -22,5 +22,9 @@ $this->params['breadcrumbs'][] = $model->title;
 <?php endif; ?>
 <div class="editor-content editor-content__page">
 	<?= $this->render('@theme/views/_price') ?>
+	<?= $this->render('@theme/views/_notice') ?>
+	<?= $this->render('@theme/views/_price') ?>
+	<?= $this->render('@theme/views/_question') ?>
+	<?= $this->render('@theme/views/_fast-consult') ?>
 	<?= $model->body ?>
 </div>

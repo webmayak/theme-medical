@@ -31,8 +31,8 @@ use yii\web\View;
                     ]) ?>
                     <?php $this->endCache(); endif; ?>
                 </li>
-                <li class="<?= preg_match('/^tseny/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/tseny']) ?>">
+                <li class="<?= preg_match('/^price/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/price']) ?>">
                         Цены
                     </a>
                 </li>
