@@ -146,6 +146,7 @@ $this->context->layout = '//front';
 	<div class="container">
 		<div class="content-block__title text-center">Задать вопрос врачу</div>
 		<?= $this->render('@theme/views/_question') ?>
+		<?= $this->render('@theme/views/_faq-block') ?>
 	</div>
 </div>
 

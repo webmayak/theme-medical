@@ -1798,10 +1798,8 @@ footer a:hover, footer a:focus {
 
 .btn {
     border-radius: 4px;
-    font-size: 13px;
     font-weight: 500;
     outline: none !important;
-    padding: 10px 35px;
 }
 
 .btn-lg {
@@ -3144,4 +3142,57 @@ small, .small {
 
 .important-notice__image img {
     max-width: none;
+}
+
+.faq-block {
+    margin: 40px 0 70px;
+}
+
+.faq-block-item {
+    border: 1px solid #15C9CD;
+    background: #fff;
+    box-shadow: 0 4px 7px rgba(0,0,0,.15);
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 13px;
+    line-height: 1.4em;
+}
+
+.faq-block-item__question-title,
+.faq-block-item__answer-title {
+    color: #007477;
+    padding: 20px 0;
+    font-size: 18px;
+    position: relative;
+}
+
+.faq-block-item__question-title:before,
+.faq-block-item__answer-title:before {
+    font-family: "FontAwesome";
+    content: "";
+    position: absolute;
+    left: 0;
+    font-size: 48px;
+    color: #83BFC0;
+}
+
+.faq-block-item__answer-title:before {
+    content: "";
+}
+
+.faq-block-item__answer {
+    border-top: 2px solid #15C9CD;
+    margin-top: 20px;
+}
+
+.faq-block-item__button {
+    margin-bottom: -35px;
+    margin-top: 20px;
+    padding: 0 15px;
+}
+
+.faq-block-item__button .btn {
+    border-radius: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
 }
