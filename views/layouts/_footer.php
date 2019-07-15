@@ -12,6 +12,7 @@ use yii\web\View;
 /* @var $this View */
 ?>
 
+<!--
 <div class="footer-middle">
     <div class="container">
         <div class="row">
@@ -87,6 +88,7 @@ use yii\web\View;
         </div>
     </div>
 </div>
+-->
 
 <footer>
     <div class="footer-1">
