@@ -79,6 +79,11 @@ use yii\web\View;
                         Лечение
                     </a>
                 </li>
+                <li class="<?= Yii::$app->request->pathInfo === 'dostavka' ? 'active' : '' ?>">
+                    <a href="<?= Url::to(['/dostavka']) ?>" class="navtext">
+                        Доставка
+                    </a>
+                </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'contacts' ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/contacts']) ?>">
                         Контакты

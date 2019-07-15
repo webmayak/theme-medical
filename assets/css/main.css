@@ -2497,6 +2497,10 @@ h2, .h2 {
     font-size: 22px;
 }
 
+h3, .h3 {
+    font-size: 20px;
+}
+
 .row-advantages {
     margin-top: 50px;
 }
