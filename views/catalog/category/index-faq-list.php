@@ -7,7 +7,6 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
-use pantera\leads\widgets\form\LeadForm;
 use yii\web\View;
 
 /* @var $this View */
@@ -25,22 +24,27 @@ use yii\web\View;
         <div class="panel-group" id="faq_category" role="tablist" aria-multiselectable="true">
             <?php if ($model->childrenActive) : ?>
             <?php foreach ($model->childrenActive as $category) : ?>
-                <div class="panel panel-default">
-                    <a class="panel-title" role="button" data-toggle="collapse"
-                       data-parent="#faq_category"
-                       href="#faq_question_text_<?= $category->id ?>" aria-expanded="true"
-                       aria-controls="faq_question_text_<?= $category->id ?>">
-                        <div class="panel-heading" role="tab"
-                             id="faq_question_<?= $category->id ?>">
-                            <?= $category->name ?>
-                            <div class="img-faq"></div>
+                <div class="faq-item">
+                    <div class="faq-item__question">
+                        <div class="faq-item__question-info">
+                            <div class="faq-item__question-title">
+                                Вопрос:
+                            </div>
+                            <div class="faq-item__question-text">
+                                <?= $category->name ?>
+                            </div>
                         </div>
-                    </a>
-                    <div id="faq_question_text_<?= $category->id ?>"
-                         class="panel-collapse collapse" role="tabpanel"
-                         aria-labelledby="faq_question_<?= $category->id ?>">
-                        <div class="panel-body">
-                            <div class="editor-content">
+                        <div class="faq-item__question-date">
+                            Дата публикации<br/>вопроса:<br/>
+                            17.04.2019
+                        </div>
+                    </div>
+                    <div class="faq-item__answer">
+                        <div class="faq-item__answer-info">
+                            <div class="faq-item__answer-title">
+                                Ответ врача:
+                            </div>
+                            <div class="faq-item__answer-text">
                                 <?= $category->description ?>
                             </div>
                         </div>
@@ -57,7 +61,9 @@ use yii\web\View;
         </div>
     </div>
 </div>
-<?= LeadForm::widget([
+<?php if (1): ?>
+<?= \pantera\leads\widgets\form\LeadForm::widget([
     'key' => 'question-row',
-    'mode' => LeadForm::MODE_INLINE,
+    'mode' => \pantera\leads\widgets\form\LeadForm::MODE_INLINE,
 ]) ?>
+<?php endif; ?>
