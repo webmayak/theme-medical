@@ -7,6 +7,7 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
+use pantera\leads\widgets\form\LeadForm;
 use yii\web\View;
 
 /* @var $this View */
@@ -17,7 +18,10 @@ use yii\web\View;
     <?= Yii::$app->seo->getH1() ?>
 </h1>
 <div class="content-block content-block--without-padding-top content-block--gray">
-    <?= $this->render('@theme/views/_question') ?>
+    <?= LeadForm::widget([
+        'key' => 'question-row',
+        'mode' => LeadForm::MODE_INLINE,
+    ]) ?>
     <?= $this->render('@theme/views/_fast-consult') ?>
     <br/>
     <div class="faq-page">
@@ -61,9 +65,3 @@ use yii\web\View;
         </div>
     </div>
 </div>
-<?php if (1): ?>
-<?= \pantera\leads\widgets\form\LeadForm::widget([
-    'key' => 'question-row',
-    'mode' => \pantera\leads\widgets\form\LeadForm::MODE_INLINE,
-]) ?>
-<?php endif; ?>

@@ -145,7 +145,10 @@ $this->context->layout = '//front';
 <div class="content-block">
 	<div class="container">
 		<div class="content-block__title text-center">Задать вопрос врачу</div>
-		<?= $this->render('@theme/views/_question') ?>
+        <?= LeadForm::widget([
+            'key' => 'question-row',
+            'mode' => LeadForm::MODE_INLINE,
+        ]) ?>
 		<?= $this->render('@theme/views/_faq-block') ?>
 	</div>
 </div>
