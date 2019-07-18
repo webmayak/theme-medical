@@ -17,22 +17,22 @@ use pantera\leads\widgets\form\LeadForm;
 
 $hasImage = $model->media && $model->media->issetMedia();
 
-?><div class="catalog-block<?= $hasImage ? ' with-image' : ' no-image' ?>">
-    <div class="caption">
-        <div class="num">
-            <?= str_pad($index + 1, 2, 0, STR_PAD_LEFT) ?>
-        </div>
-        <div class="title-block-img">
-            <?= Html::a($model->name, $model->present()->getUrl()) ?>
-        </div>
-    </div>
+?><a href="<?= $model->present()->getUrl() ?>" class="catalog-item<?= $hasImage ? ' with-image' : ' no-image' ?>">
     <?php if ($hasImage): ?>
     <div class="media-top">
         <div class="block-img">
-            <a href="<?= $model->present()->getUrl() ?>">
-                <?= Html::img($model->media->image(340, 276, false), ['alt'=>$model->name]); ?>
-            </a>
+            <?= Html::img($model->media->image(340, 276, false), ['alt'=>$model->name]); ?>
         </div>
     </div>
     <?php endif; ?>
-</div>
+    <div class="catalog-item__footer">
+        <div class="catalog-item__title">
+            <?= Html::encode($model->name) ?>
+        </div>
+        <div class="catalog-item__announce">
+            Дженерик препарата: Sovaldi (Совальди)<br/>
+            В упаковке: 28 Таблеток.<br/>
+            Производитель: Hetero Индия
+        </div>
+    </div>
+</a>

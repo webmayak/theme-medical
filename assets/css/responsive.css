@@ -81,10 +81,6 @@
         display: flex;
     }
 
-    .block-img {
-        height: 276px;
-    }
-
     .footer-menu__title > .icon {
         display: none;
     }

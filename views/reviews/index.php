@@ -21,27 +21,27 @@ $this->params['breadcrumbs'][] = $this->title;
     'summary' => false,
     'itemView' => '_view',
     'options' => [
-        'class' => 'row',
+        'class' => 'reviews',
     ],
     'itemOptions' => [
-        'class' => 'col-md-6',
+        'class' => 'review-item',
     ],
-    'pager' => [
-        'class' => ScrollPager::class,
-        'item' => '.review-block',
-        'triggerText' => 'ПОКАЗАТЬ ЕЩЕ',
-        'noneLeftText' => '',
-        'enabledExtensions' => [
-            ScrollPager::EXTENSION_TRIGGER,
-            ScrollPager::EXTENSION_SPINNER,
-            ScrollPager::EXTENSION_NONE_LEFT,
-            ScrollPager::EXTENSION_PAGING,
-        ],
-        'triggerTemplate' => '<div class="ias-trigger" style="text-align: center; cursor: pointer;">
-                                <a class="btn btn-primary btn-lg">{text}</a>
-                            </div>',
-        'eventOnRendered' => new JsExpression('function(){initReviewReadMore();}'),
-    ]
+    // 'pager' => [
+    //     'class' => ScrollPager::class,
+    //     'item' => '.reviews',
+    //     'triggerText' => 'ПОКАЗАТЬ ЕЩЕ',
+    //     'noneLeftText' => '',
+    //     'enabledExtensions' => [
+    //         ScrollPager::EXTENSION_TRIGGER,
+    //         ScrollPager::EXTENSION_SPINNER,
+    //         ScrollPager::EXTENSION_NONE_LEFT,
+    //         ScrollPager::EXTENSION_PAGING,
+    //     ],
+    //     'triggerTemplate' => '<div class="ias-trigger" style="text-align: center; cursor: pointer;">
+    //                             <a class="btn btn-primary btn-lg">{text}</a>
+    //                         </div>',
+    //     'eventOnRendered' => new JsExpression('function(){initReviewReadMore();}'),
+    // ]
 ]) ?>
 <section class="review-form-wrapper">
 <?= LeadForm::widget([

@@ -19,9 +19,9 @@ use yii\web\View;
     </div>
 <?php endif; ?>
 <?php
-if($onlyFirstLevel) {
+if ($onlyFirstLevel) {
     echo $content;
-}else{
+} else {
     echo Tabs::widget([
         'items' => $items,
         'options' => [

@@ -23,6 +23,6 @@ use yii\widgets\ListView;
         'class' => 'row',
     ],
     'itemOptions' => [
-        'class' => 'col-md-6 col-lg-4',
+        'class' => 'col-md-6 col-lg-6',
     ],
 ]) ?>
