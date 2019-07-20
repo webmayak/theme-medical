@@ -32,19 +32,3 @@ if ($onlyFirstLevel) {
     ]);
 }
 ?>
-
-<?= $this->render('@theme/views/_text_about') ?>
-
-<?= $this->render('@theme/views/_features') ?>
-
-<div class="content-block">
-    <div class="container">
-        <div class="content-block__title text-center">Задать вопрос врачу</div>
-        <?= LeadForm::widget([
-            'key' => 'question-row',
-            'mode' => LeadForm::MODE_INLINE,
-        ]) ?>
-    </div>
-</div>
-
-<?= $this->render('@theme/views/_fast-consult') ?>

@@ -37,7 +37,6 @@ $this->context->layout = '//front';
 </div>
 
 <?= $this->render('@theme/views/_text_about') ?>
-
 <?= $this->render('@theme/views/_features') ?>
 
 <div class="content-block content-block--main-catalog">
