@@ -3331,3 +3331,63 @@ small, .small {
     border-left: 1px solid #FFFFFF;
     content: "";
 }
+
+
+/******************/
+.specials {
+
+}
+
+.specials-item {
+    border: 2px solid #15C9CD;
+    background: url(../images/specials-bg.png) center;
+    background-repeat: no-repeat;
+}
+
+.specials-item__top {
+    padding: 20px 20px 40px;
+}
+
+.specials-item__bottom {
+    padding: 10px 20px;
+    font-size: 13px;
+    color: #3C3C3C;
+    background: #15C9CD;
+    display: flex;
+    align-items: center;
+    line-height: 1.2em;
+}
+
+.specials-item + .specials-item {
+    margin-top: 30px;
+}
+
+.specials-item__title {
+    max-width: 700px;
+    font-size: 32px;
+    line-height: 1.3em;
+}
+
+.specials-item__title a {
+    text-decoration: none;
+    color: #005E87 !important;
+}
+
+.specials-item__bottom .fa {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.specials-item__buttons {
+    margin-top: 40px;
+}
+.specials-item__buttons .btn {
+    border-radius: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.specials-item__buttons .btn .fa {
+    margin-left: 10px;
+}

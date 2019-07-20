@@ -12,18 +12,26 @@ use yii\web\View;
 
 /* @var $this View */
 /* @var $model ContentPage */
-?>
-<a href="<?= $model->getUrl() ?>">
-    <?php
-    $img = '/images/stub.png';
-    if ($model->media && $model->media->issetMedia()) {
-        $img = $model->media->image(370, 280, false);
-    }
-    echo Html::img($img, [
-        'class' => 'content-item__image',
-    ])
-    ?>
-    <h4 class="content-item__title">
-        <?= $model->title ?>
-    </h4>
-</a>
+
+?><div class="specials-item__top">
+    <div class="specials-item__title">
+        <a href="<?= $model->getUrl() ?>">
+            <?php
+            if ($model->media && $model->media->issetMedia()) {
+                $img = $model->media->image(370, 280, false);
+                echo Html::img($img, [
+                    'class' => 'content-item__image',
+                ]);
+            } ?>
+            <?= $model->title ?>
+        </a>
+    </div>
+    <div class="specials-item__buttons">
+        <a class="btn btn-primary" href="<?= $model->getUrl() ?>">
+            Подробнее <i class="fa fa-arrow-right"></i>
+        </a>
+    </div>
+</div>
+<div class="specials-item__bottom">
+    <i class="fa fa-calendar"></i> <span class="specials-item__date-label">Дата публикации<br/>21.12.2018</span>
+</div>

@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 ?>
 <div class="page-specials">
-    <h1 class="title-home"><?= $this->title ?></h1>
+    <h1><?= $this->title ?></h1>
     <?= \pantera\content\widgets\block\Block::widget([
         'position' => 'specials_top',
     ]) ?>
@@ -19,12 +19,11 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'summary' => false,
         'itemView' => '_view',
-        'layout' => '<div class="row">{items}</div>{pager}',
         'itemOptions' => [
-            'class' => 'col-md-6 col-lg-4 content-item',
+            'class' => 'specials-item',
         ],
         'options' => [
-            'class' => 'list-view--content',
+            'class' => 'specials',
         ],
         'pager' => [
             'class' => 'justinvoelker\separatedpager\LinkPager',

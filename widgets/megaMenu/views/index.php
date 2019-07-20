@@ -25,7 +25,7 @@ use yii\web\View;
                     <a href="<?= Url::to(['/catalog']) ?>" class="navtext vsmenu-cat-toggle">
                         Каталог препаратов
                     </a>
-                    <?php if ($this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
+                    <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
                     <?= $this->render('_dropdown', [
                         'categories' => $catalogRoot->getChildren()->isInMenu()->all(),
                     ]) ?>

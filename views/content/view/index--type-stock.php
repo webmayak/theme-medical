@@ -6,7 +6,6 @@
  * Time: 3:45 PM
  */
 
-use frontend\widgets\stockOther\StockOther;
 use pantera\content\models\ContentPage;
 use yii\web\View;
 use pantera\leads\widgets\form\LeadForm;
@@ -30,12 +29,9 @@ $this->params['breadcrumbs'][] = $model->title;
     <?php endif; ?>
     <div class="clearfix"></div>
 </div>
-<div class="content-block content-block--specials">
-    <?= StockOther::widget([
-        'model' => $model,
-    ]) ?>
-</div>
+<br/>
 <?= LeadForm::widget([
-    'key' => 'request',
+    'key' => 'question-row',
     'mode' => LeadForm::MODE_INLINE,
 ]) ?>
+<?= $this->render('@theme/views/_fast-consult') ?>
