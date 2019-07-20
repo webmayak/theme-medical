@@ -23,7 +23,7 @@ use yii\web\View;
             <ul class="wsmenu-list">
                 <li class="<?= preg_match('/^catalog/', Yii::$app->request->pathInfo) ? 'active' : '' ?>" id="main-menu-catalog">
                     <a href="<?= Url::to(['/catalog']) ?>" class="navtext vsmenu-cat-toggle">
-                        Каталог препаратов
+                        Каталог
                     </a>
                     <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
                     <?= $this->render('_dropdown', [
@@ -33,9 +33,20 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^price/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/price']) ?>">
-                        Цены
+                        Цена
                     </a>
                 </li>
+                <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/article']) ?>">
+                        О гепатите
+                    </a>
+                </li>
+                <li class="<?= preg_match('/^article\/rekomendacii-po-provedeniu-terapii/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a href="<?= Url::to(['/article/rekomendacii-po-provedeniu-terapii']) ?>" class="navtext">
+                        Лечение
+                    </a>
+                </li>
+                <?php if (0): ?>
                 <?php
                 $okompaniiIsActive = preg_match('/^o-kompanii/', Yii::$app->request->pathInfo);
                 $sotrudnikiIsActive = preg_match('/^o-kompanii\/nashi-sotrudniki/', Yii::$app->request->pathInfo);
@@ -54,15 +65,8 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
-                <li class="<?= Yii::$app->request->pathInfo === 'specials' ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/specials']) ?>">                        
-                        Акции
-                    </a>
-                </li>
-                <?php
-                $reviewsIsActive = preg_match('/^reviews/', Yii::$app->request->pathInfo);
-                ?>
-                <li class="<?= $reviewsIsActive ? 'active' : '' ?>">
+                <?php endif; ?>
+                <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/reviews']) ?>">Отзывы</a>
                 </li>
                 <?php
@@ -71,17 +75,14 @@ use yii\web\View;
                 <li class="<?= $faqIsActive ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/faq']) ?>">Вопрос-ответ</a>
                 </li>
-                <?php
-                $articlesIsActive = preg_match('/^article/', Yii::$app->request->pathInfo);
-                ?>
-                <li class="<?= $articlesIsActive ? 'active' : '' ?>">
-                    <a href="<?= Url::to(['/article']) ?>" class="navtext">
-                        Лечение
-                    </a>
-                </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'dostavka' ? 'active' : '' ?>">
                     <a href="<?= Url::to(['/dostavka']) ?>" class="navtext">
                         Доставка
+                    </a>
+                </li>
+                <li class="<?= Yii::$app->request->pathInfo === 'specials' ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/specials']) ?>">                        
+                        Акции
                     </a>
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'contacts' ? 'active' : '' ?>">

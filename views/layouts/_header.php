@@ -30,53 +30,48 @@ use pantera\content\widgets\block\Block;
                 </div>
                 <div class="col-md-8 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
-                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="single_header_address first">
                                 <div class="creative_header_icon">
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="creative_header_address_text">
-
                                     <h3>Телефон</h3>
-
-                                    <p>+8 (3812) 208-404</p>
-
+                                    <a href="tel:+73812208404">+7 (3812) 208-404</a>
                                 </div>
                             </div>
-
                         </div>
                         <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                            <div class="single_header_address ">
+                            <div class="single_header_address" style="position: relative; left: -30px;">
                                 <div class="creative_header_icon">
                                     <i class="fa fa-phone"></i>
                                 </div>
                                 <div class="creative_header_address_text">
-
-                                    <h3>Бесплатная консультация</h3>
-
-                                    <p><a href="mailto:demo@example.com">+8(983) 622-24-54</a></p>
-
+                                    <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
+                                    <a href="tel:+79836222454">+7 (983) 622-24-54</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                            <div class="single_header_address ctrp">
+                            <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
                                 <div class="creative_header_icon">
                                     <i class="fa fa-map-marker"></i>
                                 </div>
                                 <div class="creative_header_address_text">
-
                                     <h3>Главный офис</h3>
-
-                                    <p><a href="/contacts">г.Омск, ул. Маршала Жукова<br/>74/2 (офис 315)</a></p>
-
+                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;">г. Омск, ул. Маршала Жукова<br/>74/2 (офис 315)</a>
                                 </div>
                             </div>
                         </div>
 
                     </div>
                 </div>
-                <div class="col-md-2 col-lg-3 top-panel__col-buttons">
+                <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
+                    <img src="/images/footer-social-icons-stub.svg">
+                    <div class="top-panel__email">
+                        <i class="fa fa-envelope"></i> <a href="mailto:indiavirexpress@gmail.com" style="font-size: 13px;">indiavirexpress@gmail.com</a>
+                    </div>
+                    <?php if (0): ?>
                     <div class="top-panel__buttons">
                         <?= LeadForm::widget([
                             'key' => 'question',
@@ -87,6 +82,7 @@ use pantera\content\widgets\block\Block;
                         ]) ?>
                         <a class="btn-primary btn btn-block text-uppercase" href="/zapis-online" style="margin-top: 10px;">Оформить заказ</a>
                     </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>

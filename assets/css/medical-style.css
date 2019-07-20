@@ -376,16 +376,6 @@ color:#fff;
     position: relative;
     padding-left: 68px;
 }
-.single_header_address:before {
-    content: "";
-    position: absolute;
-    background: #04b6ba;
-    width: 1px;
-    height: 74px;
-    top: -21px;
-    right: -38px;
-    z-index: 9999999;
-}
 .creative_header_button .dtbtn {
 	background: #04b6ba none repeat scroll 0 0;
 	border-radius: 30px;
@@ -1887,49 +1877,6 @@ background:rgba(0,0,0,.80);
 }
 /*========================
 END FOOTER middle AREA CSS
-=========================*/
-/*========================
-galenical FOOTER BOTTOM AREA CSS
-=========================*/
-
-.footer-bottom {
-    background: #15161c none repeat scroll 0 0;
-    padding: 26px 0 24px;
-}
-.copy-right-text {} .copy-right-text p {
-    color: #fff;
-    font-size: 14px;
-    margin: 0;
-    padding: 0;
-}
-.footer-menu {} .footer-menu ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-}
-.footer-menu ul li {
-    display: inline-block;
-}
-.footer-menu ul li a {
-    color: #fff;
-    padding: 0 10px;
-    display: block;
-}
-.copy-right-text a:hover,
-.footer-menu ul li a:hover {
-    color: #04b6ba;
-}
-.footer-menu ul li:last-child a {
-    padding-right: 0px;
-}
-.footer_style_3 .footer-menu ul li:first-child a {
-    padding-left: 0px;
-}
-.footer-menu ul ul {
-    display: none;
-}
-/*========================
-END FOOTER BOTTOM AREA CSS
 =========================*/
 /*========================
 EM40 SCROLL TOP CSS
@@ -4824,20 +4771,6 @@ galenical Video CSS
 	float: left;
 	margin-right: 7px;
 	overflow: hidden;
-}
-.creative_header_address .single_header_address::before {
-	content: "";
-	position: absolute;
-	background: #ddd;
-	width: 1px;
-	height: 75px;
-	top: -21px;
-	left: -13px;
-	z-index: 9999999;
-	overflow: visible;
-}
-.single_header_address.first::before{
-opacity:0;
 }
 
 .em_tab_pils.nav-pills > li > a {
