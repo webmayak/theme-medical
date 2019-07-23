@@ -30,3 +30,5 @@ $this->params['breadcrumbs'][] = $this->title;
         ]
     ]) ?>
 </div>
+
+<?= $this->render('@theme/views/_fast-consult') ?>

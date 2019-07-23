@@ -25,11 +25,6 @@ $this->params['breadcrumbs'][] = $model->title;
 	<?= $this->render('@theme/views/_price') ?>
 	<?= $this->render('@theme/views/_notice') ?>
 	<?= $this->render('@theme/views/_price') ?>
-    <?= LeadForm::widget([
-        'key' => 'question-row',
-        'mode' => LeadForm::MODE_INLINE,
-    ]) ?>
-	<?= $this->render('@theme/views/_faq-block') ?>
 	<?= $this->render('@theme/views/_fast-consult') ?>
 	<?= $model->body ?>
 </div>
