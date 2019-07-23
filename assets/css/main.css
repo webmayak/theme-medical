@@ -467,12 +467,6 @@ a.desc:after {
     width: 100%;
 }
 
-.image {
-    padding: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 25px rgba(000, 000, 000, .3);
-}
-
 .list__item--location:before {
     content: "\f041";
     background: no-repeat;
@@ -2306,11 +2300,6 @@ footer a:hover, footer a:focus {
     margin-top: 5px;
 }
 
-.category__body .image {
-    float: right;
-    margin: 0 0 15px 15px;
-}
-
 .modal .form-control {
     padding: 10px 17px !important;
 }
@@ -2502,10 +2491,6 @@ h3, .h3 {
 .wsmenu>.wsmenu-list>li>ul.sub-menu>li>a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-}
-
-body[class*='contacts'] .category__body .image {
-    display: none;
 }
 
 .contact-form {
@@ -3305,6 +3290,7 @@ small, .small {
     font-size: 11px;
     line-height: 1.3em;
     margin-top: 6px;
+    min-height: 50px;
 }
 
 .catalog-item__rating {
@@ -3313,9 +3299,20 @@ small, .small {
 }
 
 .catalog-item__prices {
-    margin-top: 15px;
     text-align: center;
     position: relative;
+}
+
+.catalog-item__button {
+    margin: 10px 0 5px;
+}
+
+.catalog-item__prices .price-label {
+    font-size: 11px;
+}
+
+.catalog-item__prices .price-value {
+    font-size: 18px;
 }
 
 .catalog-item__prices .btn {
@@ -3511,4 +3508,35 @@ header .top-panel__email .fa {
     color: #15C9CD;
     vertical-align: middle;
     margin-right: 5px;
+}
+
+/************/
+
+.product-main-image {
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.product-description {
+    margin-top: 20px;
+}
+
+.product-description h2,
+.product-description .h2 {
+    color: #007376;
+    text-transform: uppercase;
+}
+
+.product-sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+.product-layout {
+    display: flex;
+}
+
+.wsmenu>.wsmenu-list>li>.navtext {
+    padding: 14px 15px;
 }

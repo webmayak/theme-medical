@@ -21,6 +21,11 @@ use yii\web\View;
     <div class="container">
         <nav class="wsmenu">
             <ul class="wsmenu-list">
+                <li>
+                    <a class="navtext" href="<?= Url::to(['/']) ?>">
+                        Главная
+                    </a>
+                </li>
                 <li class="<?= preg_match('/^catalog/', Yii::$app->request->pathInfo) ? 'active' : '' ?>" id="main-menu-catalog">
                     <a href="<?= Url::to(['/catalog']) ?>" class="navtext vsmenu-cat-toggle">
                         Каталог

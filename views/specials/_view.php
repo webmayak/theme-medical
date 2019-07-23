@@ -33,5 +33,5 @@ use yii\web\View;
     </div>
 </div>
 <div class="specials-item__bottom">
-    <i class="fa fa-calendar"></i> <span class="specials-item__date-label">Дата публикации<br/>21.12.2018</span>
+    <i class="fa fa-calendar"></i> <span class="specials-item__date-label">Дата публикации<br/><?= Yii::$app->formatter->asDate($model->created_at) ?></span>
 </div>
