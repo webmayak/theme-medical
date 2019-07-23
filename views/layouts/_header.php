@@ -67,7 +67,13 @@ use pantera\content\widgets\block\Block;
                     </div>
                 </div>
                 <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
-                    <img src="/images/footer-social-icons-stub.svg">
+                    <div class="top-panel__icons">
+                        <a href="https://www.facebook.com/INDIAVIR.ru" target="_blank"><img src="/images/icon-fb.svg"></a>
+                        <a href="https://api.whatsapp.com/send?phone=79836222454" target="_blank"><img src="/images/icon-wa.svg"></a>
+                        <a href="https://www.youtube.com/channel/UC2hGbdk_AUIte0EGk10_KGQ/featured" target="_blank"><img src="/images/icon-youtube.svg"></a>
+                        <a href="https://www.instagram.com/deniss_smolin/" target="_blank"><img src="/images/icon-instagram.svg"></a>
+                        <a href="https://vk.com/den_smolin85" target="_blank"><img src="/images/icon-vk.svg"></a>
+                    </div>
                     <div class="top-panel__email">
                         <i class="fa fa-envelope"></i> <a href="mailto:indiavirexpress@gmail.com" style="font-size: 13px;">indiavirexpress@gmail.com</a>
                     </div>

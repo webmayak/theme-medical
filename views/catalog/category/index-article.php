@@ -7,6 +7,7 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
+use frontend\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
 use yii\web\View;
@@ -31,7 +32,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
     <?php if ($model->description) : ?>
     <div class="category__body">
         <?php if ($hasMedia) : ?>
-            <div class="image">
+            <div class="image pull-right">
                 <img src="<?= $model->media->image(375, 300, false) ?>" alt="<?= Html::encode($model->name) ?>">
             </div>
         <?php endif; ?>
@@ -45,7 +46,7 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 
 <?php if ($model->childrenActive) : ?>
     <div class="content-block content-block--children-items">
-        <?= \frontend\themes\medical\widgets\categoryListArticle\CategoryList::widget([
+        <?= CategoryList::widget([
             'models' => $model->childrenActive,
         ]) ?>
     </div>

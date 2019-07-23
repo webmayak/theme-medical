@@ -2719,7 +2719,7 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     margin-top: 60px;
 }
 
-.brands {
+.brands > .block {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2845,8 +2845,9 @@ small, .small {
 }
 
 .fast-consult__phone {
-    color: #8C8C8C;
+    color: #8C8C8C !important;
     font-size: 16px;
+    text-decoration: none !important;
 }
 
 .fast-consult__social-icons {
@@ -2916,12 +2917,21 @@ small, .small {
     color: #8C8C8C;
 }
 
+.footer-middle [class*="col-"] {
+    position: relative;
+}
+
+.footer-middle [class*="col-"].last {
+    text-align: right;
+}
+
 .footer-middle [class*="col-"]:not(.first):before {
     content: "";
     border-left: 1px solid rgba(255, 255, 255, .8);
     position: absolute;
     height: 220px;
-    margin-left: -30px;
+    left: 0;
+    margin-left: -20px;
 }
 
 .content-block__bottom-promo {
@@ -3510,6 +3520,24 @@ header .top-panel__email .fa {
     margin-right: 5px;
 }
 
+.top-panel__icons a:hover,
+.bottom-panel__icons a:hover {
+    opacity: .6;
+}
+
+.top-panel__icons img,
+.bottom-panel__icons img {
+    width: 32px;
+}
+
+.top-panel__icons img {
+    margin-left: 5px;
+}
+
+.bottom-panel__icons img {
+    margin-right: 13px;
+}
+
 /************/
 
 .product-main-image {
@@ -3523,7 +3551,9 @@ header .top-panel__email .fa {
 }
 
 .product-description h2,
-.product-description .h2 {
+.product-description .h2,
+.product-description h3,
+.product-description .h3 {
     color: #007376;
     text-transform: uppercase;
 }

@@ -90,61 +90,23 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
-<div class="content-block">
-	<div class="container">
-		<div class="content-block__title text-center">Вы защищены от подделок</div>
-		<div class="quality-protection d-flex d-flex__col-2">
-			<div class="bordered-block small">
-				<p>Мы с ответсвенностью ГАРАНТИРУЕМ отсутсвие подделок. И вот почему:</p>
-				<p>Мы являемся официальным представителем фармацевтической компании JC Pharm (Индия) и у нас вы можете купить оригинальные препараты софосбувир, даклатасвир и ледипасвир производства Индии.</p>
-				<p>Дженерики производятся по стандартам и конторлем Gilead Sciences и на их оборудовании.</p>
-			</div>
-			<div class="bordered-block small">
-				<p>Софосбувир-индия.рф - официальный сайт представительства компании JC Pharm в Росcии</p>
-				<p>JC Pharm является фармацевтической компанией зарегистированной в Индии</p>
-				<p>Являемся официальным дистрибютером компании NATCO и HETERO</p>
-				<p>Транспортировка дженерков осуществляется с соблюдением всех правил и температурного режима</p>
-			</div>
-		</div>
-	</div>
-</div>
+<?= $this->render('@theme/views/_quality-protection') ?>
 
 <div class="content-block">
 	<div class="container">
 		<div class="brands text-center">
-			<img src="/uploads/elfinder/brands/1.png" alt="" />
-			<img src="/uploads/elfinder/brands/2.png" alt="" />
-			<img src="/uploads/elfinder/brands/3.png" alt="" />
-			<img src="/uploads/elfinder/brands/4.jpg" alt="" />
-			<img src="/uploads/elfinder/brands/5.png" alt="" />
+			<?= Block::widget([
+                'position' => 'brands',
+            ]) ?>
 		</div>
 	</div>
 </div>
 
 <div class="content-block">
 	<div class="h2 content-block__title text-center">Химические исследования</div>
-	<div class="chemical-research">
-		<div class="chemical-research__item">
-			<div><img src="/images/icon-doc.svg"></div>
-			<div class="chemical-research__item-title">Hepcinat</div>
-			<div><img src="/images/download-button.png"></div>
-		</div>
-		<div class="chemical-research__item">
-			<div><img src="/images/icon-doc.svg"></div>
-			<div class="chemical-research__item-title">Natdac</div>
-			<div><img src="/images/download-button.png"></div>
-		</div>
-		<div class="chemical-research__item">
-			<div><img src="/images/icon-doc.svg"></div>
-			<div class="chemical-research__item-title">Hepcinat LP</div>
-			<div><img src="/images/download-button.png"></div>
-		</div>
-		<div class="chemical-research__item">
-			<div><img src="/images/icon-doc.svg"></div>
-			<div class="chemical-research__item-title">Hepcinat Plus</div>
-			<div><img src="/images/download-button.png"></div>
-		</div>
-	</div>
+	<?= Block::widget([
+        'position' => 'chemical_research',
+    ]) ?>
 </div>
 
 <div class="content-block content-block--video">
