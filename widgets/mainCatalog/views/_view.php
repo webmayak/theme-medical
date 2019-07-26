@@ -25,7 +25,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
 <div class="catalog-item<?= $hasImage ? ' with-image' : ' no-image' ?>">
     <?php if ($hasImage) : ?>
     <div class="catalog-item__image">
-        <?= Html::img($model->media->image(340, 276), ['alt'=>$model->name]); ?>
+        <a href="<?= $model->present()->getUrl() ?>"><?= Html::img($model->media->image(340, 276), ['alt'=>$model->name]); ?></a>
     </div>
     <?php endif; ?>
     <div class="catalog-item__info">
@@ -37,7 +37,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
             <i class="fa fa-star"></i>
         </div>
         <div class="catalog-item__title">
-            <?= Html::encode($model->name) ?>
+            <a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a>
         </div>
         <div class="catalog-item__announce">
             <?= $announce ? nl2br($announce->value) : '' ?>

@@ -3296,6 +3296,11 @@ small, .small {
     font-size: 18px;
 }
 
+.catalog-item__title a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
 .catalog-item__announce {
     font-size: 11px;
     line-height: 1.3em;
