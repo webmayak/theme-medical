@@ -21,8 +21,9 @@ $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id,
 $price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 88]);
 $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 89]);
 
-?><a href="<?= $model->present()->getUrl() ?>" class="catalog-item<?= $hasImage ? ' with-image' : ' no-image' ?>">
-    <?php if ($hasImage): ?>
+?>
+<div class="catalog-item<?= $hasImage ? ' with-image' : ' no-image' ?>">
+    <?php if ($hasImage) : ?>
     <div class="catalog-item__image">
         <?= Html::img($model->media->image(340, 276), ['alt'=>$model->name]); ?>
     </div>
@@ -48,16 +49,32 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
                         <span class="price-label">Цена по предоплате:</span>
                         <span class="price-value"><?= $price_prepay ? $price_prepay->value : '' ?></span>
                     </div>
-                    <div class="catalog-item__button"><span class="btn btn-primary">Купить</span></div>
+                    <div class="catalog-item__button">
+                        <?= LeadForm::widget([
+                            'key' => 'order',
+                            'text' => 'Купить',
+                            'options' => [
+                                'class' => 'btn btn-primary',
+                            ],
+                        ]) ?>
+                    </div>
                 </div>
                 <div class="col-xs-6">
                     <div class="catalog-item__price">
                         <span class="price-label">Цена при получении:</span>
                         <span class="price-value"><?= $price_afterpay ? $price_afterpay->value : '' ?></span>
                     </div>
-                    <div class="catalog-item__button"><span class="btn btn-primary">Купить</span></div>
+                    <div class="catalog-item__button">
+                        <?= LeadForm::widget([
+                            'key' => 'order',
+                            'text' => 'Купить',
+                            'options' => [
+                                'class' => 'btn btn-primary',
+                            ],
+                        ]) ?>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</a>
+</div>

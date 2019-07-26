@@ -15,7 +15,7 @@ use yii\widgets\MaskedInput;
 /* @var $this View */
 /* @var $model LeadOrder */
 /* @var $key string */
-$this->title = 'Записаться';
+$this->title = 'Быстрый заказ';
 
 $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',
@@ -29,6 +29,11 @@ echo $form->field($model, 'name')->textInput([
     'placeholder' => $model->getAttributeLabel('name'),
 ])->label(false);
 
+echo $form->field($model, 'email')->textInput([
+    'type' => 'email',
+    'placeholder' => $model->getAttributeLabel('email'),
+])->label(false);
+
 echo $form->field($model, 'phone')->widget(MaskedInput::class, [
     'mask' => '+7 (999) 999-99-99',
     'options' => [
@@ -37,14 +42,17 @@ echo $form->field($model, 'phone')->widget(MaskedInput::class, [
     ],
 ])->label(false);
 
-echo $form->field($model, 'email')->textInput([
-    'type' => 'email',
-    'placeholder' => $model->getAttributeLabel('email'),
+echo $form->field($model, 'address')->textarea([
+    'rows' => 4,
+    'placeholder' => $model->getAttributeLabel('address'),
 ])->label(false);
 
-echo Html::activeHiddenInput($model, 'detail');
+echo $form->field($model, 'comment')->textarea([
+    'rows' => 4,
+    'placeholder' => $model->getAttributeLabel('comment'),
+])->label(false);
 
-echo Html::submitButton(Html::tag('span', 'Записаться', [
+echo Html::submitButton(Html::tag('span', 'Купить', [
     'class' => 'ladda-label',
 ]), [
     'class' => 'btn btn-primary ladda-button',
