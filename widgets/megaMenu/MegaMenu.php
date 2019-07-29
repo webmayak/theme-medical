@@ -9,12 +9,8 @@
 namespace frontend\widgets\megaMenu;
 
 use common\modules\catalog\models\CatalogCategory;
-use function var_dump;
-use Yii;
-use yii\base\Widget;
-use yii\behaviors\CacheableWidgetBehavior;
 
-class MegaMenu extends Widget
+class MegaMenu extends \yii\base\Widget
 {
     public function run()
     {

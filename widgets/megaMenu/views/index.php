@@ -36,11 +36,13 @@ use yii\web\View;
                     ]) ?>
                     <?php $this->endCache(); endif; ?>
                 </li>
+                <?php if (0): ?>
                 <li class="<?= preg_match('/^price/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/price']) ?>">
                         Цена
                     </a>
                 </li>
+                <?php endif; ?>
                 <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/article']) ?>">
                         О гепатите
@@ -83,6 +85,11 @@ use yii\web\View;
                 <li class="<?= Yii::$app->request->pathInfo === 'dostavka' ? 'active' : '' ?>">
                     <a href="<?= Url::to(['/dostavka']) ?>" class="navtext">
                         Доставка
+                    </a>
+                </li>
+                <li class="<?= Yii::$app->request->pathInfo === 'video' ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/video']) ?>">                        
+                        Видео
                     </a>
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'specials' ? 'active' : '' ?>">
