@@ -8,9 +8,9 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use common\modules\catalog\models\CatalogCategoryAttributeValue;
+use frontend\widgets\leads\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
-use pantera\leads\widgets\form\LeadForm;
 
 /* @var $this View */
 /* @var $model CatalogCategory */
@@ -37,7 +37,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
             <i class="fa fa-star"></i>
         </div>
         <div class="catalog-item__title">
-            <?= Html::encode($model->name) ?>
+            <?= Html::a(Html::encode($model->name), $model->present()->getUrl()) ?>
         </div>
         <div class="catalog-item__announce">
             <?= $announce ? nl2br($announce->value) : '' ?>
@@ -55,6 +55,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
                             'text' => 'Купить',
                             'options' => [
                                 'class' => 'btn btn-primary',
+                                'href' => ['/leads/default/modal', 'key' => 'order', 'productId' => $model->id],
                             ],
                         ]) ?>
                     </div>
@@ -70,6 +71,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
                             'text' => 'Купить',
                             'options' => [
                                 'class' => 'btn btn-primary',
+                                'href' => ['/leads/default/modal', 'key' => 'order', 'productId' => $model->id],
                             ],
                         ]) ?>
                     </div>

@@ -3296,6 +3296,11 @@ small, .small {
     font-size: 18px;
 }
 
+.catalog-item__title a {
+    color: #fff !important;
+    text-decoration: none;
+}
+
 .catalog-item__announce {
     font-size: 11px;
     line-height: 1.3em;
@@ -3569,4 +3574,59 @@ header .top-panel__email .fa {
 
 .wsmenu>.wsmenu-list>li>.navtext {
     padding: 14px 15px;
+}
+
+.product-small {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.product-small_bottom-border {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.product-small__image {
+    height: 100px;
+    margin-right: 25px;
+}
+
+.product-small__content {
+    display: flex;
+    flex: 1;
+}
+
+.product-small__content-left, .product-small__content-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-small__content-left {
+    margin-right: 50px;
+}
+
+a.product-small__name {
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.product-small__options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #8C8C8C;
+    font-size: 12px;
+}
+
+.product-small__option-value {
+    color: #333;
+    font-size: 14px;
+}
+
+.product-small__amount {
+    width: 100px;
+}
+
+.product-small__amount-label {
+    margin-bottom: 5px;
 }
