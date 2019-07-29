@@ -2,7 +2,7 @@
 
 use kop\y2sp\ScrollPager;
 use pantera\leads\widgets\form\LeadForm;
-use yii\data\ActiveDataProvider;
+use yii\data\ArrayDataProvider;
 use yii\web\View;
 use yii\widgets\ListView;
 use yii\web\JsExpression;
@@ -12,14 +12,14 @@ use yii\web\JsExpression;
 $this->title = 'Отзывы наших клиентов';
 $this->params['breadcrumbs'][] = $this->title;
 
-?>
-<h1 class="title-home">
-    <?= $this->title ?>
-</h1>
+?><h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
+
 <?= ListView::widget([
-    'dataProvider' => $dataProvider,
+    'dataProvider' =>  new ArrayDataProvider([
+        'allModels' => $model->childrenActive,
+    ]),
     'summary' => false,
-    'itemView' => '_view',
+    'itemView' => '_review_view',
     'options' => [
         'class' => 'reviews',
     ],
