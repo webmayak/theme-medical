@@ -11,6 +11,7 @@ namespace frontend\themes\medical\widgets\categoryList;
 use common\modules\catalog\models\CatalogCategory;
 use yii\base\Widget;
 use yii\data\ArrayDataProvider;
+use yii\widgets\ListView;
 
 class CategoryList extends Widget
 {
@@ -18,6 +19,12 @@ class CategoryList extends Widget
     public $models;
     /* @var false|array Настройки для пейджера */
     public $pagination = false;
+    /* @var string */
+    public $itemView = '_view';
+    /* @var array|null */
+    public $options = ['class' => 'category-list'];
+    /* @var array|null */
+    public $itemOptions = ['class' => 'category-list'];
 
     public function run()
     {
@@ -28,9 +35,12 @@ class CategoryList extends Widget
             'pagination' => $this->pagination,
         ]);
         if ($this->models) {
-            return $this->render('index', [
+            return ListView::widget([
                 'dataProvider' => $dataProvider,
-                'view' => '_view',
+                'summary' => false,
+                'itemView' => $this->itemView,
+                'options' => $this->options,
+                'itemOptions' => $this->itemOptions,
             ]);
         }
     }

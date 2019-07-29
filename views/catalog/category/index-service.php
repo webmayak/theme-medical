@@ -8,7 +8,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use common\modules\catalog\models\CatalogCategoryAttributeValue;
-use frontend\widgets\categoryList\CategoryList;
+use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
 use yii\web\View;
@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $model->name;
 $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 86]);
 
 ?><div class="product-layout row">
-    <div class="col-md-8">
+    <div class="<?php if (!$model->childrenActive) : ?>col-md-8<?php else: ?>col-md-12<?php endif; ?>">
         <?php if ($hasMedia) : ?>
             <div class="product-main-image">
                 <img src="<?= $model->media->image(600, 400) ?>" alt="<?= Html::encode($model->name) ?>">
@@ -44,17 +44,26 @@ $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id,
         </div>
         <?php endif; ?>
     </div>
+    <?php if (!$model->childrenActive) : ?>
     <div class="col-md-4">
         <div class="product-sidebar">
-            <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/widgets/mainCatalog/views/_view_inner', ['model' => $model]) ?>
+            <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_view_inner', ['model' => $model]) ?>
         </div>
     </div>
+    <?php endif; ?>
 </div>
 
 <?php if ($model->childrenActive) : ?>
     <div class="content-block content-block--children-items">
         <?= CategoryList::widget([
             'models' => $model->childrenActive,
+            'itemView' => '@frontend/themes/medical/views/catalog/default/_view',
+            'options' => [
+                'class' => 'row',
+            ],
+            'itemOptions' => [
+                'class' => 'col-md-6 col-lg-4',
+            ],
         ]) ?>
     </div>
 <?php endif; ?>

@@ -21,15 +21,15 @@ $price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $model-
 $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 89]);
 
 ?><div class="catalog-item__info">
+    <div class="catalog-item__title">
+        <a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a>
+    </div>
     <div class="catalog-item__rating">
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
         <i class="fa fa-star"></i>
-    </div>
-    <div class="catalog-item__title">
-        <a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a>
     </div>
     <div class="catalog-item__announce">
         <?= $announce ? nl2br($announce->value) : '' ?>

@@ -30,7 +30,7 @@ $form = ActiveForm::begin([
 <?php if ($product) : ?>
     <div class="product-small product-small_bottom-border">
         <?php
-        if ($product->media->issetMedia()) {
+        if ($product->media && $product->media->issetMedia()) {
             echo Html::img($product->media->image(), [
                 'class' => 'product-small__image',
             ]);

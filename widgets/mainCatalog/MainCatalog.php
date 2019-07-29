@@ -1,35 +1,40 @@
 <?php
 
-namespace frontend\widgets\mainCatalog;
+namespace frontend\themes\medical\widgets\mainCatalog;
 
 use common\modules\catalog\models\CatalogCategory;
-use yii\base\Widget;
 use yii\data\ArrayDataProvider;
+use yii\bootstrap\Tabs;
+use yii\widgets\ListView;
 
-class MainCatalog extends Widget
+class MainCatalog extends \yii\base\Widget
 {
     public $root = null;
-    /* @var bool Флаг указывает что заголовок должен быть через h1 */
-    public $titleAsH1 = false;
     /* @var bool Флаг что нужно вывесли плиткой только первый уровень */
     public $onlyFirstLevel = false;
+    /* @var array|null */
+    public $options = ['class' => 'row'];
+    /* @var array|null */
+    public $itemOptions = ['class' => 'col-md-6 col-lg-6'];
 
     public function run()
     {
         parent::run();
         $root = $this->root ?? CatalogCategory::find()->roots()->one();
-        $items = [];
-        $content = '';
         if ($this->onlyFirstLevel) {
             $dataProvider = new ArrayDataProvider([
                 'allModels' => $root->children,
                 'pagination' => false,
             ]);
-            $content = $this->render('_tab', [
-                'model' => $root,
+            return ListView::widget([
+                'summary' => false,
                 'dataProvider' => $dataProvider,
+                'itemView' => '_view',
+                'options' => $this->options,
+                'itemOptions' => $this->itemOptions,
             ]);
         } else {
+            $items = [];
             foreach ($root->children as $category) {
                 $dataProvider = new ArrayDataProvider([
                     'models' => $category->children,
@@ -47,12 +52,9 @@ class MainCatalog extends Widget
                     ]),
                 ];
             }
+            return Tabs::widget([
+                'items' => $items,
+            ]);
         }
-        return $this->render('index', [
-            'items' => $items,
-            'content' => $content,
-            'titleAsH1' => $this->titleAsH1,
-            'onlyFirstLevel' => $this->onlyFirstLevel,
-        ]);
     }
 }

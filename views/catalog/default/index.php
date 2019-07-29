@@ -6,33 +6,30 @@
  * Time: 4:44 PM
  */
 
-use frontend\widgets\cityList\CityList;
-use frontend\widgets\mainCatalog\MainCatalog;
-use pantera\leads\widgets\form\LeadForm;
+use frontend\themes\medical\widgets\mainCatalog\MainCatalog;
 use yii\web\View;
+use yii\helpers\Html;
 use common\modules\catalog\models\CatalogCategory;
 
 /* @var $this View */
 $this->params['breadcrumbs'][] = $this->title;
-?>
-<?= MainCatalog::widget([
-    'root' => CatalogCategory::findOne(54),
-    'titleAsH1' => true,
-    'onlyFirstLevel' => true,
-]) ?>
 
-<?= $this->render('@theme/views/_text_about') ?>
+$topLevelCategories = CatalogCategory::findOne(54)->children;
 
-<?= $this->render('@theme/views/_features') ?>
+?><h1 class="title-home"><?= Yii::$app->seo->getH1() ?: 'Каталог' ?></h1>
 
-<div class="content-block">
-    <div class="container">
-        <div class="content-block__title text-center">Задать вопрос врачу</div>
-        <?= LeadForm::widget([
-            'key' => 'question-row',
-            'mode' => LeadForm::MODE_INLINE,
-        ]) ?>
-    </div>
-</div>
+<?php foreach ($topLevelCategories as $category): ?>
+    <h2><?= Html::a($category->name, $category->present()->getUrl()) ?></h2>
+    <?= MainCatalog::widget([
+        'root' => $category,
+        'onlyFirstLevel' => true,
+        'options' => [
+            'class' => 'row',
+        ],
+        'itemOptions' => [
+            'class' => 'col-md-6 col-lg-4',
+        ],
+    ]) ?>
+<?php endforeach; ?>
 
 <?= $this->render('@theme/views/_fast-consult') ?>

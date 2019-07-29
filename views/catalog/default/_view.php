@@ -16,5 +16,5 @@ $hasImage = $model->media && $model->media->issetMedia();
         <a href="<?= $model->present()->getUrl() ?>"><?= Html::img($model->media->image(340, 276), ['alt'=>$model->name]); ?></a>
     </div>
     <?php endif; ?>
-    <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/widgets/mainCatalog/views/_view_inner', ['model' => $model]) ?>
+    <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_view_inner', ['model' => $model]) ?>
 </div>
