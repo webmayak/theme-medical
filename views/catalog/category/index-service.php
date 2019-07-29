@@ -35,6 +35,7 @@ $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id,
                 <img src="<?= $model->media->image(600, 400) ?>" alt="<?= Html::encode($model->name) ?>">
             </div>
         <?php endif; ?>
+        <h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
         <?php if ($model->description) : ?>
         <div class="product-description">
         <?= TwigRender::widget([
@@ -45,10 +46,7 @@ $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id,
     </div>
     <div class="col-md-4">
         <div class="product-sidebar">
-            <h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
-            <div class="product-announce">
-                <?= $announce ? nl2br($announce->value) : '' ?>
-            </div>
+            <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/widgets/mainCatalog/views/_view_inner', ['model' => $model]) ?>
         </div>
     </div>
 </div>
