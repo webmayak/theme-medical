@@ -9,11 +9,10 @@
 namespace frontend\themes\medical\widgets\categoryList;
 
 use common\modules\catalog\models\CatalogCategory;
-use yii\base\Widget;
 use yii\data\ArrayDataProvider;
 use yii\widgets\ListView;
 
-class CategoryList extends Widget
+class CategoryList extends \yii\base\Widget
 {
     /* @var CatalogCategory[] */
     public $models;

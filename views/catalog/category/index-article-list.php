@@ -8,6 +8,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\widgets\twigRender\TwigRender;
+use frontend\themes\medical\widgets\categoryList\CategoryList;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -24,7 +25,6 @@ foreach ($model->parents as $parent) {
     }
 }
 $this->params['breadcrumbs'][] = $model->name;
-$tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 ?>
 <div class="content-block">
     <h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
@@ -45,9 +45,29 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 
 <?php if ($model->childrenActive) : ?>
     <div class="content-block content-block--children-items">
-        <?= \frontend\themes\medical\widgets\categoryListArticle\CategoryList::widget([
-            'models' => $model->childrenActive,
-        ]) ?>
+        <div class="articles">
+            <?= CategoryList::widget([
+                'models' => $model->childrenActive,
+                'itemView' => '_article_view',
+                'options' => [
+                    'class' => 'row',
+                ],
+                'itemOptions' => function($model, $key, $index, $widget) {
+                    switch ($key % 3) {
+                        case 1:
+                            $colClass = 'col-md-6';
+                            break;
+                        case 2:
+                            $colClass = 'col-md-12';
+                            break;
+                        default:
+                            $colClass = 'col-md-6';
+                            break;
+                    }
+                    return ['class' => $colClass];
+                },
+            ]) ?>
+        </div>
     </div>
 <?php endif; ?>
 

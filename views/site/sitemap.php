@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
 		</ul>
 	</div>
 	<div class="col-md-4">
-		<div class="h2">Услуги</div>
+		<div class="h2">Каталог</div>
 		<ul>
 		    <?php foreach ($links3 as $link) : ?>
 		        <li style="margin-top: 5px;">
@@ -57,5 +57,3 @@ $this->params['breadcrumbs'][] = $this->title;
 		</ul>
 	</div>
 </div>
-<br/>
-<br/>
