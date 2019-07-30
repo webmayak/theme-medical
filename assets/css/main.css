@@ -3304,8 +3304,7 @@ small, .small {
 .catalog-item__announce {
     font-size: 11px;
     line-height: 1.3em;
-    margin-top: 6px;
-    min-height: 50px;
+    margin-top: 7px;
 }
 
 .catalog-item__rating {
@@ -3313,36 +3312,8 @@ small, .small {
 }
 
 .catalog-item__prices {
-    text-align: center;
     position: relative;
-}
-
-.catalog-item__button {
-    margin: 10px 0 5px;
-}
-
-.catalog-item__prices .price-label {
-    font-size: 11px;
-}
-
-.catalog-item__prices .price-value {
-    font-size: 18px;
-}
-
-.catalog-item__prices .btn {
-    background: #fff;
-    border-color: #fff;
-    color: #007477;
-    border-radius: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
-}
-
-.catalog-item__prices .btn:hover,
-.catalog-item__prices .btn:active,
-.catalog-item__prices .btn:focus {
-    background: #FFC700 !important;
-    border-color: #FFC700 !important;
+    margin-top: 10px;
 }
 
 .catalog-item__prices:before {
@@ -3354,6 +3325,57 @@ small, .small {
     content: "";
 }
 
+.catalog-item__prices .price-label {
+    font-size: 11px;
+}
+
+.catalog-item__prices .price-value {
+    font-size: 18px;
+}
+
+.catalog-item__button {
+    margin-top: 10px;
+    text-align: center;
+    display: flex;
+}
+
+.catalog-item__button .btn {
+    background: #fff;
+    border-color: #fff;
+    color: #007477;
+    border-radius: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.catalog-item__button .btn:not(.btn-block) {
+    width: 48%;
+}
+
+.catalog-item__button .btn-buy {
+    background: #FFC700 !important;
+    border-color: #FFC700 !important;
+    color: #444;
+}
+
+.catalog-item__button .btn + .btn {
+    margin-left: 4%;
+}
+
+.catalog-item__button .btn:hover,
+.catalog-item__button .btn:active,
+.catalog-item__button .btn:focus {
+    background: #FFC700 !important;
+    border-color: #FFC700 !important;
+}
+
+.catalog-item__button .btn-buy:hover,
+.catalog-item__button .btn-buy:active,
+.catalog-item__button .btn-buy:focus {
+    background: #ffe074 !important;
+    border-color: #ffe074 !important;
+    color: #444;
+}
 
 /******************/
 .specials {
@@ -3635,4 +3657,13 @@ a.product-small__name {
 .content-block--video {
     padding-top: 40px !important;
     margin-bottom: 40px;
+}
+
+.main-catalog__subtitle {
+    margin: 30px 0;
+    font-size: 24px;
+}
+
+.main-catalog__subset .row > div:nth-child(3n+1) {
+    clear: both;
 }

@@ -10,7 +10,9 @@ use common\modules\catalog\models\CatalogCategory;
 use common\modules\catalog\models\CatalogCategoryAttributeValue;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
+use frontend\widgets\leads\LeadForm;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\web\View;
 
 /* @var $this View */
@@ -27,6 +29,8 @@ foreach ($model->parents as $parent) {
 }
 $this->params['breadcrumbs'][] = $model->name;
 $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 86]);
+$price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 88]);
+$price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 89]);
 
 ?><div class="product-layout row">
     <div class="<?php if (!$model->childrenActive) : ?>col-md-8<?php else: ?>col-md-12<?php endif; ?>">
@@ -47,14 +51,59 @@ $announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id,
     <?php if (!$model->childrenActive) : ?>
     <div class="col-md-4">
         <div class="product-sidebar">
-            <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_view_inner', ['model' => $model]) ?>
+            <div class="catalog-item__info">
+                <div class="catalog-item__title">
+                    <a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a>
+                </div>
+                <div class="catalog-item__rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                </div>
+                <div class="catalog-item__announce">
+                    <?= $announce ? nl2br($announce->value) : '' ?>
+                </div>
+                <div class="catalog-item__prices">
+                    <div class="row">
+                        <div class="col-xs-6">
+                            <?php if ($price_prepay->value): ?>
+                            <div class="catalog-item__price">
+                                <span class="price-label">Цена по предоплате:</span>
+                                <span class="price-value"><?= $price_prepay->value ?></span>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                        <div class="col-xs-6">
+                            <?php if ($price_afterpay->value): ?>
+                            <div class="catalog-item__price">
+                                <span class="price-label">Цена при получении:</span>
+                                <span class="price-value"><?= $price_afterpay->value ?></span>
+                            </div>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="catalog-item__button">
+                    <?= LeadForm::widget([
+                        'key' => 'order',
+                        'text' => 'Заказать',
+                        'options' => [
+                            'class' => 'btn btn-primary btn-buy btn-block btn-lg',
+                            'href' => Url::to(['/leads/default/modal', 'key' => 'order', 'productId' => $model->id]),
+                        ],
+                    ]) ?>
+                </div>
+            </div>
+
         </div>
     </div>
     <?php endif; ?>
 </div>
 
 <?php if ($model->childrenActive) : ?>
-    <div class="content-block content-block--children-items">
+    <div class="main-catalog__subset">
         <?= CategoryList::widget([
             'models' => $model->childrenActive,
             'itemView' => '@frontend/themes/medical/views/catalog/default/_view',

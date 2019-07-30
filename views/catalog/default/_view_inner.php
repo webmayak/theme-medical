@@ -37,37 +37,32 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
     <div class="catalog-item__prices">
         <div class="row">
             <div class="col-xs-6">
+                <?php if ($price_prepay->value): ?>
                 <div class="catalog-item__price">
                     <span class="price-label">Цена по предоплате:</span>
-                    <span class="price-value"><?= $price_prepay ? $price_prepay->value : '' ?></span>
+                    <span class="price-value"><?= $price_prepay->value ?></span>
                 </div>
-                <div class="catalog-item__button">
-                    <?= LeadForm::widget([
-                        'key' => 'order',
-                        'text' => 'Купить',
-                        'options' => [
-                            'class' => 'btn btn-primary',
-                            'href' => Url::to(['/leads/default/modal', 'key' => 'order', 'productId' => $model->id]),
-                        ],
-                    ]) ?>
-                </div>
+                <?php endif; ?>
             </div>
             <div class="col-xs-6">
+                <?php if ($price_afterpay->value): ?>
                 <div class="catalog-item__price">
                     <span class="price-label">Цена при получении:</span>
-                    <span class="price-value"><?= $price_afterpay ? $price_afterpay->value : '' ?></span>
+                    <span class="price-value"><?= $price_afterpay->value ?></span>
                 </div>
-                <div class="catalog-item__button">
-                    <?= LeadForm::widget([
-                        'key' => 'order',
-                        'text' => 'Купить',
-                        'options' => [
-                            'class' => 'btn btn-primary',
-                            'href' => Url::to(['/leads/default/modal', 'key' => 'order', 'productId' => $model->id]),
-                        ],
-                    ]) ?>
-                </div>
+                <?php endif; ?>
             </div>
         </div>
+    </div>
+    <div class="catalog-item__button">
+        <a class="btn btn-primary" href="<?= $model->present()->getUrl() ?>">Подробнее</a>
+        <?= LeadForm::widget([
+            'key' => 'order',
+            'text' => 'Заказать',
+            'options' => [
+                'class' => 'btn btn-primary btn-buy',
+                'href' => Url::to(['/leads/default/modal', 'key' => 'order', 'productId' => $model->id]),
+            ],
+        ]) ?>
     </div>
 </div>
