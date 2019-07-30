@@ -34,7 +34,7 @@ use yii\web\View;
                         </div>
                         <div class="faq-item__question-date">
                             Дата публикации<br/>вопроса:<br/>
-                            17.04.2019
+                            <?= Yii::$app->formatter->asDate($category->created_at) ?>
                         </div>
                     </div>
                     <div class="faq-item__answer">
