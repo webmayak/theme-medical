@@ -7,6 +7,7 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
+use common\modules\catalog\models\CatalogCategoryAttributeValue;
 use frontend\widgets\leads\order\LeadOrder;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Html;
@@ -19,6 +20,9 @@ use yii\widgets\MaskedInput;
 $product = CatalogCategory::findOne(Yii::$app->request->get('productId'));
 $this->title = 'Быстрый заказ';
 
+$price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $product->id, 'attribute_id' => 88]);
+$price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $product->id, 'attribute_id' => 89]);
+
 $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',
     'action' => ['/leads/default/save', 'key' => $key],
@@ -29,34 +33,38 @@ $form = ActiveForm::begin([
 ?>
 <?php if ($product) : ?>
     <div class="product-small product-small_bottom-border">
-        <?php
-        if ($product->media && $product->media->issetMedia()) {
-            echo Html::img($product->media->image(), [
-                'class' => 'product-small__image',
-            ]);
-        }
-        ?>
-        <div class="product-small__content">
-            <div class="product-small__content-left">
+        <div class="product-small__content row">
+            <div class="col-md-3">
+                <?php
+                if ($product->media && $product->media->issetMedia()) {
+                    echo Html::img($product->media->image(), [
+                        'class' => 'product-small__image',
+                    ]);
+                }
+                ?>
+            </div>
+            <div class="product-small__content-left col-md-6">
                 <?= Html::a($product->name, $product->present()->getUrl(), [
                     'class' => 'product-small__name',
                 ]) ?>
+                <?php if ($price_prepay->value || $price_afterpay->value): ?>
                 <ul class="product-small__options">
+                    <?php if ($price_prepay->value): ?>
                     <li>
-                        Цена по предоплате
-                        <span class="product-small__option-value">
-                    1000 руб.
-                </span>
+                        Цена по предоплате:
+                        <span class="product-small__option-value"><?= $price_prepay->value ?></span>
                     </li>
+                    <?php endif; ?>
+                    <?php if ($price_afterpay->value): ?>
                     <li>
-                        Цена при получении
-                        <span class="product-small__option-value">
-                    10000 руб.
-                </span>
+                        Цена при получении:
+                        <span class="product-small__option-value"><?= $price_afterpay->value ?></span>
                     </li>
+                    <?php endif; ?>
                 </ul>
+                <?php endif; ?>
             </div>
-            <div class="product-small__content-right">
+            <div class="product-small__content-right col-md-3">
                 <span class="product-small__amount-label">
                     Количество:
                 </span>
@@ -95,22 +103,28 @@ echo $form->field($model, 'phone')->widget(MaskedInput::class, [
 ])->label(false);
 
 echo $form->field($model, 'address')->textarea([
-    'rows' => 4,
+    'rows' => 3,
     'placeholder' => $model->getAttributeLabel('address'),
 ])->label(false);
 
 echo $form->field($model, 'comment')->textarea([
-    'rows' => 4,
+    'rows' => 3,
     'placeholder' => $model->getAttributeLabel('comment'),
 ])->label(false);
 
-echo Html::submitButton(Html::tag('span', 'Купить', [
-    'class' => 'ladda-label',
-]), [
-    'class' => 'btn btn-primary ladda-button',
-    'data' => [
-        'style' => 'zoom-in'
-    ],
-]);
+?>
+<div class="text-right">
+    <small class="pull-left text-left" style="padding-top: 5px;">После получения заявки мы свяжемся с Вами<br/>и уточним условия доставки и оплаты</small>
+    <?php echo Html::submitButton(Html::tag('span', 'Заказать', [
+        'class' => 'ladda-label',
+    ]), [
+        'class' => 'btn btn-primary ladda-button btn-lg',
+        'data' => [
+            'style' => 'zoom-in'
+        ],
+    ]);?>
+</div>
+
+<?php
 
 ActiveForm::end();

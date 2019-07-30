@@ -3624,18 +3624,24 @@ header .top-panel__email .fa {
     flex-direction: column;
 }
 
+.product-small__content-right {
+    font-size: 13px;
+}
+
 .product-small__content-left {
     margin-right: 50px;
 }
 
-a.product-small__name {
+.product-small__name {
     text-decoration: none;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 .product-small__options {
     list-style: none;
     margin: 0;
+    margin-top: 7px;
     padding: 0;
     color: #8C8C8C;
     font-size: 12px;
@@ -3648,10 +3654,12 @@ a.product-small__name {
 
 .product-small__amount {
     width: 100px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .product-small__amount-label {
-    margin-bottom: 5px;
+    margin-top: 12px;
 }
 
 /*****************/
