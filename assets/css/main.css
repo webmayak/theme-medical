@@ -3629,3 +3629,10 @@ a.product-small__name {
 .product-small__amount-label {
     margin-bottom: 5px;
 }
+
+/*****************/
+
+.content-block--video {
+    padding-top: 40px !important;
+    margin-bottom: 40px;
+}

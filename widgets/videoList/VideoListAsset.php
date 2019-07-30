@@ -6,7 +6,7 @@
  * Time: 12:12 PM
  */
 
-namespace frontend\widgets\videoList;
+namespace frontend\themes\medical\widgets\videoList;
 
 use pantera\media\widgets\syncedOwls\FancyboxAsset;
 use yii\web\AssetBundle;

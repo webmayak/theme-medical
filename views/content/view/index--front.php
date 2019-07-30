@@ -8,8 +8,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\widgets\mainCatalog\MainCatalog;
-use frontend\widgets\portfolioSlider\PortfolioSlider;
-use frontend\widgets\stockOther\StockOther;
+use frontend\themes\medical\widgets\videoList\VideoList;
 use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
 use pantera\content\widgets\slider\Slider;
@@ -106,8 +105,8 @@ $this->context->layout = '//front';
 <div class="content-block content-block--video">
     <div class="container">
         <div class="front-page-video-holder">
-            <?= Block::widget([
-                'position' => 'front-video',
+            <?= VideoList::widget([
+                'models' => CatalogCategory::findOne(110)->getChildrenActive()->limit(6)->all(),
             ]) ?>
         </div>
     </div>

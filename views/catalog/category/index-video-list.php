@@ -7,8 +7,8 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
+use frontend\themes\medical\widgets\videoList\VideoList;
 use yii\web\View;
-use frontend\widgets\videoList\VideoList;
 
 /* @var $this View */
 /* @var $model CatalogCategory */
