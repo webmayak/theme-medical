@@ -45,14 +45,8 @@ $this->context->layout = '//front';
             'root' => CatalogCategory::findOne(54),
             'onlyFirstLevel' => true,
         ]) ?>
-    </div>
-</div>
-
-<div class="content-block">
-    <div class="container">
-		<?= $this->render('@theme/views/_price') ?>
 		<?= $this->render('@theme/views/_fast-consult') ?>
-	</div>
+    </div>
 </div>
 
 <div class="content-block">
