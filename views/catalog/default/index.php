@@ -23,7 +23,6 @@ $topLevelCategories = CatalogCategory::findOne(54)->children;
     <div class="main-catalog__subset">
         <?= MainCatalog::widget([
             'root' => $category,
-            'onlyFirstLevel' => true,
             'options' => [
                 'class' => 'row',
             ],

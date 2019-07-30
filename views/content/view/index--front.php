@@ -7,7 +7,7 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
-use frontend\widgets\mainCatalog\MainCatalog;
+use frontend\themes\medical\widgets\mainCatalog\MainCatalog;
 use frontend\themes\medical\widgets\videoList\VideoList;
 use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
@@ -40,10 +40,30 @@ $this->context->layout = '//front';
 
 <div class="content-block content-block--main-catalog">
     <div class="container">
-        <?= MainCatalog::widget([
-            'root' => CatalogCategory::findOne(54),
-            'onlyFirstLevel' => true,
-        ]) ?>
+        <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-c">Препараты для лечения гепатита C</a></h3>
+        <div class="main-catalog__subset">
+            <?= MainCatalog::widget([
+                'root' => CatalogCategory::findOne(386),
+                'limit' => 3,
+            ]) ?>
+        </div>
+        
+        <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-b">Препараты для лечения гепатита В</a></h3>
+        <div class="main-catalog__subset">
+            <?= MainCatalog::widget([
+                'root' => CatalogCategory::findOne(386),
+                'limit' => 3,
+            ]) ?>
+        </div>
+
+        <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-vich">Препараты для лечения ВИЧ</a></h3>
+        <div class="main-catalog__subset">
+            <?= MainCatalog::widget([
+                'root' => CatalogCategory::findOne(386),
+                'limit' => 3,
+            ]) ?>
+        </div>
+
 		<?= $this->render('@theme/views/_fast-consult') ?>
     </div>
 </div>
@@ -103,6 +123,7 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block content-block--video">
+    <div class="h2 content-block__title text-center" style="margin-bottom: 0px;">Видео о нас</div>
     <div class="container">
         <div class="front-page-video-holder">
             <?= VideoList::widget([
