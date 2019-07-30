@@ -2602,7 +2602,8 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     border: 1px solid #ddd;
 }
 
-.page-article .content-block--children-items {
+.page-article .content-block--children-items,
+.page-lechenie .content-block--children-items {
     padding-top: 0;
 }
 

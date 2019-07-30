@@ -63,11 +63,11 @@ use yii\web\View;
                 <?php endif; ?>
                 <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/article']) ?>">
-                        О гепатите
+                        О гепатите и ВИЧ
                     </a>
                 </li>
-                <li class="<?= preg_match('/^article\/rekomendacii-po-provedeniu-terapii/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
-                    <a href="<?= Url::to(['/article/rekomendacii-po-provedeniu-terapii']) ?>" class="navtext">
+                <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/lechenie']) ?>">
                         Лечение
                     </a>
                 </li>
@@ -129,7 +129,7 @@ use yii\web\View;
                             border-color: #fff !important;
                         }
                     </style>
-                    <div class="ya-site-form ya-site-form_bg_transparent ya-site-form_inited_yes" id="ya-site-form0"><div class="ya-site-form__form"><table class="ya-site-form__wrap" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-wrap"><table class="ya-site-form__search" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-input"><table class="ya-site-form__search-input-layout"><tbody><tr><td class="ya-site-form__search-input-layout-l"><div class="ya-site-form__input"><input name="text" type="search" value="" class="ya-site-form__input-text" placeholder="Поиск по сайту" autocomplete="off"><div class="ya-site-suggest"><div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i><div class="ya-site-suggest-list"><div class="ya-site-suggest__iframe"></div><ul class="ya-site-suggest-items"></ul></div></div></div></div></td><td class="ya-site-form__search-input-layout-r"><input class="ya-site-form__submit" type="button" value="Найти"></td></tr></tbody></table></td></tr><tr><td class="ya-site-form__gap"><div class="ya-site-form__gap-i"></div></td></tr></tbody></table></td></tr></tbody></table></div></div>
+                    <div class="ya-site-form ya-site-form_bg_transparent ya-site-form_inited_yes" id="ya-site-form0"><div class="ya-site-form__form"><table class="ya-site-form__wrap" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-wrap"><table class="ya-site-form__search" cellpadding="0" cellspacing="0"><tbody><tr><td class="ya-site-form__search-input"><table class="ya-site-form__search-input-layout"><tbody><tr><td class="ya-site-form__search-input-layout-l"><div class="ya-site-form__input"><input name="text" type="search" value="" class="ya-site-form__input-text" placeholder="Поиск.." autocomplete="off"><div class="ya-site-suggest"><div class="ya-site-suggest-popup" style="display: none;"><i class="ya-site-suggest__opera-gap"></i><div class="ya-site-suggest-list"><div class="ya-site-suggest__iframe"></div><ul class="ya-site-suggest-items"></ul></div></div></div></div></td><td class="ya-site-form__search-input-layout-r"><input class="ya-site-form__submit" type="button" value="Найти"></td></tr></tbody></table></td></tr><tr><td class="ya-site-form__gap"><div class="ya-site-form__gap-i"></div></td></tr></tbody></table></td></tr></tbody></table></div></div>
                 </li>
             </ul>
             <ul class="additional-list wsmenu-list visible-xs visible-sm">
