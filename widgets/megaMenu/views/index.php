@@ -23,13 +23,31 @@ use yii\web\View;
             <ul class="wsmenu-list">
                 <li>
                     <a class="navtext" href="<?= Url::to(['/']) ?>">
-                        Главная
+                        <i class="fa fa-home"></i>
                     </a>
                 </li>
-                <li class="<?= preg_match('/^catalog/', Yii::$app->request->pathInfo) ? 'active' : '' ?>" id="main-menu-catalog">
-                    <a href="<?= Url::to(['/catalog']) ?>" class="navtext vsmenu-cat-toggle">
+                <?php
+                $catalogIsActive = preg_match('/^catalog/', Yii::$app->request->pathInfo) || preg_match('/^brands/', Yii::$app->request->pathInfo);
+                $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
+                ?>
+                <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
+                    <a href="<?= Url::to(['/catalog']) ?>" class="navtext">
                         Каталог
                     </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-c']) ?>">Препараты от Гепатита C</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-b']) ?>">Препараты от Гепатита B</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-vich']) ?>">Препараты от ВИЧ</a>
+                        </li>
+                        <li class="<?= $brandsIsActive ? 'active' : '' ?>">
+                            <a href="<?= Url::to(['/brands']) ?>">Бренды</a>
+                        </li>
+                    </ul>
                     <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
                     <?= $this->render('_dropdown', [
                         'categories' => $catalogRoot->getChildren()->isInMenu()->all(),

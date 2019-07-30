@@ -250,6 +250,7 @@ a.desc:after {
 
 .category-item__params {
     margin: 0 0 15px;
+    list-style-type: none;
 }
 
 .price {
@@ -3666,4 +3667,13 @@ a.product-small__name {
 
 .main-catalog__subset .row > div:nth-child(3n+1) {
     clear: both;
+}
+
+body.page-brands .content-block--children-items {
+    padding-top: 20px;
+}
+
+body[class*="page-brands-"] .category__body .image {
+    float: right;
+    margin: 0 0 20px 20px;
 }
