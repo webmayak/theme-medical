@@ -3209,9 +3209,10 @@ small, .small {
     display: flex;
 }
 
+.review-item__text + .review-item__image,
 .review-item__text + .review-item__audio {
-    padding-top: 10px;
-    margin-top: 20px;
+    padding-top: 15px;
+    margin-top: 15px;
     border-top: 1px solid #15C9CD;
 }
 

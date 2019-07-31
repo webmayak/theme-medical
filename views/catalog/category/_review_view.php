@@ -34,6 +34,13 @@ use yii\helpers\Html;
 		<?= $model->description ?>
 	</div>
 	<?php endif; ?>
+	<?php if ($model->media && $model->media->issetMedia() && preg_match('/image/', $model->media->type)) : ?>
+	<div class="review-item__image">
+		<a href="<?= $model->media->image() ?>" data-fancybox="reviews">
+			<img class="img-thumbnail" src="<?= $model->media->image(200, 120, false) ?>" alt="Отзыв - <?= Html::encode($model->name) ?>" />
+		</a>
+	</div>
+	<?php endif; ?>
 	<?php if ($model->media && $model->media->issetMedia() && preg_match('/audio/', $model->media->type)) : ?>
 	<div class="review-item__audio">
 		<div class="review-item__audio-left">
