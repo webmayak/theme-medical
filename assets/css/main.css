@@ -3179,8 +3179,7 @@ small, .small {
     margin-top: 5px;
 }
 
-.review-item__date,
-.review-item__city {
+.review-item__date {
     position: absolute;
     left: 20px;
     font-size: 13px;
@@ -3188,8 +3187,7 @@ small, .small {
     padding-left: 30px;
 }
 
-.review-item__date:before,
-.review-item__city:before {
+.review-item__date:before {
     font-family: 'FontAwesome';
     position: absolute;
     top: 3px;
@@ -3202,16 +3200,7 @@ small, .small {
     content: "";
 }
 
-.review-item__city:before {
-    content: "";
-    left: 5px;
-}
-
 .review-item__date {
-    bottom: 60px;
-}
-
-.review-item__city {
     bottom: 20px;
 }
 

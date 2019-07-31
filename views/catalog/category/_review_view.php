@@ -25,11 +25,7 @@ use yii\helpers\Html;
 	</div>
 	<div class="review-item__date">
 		Дата публикации<br/>
-		23.09.2017
-	</div>
-	<div class="review-item__city">
-		Местоположение<br/>
-		г. Владивосток
+		<?= Yii::$app->formatter->asDate($model->created_at) ?>
 	</div>
 </div>
 <div class="review-item__right">
