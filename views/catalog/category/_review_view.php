@@ -24,25 +24,28 @@ use yii\helpers\Html;
 		<i class="fa fa-star"></i>
 	</div>
 	<div class="review-item__date">
-		Дата публикации<br/>
+		Дата публикации
 		<?= Yii::$app->formatter->asDate($model->created_at) ?>
 	</div>
 </div>
 <div class="review-item__right">
+	<?php if (trim(strip_tags($model->description))): ?>
 	<div class="review-item__text">
 		<?= $model->description ?>
 	</div>
+	<?php endif; ?>
+	<?php if ($model->media && $model->media->issetMedia() && preg_match('/audio/', $model->media->type)) : ?>
 	<div class="review-item__audio">
 		<div class="review-item__audio-left">
 			<div class="review-item__label"><i class="fa fa-volume-up"></i> Аудио - отзыв</div>
-			<div class="review-item__button"><a class="btn btn-primary btn-sm">Прослушать &rarr;</a></div>
+			<div class="review-item__button"><a class="btn btn-primary btn-sm" onclick="document.getElementById('audio-<?= $model->id ?>').play();">Прослушать &rarr;</a></div>
 		</div>
 		<div class="review-item__audio-right">
-			<audio controls>
-			  <source src="/uploads/reviews/review.ogg" type="audio/ogg">
-			  <source src="/uploads/reviews/review.mp3" type="audio/mpeg">
+			<audio controls id="audio-<?= $model->id ?>">
+			  <source src="<?= $model->media->url ?>" type="<?= $model->media->type ?>">
 			  Ваш браузер не поддерживает вопроизведение аудиофайлов этого формата.
 			</audio>
 		</div>
 	</div>
+	<?php endif; ?>
 </div>

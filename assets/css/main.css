@@ -3180,17 +3180,17 @@ small, .small {
 }
 
 .review-item__date {
-    position: absolute;
-    left: 20px;
     font-size: 13px;
     line-height: 1.3em;
     padding-left: 30px;
+    position: relative;
+    margin-top: 15px;
 }
 
 .review-item__date:before {
     font-family: 'FontAwesome';
     position: absolute;
-    top: 3px;
+    top: 0;
     left: 3px;
     color: #15C9CD;
     font-size: 16px;
@@ -3200,20 +3200,19 @@ small, .small {
     content: "";
 }
 
-.review-item__date {
-    bottom: 20px;
-}
-
 .review-item__text {
     font-size: 13px;
     line-height: 1.4em;
 }
 
 .review-item__audio {
-    margin-top: 20px;
-    padding-top: 10px;
-    border-top: 1px solid #15C9CD;
     display: flex;
+}
+
+.review-item__text + .review-item__audio {
+    padding-top: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #15C9CD;
 }
 
 .review-item__audio-left {
