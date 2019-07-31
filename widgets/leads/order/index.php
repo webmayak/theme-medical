@@ -20,9 +20,6 @@ use yii\widgets\MaskedInput;
 $product = CatalogCategory::findOne(Yii::$app->request->get('productId'));
 $this->title = 'Быстрый заказ';
 
-$price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $product->id, 'attribute_id' => 88]);
-$price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $product->id, 'attribute_id' => 89]);
-
 $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',
     'action' => ['/leads/default/save', 'key' => $key],
@@ -47,22 +44,32 @@ $form = ActiveForm::begin([
                 <?= Html::a($product->name, $product->present()->getUrl(), [
                     'class' => 'product-small__name',
                 ]) ?>
-                <?php if ($price_prepay->value || $price_afterpay->value): ?>
                 <ul class="product-small__options">
-                    <?php if ($price_prepay->value): ?>
+                    <?php if ($price_prepay = $product->present()->getAttributeValueByKey('price_prepay')): ?>
                     <li>
                         Цена по предоплате:
-                        <span class="product-small__option-value"><?= $price_prepay->value ?></span>
+                        <span class="product-small__option-value"><?= $price_prepay ?></span>
                     </li>
                     <?php endif; ?>
-                    <?php if ($price_afterpay->value): ?>
+                    <?php if ($price_afterpay = $product->present()->getAttributeValueByKey('price_afterpay')): ?>
                     <li>
                         Цена при получении:
-                        <span class="product-small__option-value"><?= $price_afterpay->value ?></span>
+                        <span class="product-small__option-value"><?= $price_afterpay ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($price_of_1 = $product->present()->getAttributeValueByKey('price_of_1')): ?>
+                    <li>
+                        Цена 1 банки:
+                        <span class="product-small__option-value"><?= $price_of_1 ?></span>
+                    </li>
+                    <?php endif; ?>
+                    <?php if ($price_of_12 = $product->present()->getAttributeValueByKey('price_of_12')): ?>
+                    <li>
+                        Цена 12 банок:
+                        <span class="product-small__option-value"><?= $price_of_12 ?></span>
                     </li>
                     <?php endif; ?>
                 </ul>
-                <?php endif; ?>
             </div>
             <div class="product-small__content-right col-md-3">
                 <span class="product-small__amount-label">

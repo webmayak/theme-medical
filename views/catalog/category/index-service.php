@@ -7,7 +7,6 @@
  */
 
 use common\modules\catalog\models\CatalogCategory;
-use common\modules\catalog\models\CatalogCategoryAttributeValue;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
 use frontend\widgets\leads\LeadForm;
@@ -15,9 +14,6 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 
-/* @var $this View */
-/* @var $model CatalogCategory */
-/* @var $hasMedia bool */
 $this->params['breadcrumbs'] = [];
 foreach ($model->parents as $parent) {
     if ($parent->depth > 0) {
@@ -28,10 +24,10 @@ foreach ($model->parents as $parent) {
     }
 }
 $this->params['breadcrumbs'][] = $model->name;
-$announce = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 86]);
-$price_prepay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 88]);
-$price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $model->id, 'attribute_id' => 89]);
 
+/* @var $this View */
+/* @var $model CatalogCategory */
+/* @var $hasMedia bool */
 ?><div class="product-layout row">
     <div class="<?php if (!$model->childrenActive) : ?>col-md-8<?php else: ?>col-md-12<?php endif; ?>">
         <?php if ($hasMedia) : ?>
@@ -53,7 +49,7 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
         <div class="product-sidebar">
             <div class="catalog-item__info">
                 <div class="catalog-item__title">
-                    <a href="<?= $model->present()->getUrl() ?>"><?= Html::encode($model->name) ?></a>
+                    <?= Html::encode($model->name) ?>
                 </div>
                 <div class="catalog-item__rating">
                     <i class="fa fa-star"></i>
@@ -62,27 +58,45 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
                     <i class="fa fa-star"></i>
                     <i class="fa fa-star"></i>
                 </div>
+                <?php if ($announce = $model->present()->getAttributeValueByKey('announce')): ?>
                 <div class="catalog-item__announce">
-                    <?= $announce ? nl2br($announce->value) : '' ?>
+                    <?= nl2br($announce) ?>
                 </div>
+                <?php endif; ?>
                 <div class="catalog-item__prices">
                     <div class="row">
+                        <?php if ($price_prepay = $model->present()->getAttributeValueByKey('price_prepay')): ?>
                         <div class="col-xs-6">
-                            <?php if ($price_prepay->value): ?>
                             <div class="catalog-item__price">
                                 <span class="price-label">Цена по предоплате:</span>
-                                <span class="price-value"><?= $price_prepay->value ?></span>
+                                <span class="price-value"><?= $price_prepay ?></span>
                             </div>
-                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
+                        <?php if ($price_afterpay = $model->present()->getAttributeValueByKey('price_afterpay')): ?>
                         <div class="col-xs-6">
-                            <?php if ($price_afterpay->value): ?>
                             <div class="catalog-item__price">
                                 <span class="price-label">Цена при получении:</span>
-                                <span class="price-value"><?= $price_afterpay->value ?></span>
+                                <span class="price-value"><?= $price_afterpay ?></span>
                             </div>
-                            <?php endif; ?>
                         </div>
+                        <?php endif; ?>
+                        <?php if ($price_of_1 = $model->present()->getAttributeValueByKey('price_of_1')): ?>
+                        <div class="col-xs-6">
+                            <div class="catalog-item__price">
+                                <span class="price-label">Цена 1 банки:</span>
+                                <span class="price-value"><?= $price_of_1 ?></span>
+                            </div>
+                        </div>
+                        <?php endif; ?>
+                        <?php if ($price_of_12 = $model->present()->getAttributeValueByKey('price_of_12')): ?>
+                        <div class="col-xs-6">
+                            <div class="catalog-item__price">
+                                <span class="price-label">Цена 12 банок:</span>
+                                <span class="price-value"><?= $price_of_12 ?></span>
+                            </div>
+                        </div>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <div class="catalog-item__button">
@@ -101,8 +115,8 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
             <div class="product-brand-info">
                 <?php foreach ($brands as $brand): ?>
                     <div class="h3">О бренде <?= Html::encode($brand->name) ?></div>
-                    <?php if ($brandAnnounce = $brand->getAttributesWithValue('brand-announce')->one()): ?>
-                    <div class="product-brand-info__announce"><?= $brandAnnounce->value ?> <a href="<?= $brand->present()->getUrl() ?>">подробнее &raquo;</a></div>
+                    <?php if ($brandAnnounce = $brand->present()->getAttributeValueByKey('brand-announce')): ?>
+                    <div class="product-brand-info__announce"><?= $brandAnnounce ?> <a href="<?= $brand->present()->getUrl() ?>">подробнее &raquo;</a></div>
                     <?php endif; ?>
                 <?php endforeach; ?>
             </div>

@@ -3319,10 +3319,12 @@ small, .small {
 
 .catalog-item__prices .price-label {
     font-size: 11px;
+    display: block;
 }
 
 .catalog-item__prices .price-value {
     font-size: 18px;
+    display: block;
 }
 
 .catalog-item__button {
