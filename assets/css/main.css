@@ -3676,3 +3676,18 @@ body[class*="page-brands-"] .category__body .image {
     float: right;
     margin: 0 0 20px 20px;
 }
+
+.product-sidebar .catalog-item__info {
+    margin: 0;
+}
+
+.product-brand-info,
+.product-related-products {
+    margin-top: 30px;
+}
+
+.product-brand-info__announce {
+    font-size: 13px;
+    line-height: 1.35em;
+    color: #999;
+}

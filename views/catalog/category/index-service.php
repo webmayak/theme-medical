@@ -97,6 +97,27 @@ $price_afterpay = CatalogCategoryAttributeValue::findOne(['category_id' => $mode
                 </div>
             </div>
 
+            <?php if ($brands = $model->present()->getRelationCategoryByTypeKey('brand')) : ?>
+            <div class="product-brand-info">
+                <?php foreach ($brands as $brand): ?>
+                    <div class="h3">О бренде <?= Html::encode($brand->name) ?></div>
+                    <?php if ($brandAnnounce = $brand->getAttributesWithValue('brand-announce')->one()): ?>
+                    <div class="product-brand-info__announce"><?= $brandAnnounce->value ?> <a href="<?= $brand->present()->getUrl() ?>">подробнее &raquo;</a></div>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
+            <?php endif; ?>
+            
+            <?php if ($relatedProducts = $model->parent->getChildrenActive()->andWhere(['!=', 'id', $model->id])->all()): ?>
+            <div class="product-related-products">
+                <div class="h3">Похожие препараты</div>
+                <div class="list-group">
+                <?php foreach ($relatedProducts as $relatedProduct): ?>
+                    <a class="list-group-item" href="<?= $relatedProduct->present()->getUrl() ?>"><?= Html::encode($relatedProduct->name) ?></a>
+                <?php endforeach; ?>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
     <?php endif; ?>
