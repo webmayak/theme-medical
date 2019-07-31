@@ -2721,6 +2721,10 @@ body.page-front .content-block--main-catalog .btn.btn-primary.btn-lg {
     margin-top: 60px;
 }
 
+.brands {
+    margin: 40px 0 50px;
+}
+
 .brands > .block {
     display: flex;
     justify-content: space-between;
@@ -2768,10 +2772,6 @@ small, .small {
 
 .d-flex__col-2 > div + div {
     margin-left: 30px;
-}
-
-.quality-protection {
-    padding: 0 60px;
 }
 
 .chemical-research {

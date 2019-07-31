@@ -105,22 +105,14 @@ $this->context->layout = '//front';
 
 <?= $this->render('@theme/views/_quality-protection') ?>
 
-<div class="content-block">
-	<div class="container">
-		<div class="brands text-center">
-			<?= Block::widget([
-                'position' => 'brands',
-            ]) ?>
-		</div>
-	</div>
-</div>
-
+<?php if (0): ?>
 <div class="content-block">
 	<div class="h2 content-block__title text-center">Химические исследования</div>
 	<?= Block::widget([
         'position' => 'chemical_research',
     ]) ?>
 </div>
+<?php endif; ?>
 
 <div class="content-block content-block--video">
     <div class="h2 content-block__title text-center" style="margin-bottom: 0px;">Видео о нас</div>
