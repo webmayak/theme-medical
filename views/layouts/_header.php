@@ -30,53 +30,15 @@ use pantera\content\widgets\block\Block;
                 </div>
                 <div class="col-md-8 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                            <div class="single_header_address first">
-                                <div class="creative_header_icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="creative_header_address_text">
-                                    <h3>Телефон</h3>
-                                    <a href="tel:+73812208404">+7 (3812) 208-404</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                            <div class="single_header_address" style="position: relative; left: -30px;">
-                                <div class="creative_header_icon">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="creative_header_address_text">
-                                    <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
-                                    <a href="tel:+79836222454">+7 (983) 622-24-54</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
-                            <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
-                                <div class="creative_header_icon">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="creative_header_address_text">
-                                    <h3>Главный офис</h3>
-                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;">г. Омск, ул. Маршала Жукова<br/>74/2 (офис 315)</a>
-                                </div>
-                            </div>
-                        </div>
-
+                        <?= Block::widget([
+                            'position' => 'header_contacts',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
-                    <div class="top-panel__icons">
-                        <a href="https://www.facebook.com/INDIAVIR.ru" target="_blank"><img src="/images/icon-fb.svg"></a>
-                        <a href="https://api.whatsapp.com/send?phone=79836222454" target="_blank"><img src="/images/icon-wa.svg"></a>
-                        <a href="https://www.youtube.com/channel/UC2hGbdk_AUIte0EGk10_KGQ/featured" target="_blank"><img src="/images/icon-youtube.svg"></a>
-                        <a href="https://www.instagram.com/deniss_smolin/" target="_blank"><img src="/images/icon-instagram.svg"></a>
-                        <a href="https://vk.com/den_smolin85" target="_blank"><img src="/images/icon-vk.svg"></a>
-                    </div>
-                    <div class="top-panel__email">
-                        <i class="fa fa-envelope"></i> <a href="mailto:indiavirexpress@gmail.com" style="font-size: 13px;">indiavirexpress@gmail.com</a>
-                    </div>
+                    <?= Block::widget([
+                        'position' => 'header_socials',
+                    ]) ?>
                     <?php if (0): ?>
                     <div class="top-panel__buttons">
                         <?= LeadForm::widget([
