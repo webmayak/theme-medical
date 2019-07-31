@@ -24,7 +24,7 @@ use yii\helpers\Html;
 		<i class="fa fa-star"></i>
 	</div>
 	<div class="review-item__date">
-		Дата публикации
+		Оставлен
 		<?= Yii::$app->formatter->asDate($model->created_at) ?>
 	</div>
 </div>
