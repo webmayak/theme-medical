@@ -23,15 +23,34 @@ $this->context->layout = '//front';
 ?>
 <div class="content-block content-block--slider">
     <div class="container">
-        <?= Slider::widget([
-            'pluginOptions' => [
-                'dots' => true,
-                'autoplay' => true,
-                'animateIn' => false,
-                'animateOut' => false,
-                'autoplayHoverPause' => true,
-            ],
-        ]) ?>
+        <div class="slider-block">
+            <div class="slider-block__left">
+                <?= Slider::widget([
+                    'pluginOptions' => [
+                        'dots' => false,
+                        'autoplay' => true,
+                        'animateIn' => false,
+                        'animateOut' => false,
+                        'autoplayHoverPause' => true,
+                    ],
+                ]) ?>
+            </div>
+            <div class="slider-block__right">
+                <div class="slider-block__info">
+                    <div class="h3">НАШИ ПРЕИМУЩЕСТВА:</div>
+                    <ul>
+                        <li>безопасная сделка</li>
+                        <li>быстрая доставка</li>
+                        <li>доступная цена</li>
+                        <li>выгодные условия рассрочки</li>
+                    </ul>
+                    <div class="slider-block__icons">
+                        <a href="tel:+79836222454"><img src="/images/icon-phone-alt.svg" alt="Phone"></a>
+                        <a href="https://api.whatsapp.com/send?phone=79836222454"><img src="/images/icon-wa-alt.svg" alt="WhatsApp"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 

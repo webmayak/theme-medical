@@ -1053,31 +1053,33 @@ footer a:hover, footer a:focus {
     justify-content: center;
     width: 45px;
     height: 45px;
-    background-color: #fff;
-    transition: all ease .125s;
+    border: 1px solid rgba(255,255,255,.7);
     position: absolute;
     z-index: 2;
     top: 50%;
     margin-top: -21px;
     outline: none;
+    border-radius: 30px;
 }
 
 .owl-carousel .owl-nav > button.owl-prev {
-    border-radius: 0 30px 30px 0;
-    left: -15px;
+    left: 15px;
 }
 
 .owl-carousel .owl-nav > button.owl-next {
-    border-radius: 30px 0 0 30px;
-    right: -15px;
+    right: 15px;
 }
 
 .owl-carousel .owl-nav > button svg path {
-    fill: #666;
+    fill: rgba(255,255,255,.7);
+}
+
+.owl-carousel .owl-nav > button:hover {
+    border-color: #fff;
 }
 
 .owl-carousel .owl-nav > button:hover path {
-    fill: #333;
+    fill: #fff;
 }
 
 .footer-menu__title > .icon svg path {
@@ -2147,12 +2149,13 @@ footer a:hover, footer a:focus {
 .goup-container {
     background-color: #ccc !important;
     border-radius: 5px !important;
-    background-image: url(../images/svg/up-arrow.svg) !important;
+    background-image: url(../images/up-arrow.svg) !important;
     background-size: 25px !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
     width: 50px !important;
     height: 50px !important;
+    z-index: 100 !important;
 }
 
 .goup-arrow {
@@ -3697,4 +3700,55 @@ body[class*="page-brands-"] .category__body .image {
     font-size: 13px;
     line-height: 1.35em;
     color: #999;
+}
+
+.slider-block {
+    display: flex;
+}
+
+.slider-block__left {
+    width: 880px;
+}
+
+.slider-block__right {
+    width: calc(100% - 880px);
+}
+
+.slider-block__info {
+    color: #fff;
+    font-size: 15px;
+    padding: 40px 0 10px 20px;
+    min-height: 297px;
+}
+
+.slider-block__info ul {
+    margin-top: 10px;
+    list-style-type: none;
+    line-height: 1.4em;
+}
+
+.slider-block__info ul li:before {
+    content: "— ";
+    margin-right: 5px;
+}
+
+.slider-block__icons {
+    margin-top: 20px;
+}
+
+.slider-block__icons a {
+    transition: .2s all;
+}
+
+.slider-block__icons a + a {
+    margin-left: 15px;
+}
+
+.slider-block__icons a:hover {
+    transform: scale(1.05);
+    display: inline-block;
+}
+
+.slider-block .carousel {
+    margin-top: 30px;
 }
