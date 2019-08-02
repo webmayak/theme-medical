@@ -19,8 +19,8 @@ if ((Yii::$app->controller->id === 'site' && Yii::$app->controller->action->id =
 }
 $this->registerLinkTag([
     'rel' => 'icon',
-    'type' => 'image/x-icon',
-    'href' => '/favicon.ico',
+    'type' => 'icon',
+    'href' => '/favicon.png',
 ]);
 ?>
 <!DOCTYPE html>
