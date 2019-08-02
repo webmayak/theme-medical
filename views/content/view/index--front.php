@@ -70,7 +70,7 @@ $this->context->layout = '//front';
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-b">Препараты для лечения гепатита В</a></h3>
         <div class="main-catalog__subset">
             <?= MainCatalog::widget([
-                'root' => CatalogCategory::findOne(386),
+                'root' => CatalogCategory::findOne(393),
                 'limit' => 3,
             ]) ?>
         </div>
@@ -78,7 +78,7 @@ $this->context->layout = '//front';
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-vich">Препараты для лечения ВИЧ</a></h3>
         <div class="main-catalog__subset">
             <?= MainCatalog::widget([
-                'root' => CatalogCategory::findOne(386),
+                'root' => CatalogCategory::findOne(387),
                 'limit' => 3,
             ]) ?>
         </div>
