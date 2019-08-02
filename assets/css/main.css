@@ -3752,3 +3752,21 @@ body[class*="page-brands-"] .category__body .image {
 .slider-block .carousel {
     margin-top: 30px;
 }
+
+.content-block--affiliates {
+    padding-top: 0 !important;
+}
+
+.affiliate-item {
+    margin-top: 20px;
+    text-align: center;
+    transition: .2s all;
+}
+
+.affiliate-item:hover {
+    transform: translateY(-10px);
+}
+
+.content-block__contacts-map {
+    margin-bottom: -40px;
+}
