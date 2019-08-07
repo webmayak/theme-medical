@@ -1,16 +1,11 @@
 <?php
 
-
-use frontend\themes\medical\assets\AppAsset;
+use frontend\themes\medical\AppAsset;
 use frontend\widgets\megaMenu\MegaMenu;
 use frontend\widgets\twigRender\TwigRender;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-/* @var $this \yii\web\View */
-/* @var $content string */
-AppAsset::register($this);
-$this->beginPage();
 if ((Yii::$app->controller->id === 'site' && Yii::$app->controller->action->id === 'error') === false) {
     $this->registerLinkTag([
         'rel' => 'canonical',
@@ -22,8 +17,13 @@ $this->registerLinkTag([
     'type' => 'icon',
     'href' => '/favicon.png',
 ]);
-?>
-<!DOCTYPE html>
+
+AppAsset::register($this);
+$this->beginPage();
+
+/* @var $this \yii\web\View */
+/* @var $content string */
+?><!DOCTYPE html>
 <html lang="<?= Yii::$app->language ?>">
 <head>
     <meta charset="<?= Yii::$app->charset ?>">

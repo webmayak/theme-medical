@@ -22,8 +22,9 @@ $faqs = CatalogCategory::findOne(111)->getChildrenActive()->limit(4)->all();
 			    	<div class="faq-block-item__answer-title">
 			    		Ответ:
 					</div>
+					<?php $description = strip_tags($faq->description); ?>
 					<div class="faq-block-item__answer-text">
-			    		<?= Html::encode($faq->description) ?>
+			    		<?= Html::encode(mb_substr($description, 0, 200, 'utf-8')) . (mb_strlen($description, 'utf-8') > 200 ? '...' : '') ?>
 					</div>
 				</div>
 				<div class="faq-block-item__button">

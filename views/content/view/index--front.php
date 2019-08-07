@@ -21,7 +21,7 @@ $this->context->layout = '//front';
 /* @var $model ContentPage */
 /** @noinspection PhpUndefinedFieldInspection */
 ?>
-<div class="content-block content-block--slider">
+<div class="content-block content-block--slider hidden-sm hidden-xs">
     <div class="container">
         <div class="slider-block">
             <div class="slider-block__left">
@@ -50,6 +50,13 @@ $this->context->layout = '//front';
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="content-block content-block--sticker hidden-md hidden-lg">
+    <div class="container">
+        <div class="sticker-block">
+            <img src="/images/sticker.png" alt="Гепатит не приговор" />
         </div>
     </div>
 </div>

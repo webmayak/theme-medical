@@ -600,6 +600,10 @@ header #logo {
     transform: rotate(-90deg);
 }
 
+.footer-middle .single_header_address .creative_header_address {
+    margin-top: 45px;
+}
+
 .footer-middle .single_header_address .creative_header_address_text > h3 {
     font-size: 12px;
     color: #15C9CD;
@@ -3022,6 +3026,14 @@ small, .small {
     color: #83BFC0;
 }
 
+.faq-block-item__question-text {
+    min-height: 50px;
+}
+
+.faq-block-item__answer-text {
+    min-height: 150px;
+}
+
 .faq-block-item__answer-title:before {
     content: "";
 }
@@ -3381,7 +3393,7 @@ small, .small {
 
 .specials-item {
     border: 2px solid #15C9CD;
-    background: url(../images/specials-bg.png) center;
+    background: url(../images/specials-bg.png) top center;
     background-repeat: no-repeat;
 }
 
@@ -3769,4 +3781,23 @@ body[class*="page-brands-"] .category__body .image {
 
 .content-block__contacts-map {
     margin-bottom: -40px;
+}
+
+/*****************/
+
+.quality-protection {
+    display: flex;
+}
+
+.quality-protection > div {
+    width: 50%;
+}
+
+.content-block--sticker {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.content-block--sticker img {
+    max-width: 100%;
 }

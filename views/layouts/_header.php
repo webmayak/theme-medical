@@ -6,7 +6,6 @@
  * Time: 11:33 AM
  */
 
-use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\web\View;
 use pantera\content\widgets\block\Block;
@@ -39,18 +38,6 @@ use pantera\content\widgets\block\Block;
                     <?= Block::widget([
                         'position' => 'header_socials',
                     ]) ?>
-                    <?php if (0): ?>
-                    <div class="top-panel__buttons">
-                        <?= LeadForm::widget([
-                            'key' => 'question',
-                            'text' => 'Задать вопрос<span class="hidden-md"> доктору</span>',
-                            'options' => [
-                                'class' => 'btn btn-default btn-block text-uppercase',
-                            ],
-                        ]) ?>
-                        <a class="btn-primary btn btn-block text-uppercase" href="/zapis-online" style="margin-top: 10px;">Оформить заказ</a>
-                    </div>
-                    <?php endif; ?>
                 </div>
             </div>
         </div>
@@ -66,12 +53,8 @@ use pantera\content\widgets\block\Block;
             </a>
             <div class="logo">
                 <a href="/">
-                    <img src="/images/logo.svg" height="30" style="margin-top: 10px; margin-left: -40px;" alt=""/>
+                    <img src="/images/logo.svg" height="30" style="margin-top: 8px; margin-left: -40px;" alt=""/>
                 </a>
-            </div>
-            <div class="mobile-contacts">
-                <a class="mobile-contacts__item" href="tel:+73812208404">8 (3812) 208-404</a>
-                <a class="mobile-contacts__item" href="tel:+79836222454">+7 (983) 622-24-54</a>
             </div>
         </div>
     </div>

@@ -21,7 +21,7 @@ use yii\web\View;
     <div class="container">
         <nav class="wsmenu">
             <ul class="wsmenu-list">
-                <li>
+                <li class="hidden-xs hidden-sm">
                     <a class="navtext" href="<?= Url::to(['/']) ?>">
                         <i class="fa fa-home"></i>
                     </a>
@@ -133,19 +133,7 @@ use yii\web\View;
                 </li>
             </ul>
             <ul class="additional-list wsmenu-list visible-xs visible-sm">
-                <li>
-                    <a class="additional-list__link additional-list__link_phone" href="tel:+74212460400">
-                        8 (4212) 460-400
-                    </a>
-                </li>
-                <li>
-                    <a class="additional-list__link additional-list__link_phone" href="tel:+74212324332">
-                        8 (4212) 324-332
-                    </a>
-                </li>
-                <li class="additional-list__togglemodal">
-                    <a class="btn btn-primary text-uppercase" href="/zapis-online">Записаться</a>
-                </li>
+                
             </ul>
         </nav>
     </div>

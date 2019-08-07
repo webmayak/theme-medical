@@ -10,7 +10,7 @@ use pantera\content\widgets\block\Block;
 	            'position' => 'brands',
 	        ]) ?>
 	    </div>
-		<div class="quality-protection d-flex d-flex__col-2">
+		<div class="quality-protection">
 			<div class="bordered-block small">
 				<?= Block::widget([
 	                'position' => 'quality_protection1',

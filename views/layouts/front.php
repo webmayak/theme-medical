@@ -2,7 +2,6 @@
 
 use common\widgets\Alert;
 use yii\web\View;
-use yii\widgets\Breadcrumbs;
 
 /* @var $this View */
 /* @var $content string */

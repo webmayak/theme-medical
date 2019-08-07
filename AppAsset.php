@@ -1,6 +1,6 @@
 <?php
 
-namespace frontend\themes\medical\assets;
+namespace frontend\themes\medical;
 
 use pantera\content\OwlCarouserAsset;
 use pantera\media\widgets\syncedOwls\SyncedOwlsAsset;
@@ -12,7 +12,7 @@ use yii\web\AssetBundle;
  */
 class AppAsset extends AssetBundle
 {
-    public $sourcePath = __DIR__;
+    public $sourcePath = __DIR__.'/assets';
     public $baseUrl = '@web';
     public $css = [
         '//fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700&amp;subset=cyrillic',
