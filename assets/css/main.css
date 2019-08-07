@@ -3793,6 +3793,10 @@ body[class*="page-brands-"] .category__body .image {
     width: 50%;
 }
 
+.quality-protection > div + div {
+    margin-left: 30px;
+}
+
 .content-block--sticker {
     margin-top: 30px;
     text-align: center;
