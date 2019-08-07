@@ -970,6 +970,26 @@
 
     .quality-protection > div + div {
         margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .brands {
+        margin-top: 30px;
+        margin-bottom: 0;
+        border-top: 1px solid #ddd;
+    }
+
+    .brands > .block {
+        display: block;
+    }
+
+    .brands > .block > a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .brands > .block > a + a {
+        border-top: 1px solid #ddd;
     }
 
     .content-block--fillwidth-bg {
