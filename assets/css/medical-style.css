@@ -48,11 +48,6 @@ CSS INDEX
  Don't change any css from here. If you need to change, Please use child theme.
 ------------------------------------------*/
 
-html,
-body {} img {
-    max-width: 100%;
-    height: auto;
-}
 /* box layout */
 
 .box.wrapper {

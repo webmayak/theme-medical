@@ -1216,89 +1216,6 @@ footer a:hover, footer a:focus {
     text-decoration: none;
 }
 
-/*********** НОВОСТИ ВНУТРЕННЯЯ ************/
-.title-news {
-    font-size: 30px;
-    font-family: 'PT Serif', sans-serif;
-    color: #465372;
-    font-weight: 600;
-    padding-bottom: 20px;
-    width: 60%;
-    float: left;
-}
-
-.time-news {
-    float: right;
-}
-
-.page-news {
-    width: 100%;
-    padding-top: 90px;
-}
-
-.next-back-news {
-    margin-bottom: 20px;
-    padding: 20px 0;
-    border-top: 1px solid #e5e5e5;
-    border-bottom: 1px solid #e5e5e5;
-    min-height: 105px;
-}
-
-.back-news {
-    float: left;
-}
-
-.img-back-news {
-    float: left;
-    margin-right: 15px;
-}
-
-.next-news {
-    float: right;
-}
-
-.img-next-news {
-    float: right;
-    margin-left: 15px;
-}
-
-.title-next-news {
-    text-align: right;
-    color: #465372;
-    font-weight: bold;
-    float: left;
-}
-
-.title-next-news a {
-    color: #999999;
-}
-
-.title-next-news a:hover, .title-next-news a:focus {
-    color: #6fb227;
-}
-
-.title-back-news {
-    color: #465372;
-    font-weight: bold;
-    float: right;
-}
-
-.title-back-news a {
-    color: #999999;
-}
-
-.title-back-news a:hover, .title-back-news a:focus {
-    color: #6fb227;
-}
-
-.title-next-news p {
-    padding-top: 5px;
-}
-
-.title-back-news p {
-    padding-top: 5px;
-}
-
 /********** КОНТАКТЫ ************/
 
 .l-blok-contacts {
@@ -3804,4 +3721,56 @@ body[class*="page-brands-"] .category__body .image {
 
 .content-block--sticker img {
     max-width: 100%;
+}
+
+/*****************/
+
+.news-list {
+    margin-bottom: 60px;
+}
+
+.news-list__item {
+	margin-top: 30px;
+}
+
+.news-list__item-body,
+.news-list__item-date,
+.news-list__item-tags {
+	margin-top: 10px;
+}
+
+.news-list__item .media-left {
+    padding-right: 20px;
+}
+
+.news-list__item-tags,
+.news-page__summary {
+    font-size: 13px;
+}
+
+.news-list__item-tags a {
+    color: #8C8C8C !important;
+}
+
+.news-list__item-tags .fa,
+.news-page__tags .fa {
+    margin-right: 5px;
+}
+
+.news-page__image {
+    float: right;
+    margin: 25px 0 20px 20px;
+}
+
+.news-page__body {
+    margin-top: 20px;
+}
+
+.news-page__date,
+.news-page__tags {
+    display: inline-block;
+}
+
+.news-page__tags {
+    margin-left: 15px;
 }
