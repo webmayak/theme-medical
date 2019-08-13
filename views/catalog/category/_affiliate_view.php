@@ -16,7 +16,7 @@ use yii\web\View;
 ?><div class="affiliate-item">
     <?php if ($model->media && $model->media->issetMedia()) : ?>
         <div class="affiliate-item__image">
-            <?= Html::a(Html::img($model->media->image(400, 550, false)), $model->present()->getUrl(), ['class' => 'img-responsive']) ?>
+            <?= Html::a(Html::img($model->media->image(400, 550, false), ['class' => 'img-responsive']), $model->present()->getUrl()) ?>
         </div>
     <?php endif; ?>
     <h3 class="affiliate-item__title">
@@ -30,7 +30,7 @@ use yii\web\View;
 <div class="col-md-2 col-sm-4 col-xs-6">
     <div class="affiliate-item">
         <div class="affiliate-item__image">
-            <a target="_blank" class="img-responsive" href="mailto:indiavirexpress@gmail.com?subject=Открыть филиал ИНДИАВИР"><img src="/images/open-affiliate.png" alt="Открыть филиал в вашем городе"></a>
+            <a target="_blank" href="mailto:indiavirexpress@gmail.com?subject=Открыть филиал ИНДИАВИР"><img src="/images/open-affiliate.png" alt="Открыть филиал в вашем городе" class="img-responsive"/></a>
         </div>
     </div>
     <!-- не закрываем тег-->
