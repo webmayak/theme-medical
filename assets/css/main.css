@@ -2754,6 +2754,7 @@ small, .small {
 
 .fast-consult__block {
     margin-top: 40px;
+    clear: both;
 }
 
 .fast-consult {
