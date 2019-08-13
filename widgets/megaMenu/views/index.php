@@ -71,6 +71,22 @@ use yii\web\View;
                         Лечение
                     </a>
                 </li>
+                <li class="<?= preg_match('/^news$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/news']) ?>">
+                        Новости
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="<?= Url::to(['/news/gepatit-c']) ?>">Новости Гепатит C</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['/news/gepatit-b']) ?>">Новости Гепатит B</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['/news/aid']) ?>">Новости ВИЧ</a>
+                        </li>
+                    </ul>
+                </li>
                 <?php if (0): ?>
                 <?php
                 $okompaniiIsActive = preg_match('/^o-kompanii/', Yii::$app->request->pathInfo);
