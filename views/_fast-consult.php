@@ -18,7 +18,7 @@
         		</div>
         		<div class="fast-consult__text">
 	        		<div class="fast-consult__title">Ответим на все Ваши вопросы</div>
-	        		<a href="tel:+79836222454" class="fast-consult__phone">+7 (983) 622-24-54</a>
+	        		<a href="https://api.whatsapp.com/send?phone=79836222454" class="fast-consult__phone">+7 (983) 622-24-54</a>
 	        	</div>
 	        </div>
     	</div>

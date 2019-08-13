@@ -3490,6 +3490,10 @@ header .top-panel__email .fa {
     margin-right: 13px;
 }
 
+.bottom-panel__icons + .creative_header_address {
+    margin-top: 43px;
+}
+
 /************/
 
 .product-main-image {
