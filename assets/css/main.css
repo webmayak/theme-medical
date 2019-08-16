@@ -3779,3 +3779,9 @@ body[class*="page-brands-"] .category__body .image {
 .news-page__tags {
     margin-left: 15px;
 }
+
+.page-front .wrap {
+    top: -30px;
+    position: relative;
+    z-index: 99;
+}

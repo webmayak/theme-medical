@@ -1036,4 +1036,7 @@
     .features .em-feature {
         margin-bottom: 20px;
     }
+    .page-front .wrap {
+        position: static;
+    }
 }
