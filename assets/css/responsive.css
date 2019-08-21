@@ -1039,4 +1039,15 @@
     .page-front .wrap {
         position: static;
     }
+    .news-page__share {
+        float: none;
+        margin-top: 20px;
+    }
+    .news-page__image {
+        float: none;
+        margin: 20px 0 0 0;
+    }
+    .news-page__image img {
+        width: 100%;
+    }
 }

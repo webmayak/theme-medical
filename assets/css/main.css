@@ -3753,6 +3753,12 @@ body[class*="page-brands-"] .category__body .image {
     font-size: 13px;
 }
 
+.news-page__summary:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
 .news-list__item-tags a {
     color: #8C8C8C !important;
 }
@@ -3784,4 +3790,14 @@ body[class*="page-brands-"] .category__body .image {
     top: -30px;
     position: relative;
     z-index: 99;
+}
+
+.news-page__share {
+    float: right;
+    display: flex;
+}
+
+.news-page__share-label {
+    margin-right: 10px;
+    font-size: 12px;
 }

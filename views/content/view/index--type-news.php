@@ -34,6 +34,14 @@ $this->params['breadcrumbs'][] = $model->title;
 	<div class="news-page__summary">
 		<div class="news-page__date"><?= Yii::$app->formatter->asDate($model->created_at) ?></div>
 		<div class="news-page__tags"><a href="/news/<?= str_replace('news-', '', $model->type->key) ?>"><i class="fa fa-tag"></i><?= $model->type->name ?></a></div>
+		<script src="https://yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+		<script src="https://yastatic.net/share2/share.js"></script>
+		<div class="news-page__share">
+			<div class="news-page__share-label">Рассказать друзьям</div>
+			<div class="news-page__share-buttons">
+				<div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,twitter,whatsapp,telegram"></div>
+			</div>
+		</div>
 	</div>
 	<?php if ($model->media && $model->media->issetMedia()) : ?>
 		<div class="news-page__image">
