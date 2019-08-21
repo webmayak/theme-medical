@@ -11,6 +11,16 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 
+$body = trim(html_entity_decode($model->body));
+$body = trim(strip_tags($model->body));
+$body = trim(str_replace('&nbsp;', '', $body));
+
+Yii::$app->opengraph->set([
+	'title' => "{$model->title} - ИНДИАВИР",
+	'description' => mb_substr($body, 0, 300, 'utf-8') . (mb_strlen($body, 'utf-8') > 300 ? '...' : ''),
+	'image' => Url::base(true) . $model->media->image(500, 400, false),
+]);
+
 $this->params['breadcrumbs'][] = ['label'=>'Новости о лечении гепатита и ВИЧ', 'url'=>Url::to(['/news'])];
 $this->params['breadcrumbs'][] = ['label'=>$model->type->name, 'url'=>Url::to(['/news', 'category_key' => str_replace('news-', '', $model->type->key)])];
 $this->params['breadcrumbs'][] = $model->title;
