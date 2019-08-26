@@ -22,7 +22,7 @@ Yii::$app->opengraph->set([
 ]);
 
 $this->params['breadcrumbs'][] = ['label'=>'Новости о лечении гепатита и ВИЧ', 'url'=>Url::to(['/news'])];
-$this->params['breadcrumbs'][] = ['label'=>$model->type->name, 'url'=>Url::to(['/news', 'category_key' => str_replace('news-', '', $model->type->key)])];
+$this->params['breadcrumbs'][] = ['label'=>$model->type->name, 'url'=>Url::to(['/news/' . str_replace('news-', '', $model->type->key)])];
 $this->params['breadcrumbs'][] = $model->title;
 
 /* @var $this View */
