@@ -3811,3 +3811,51 @@ body[class*="page-brands-"] .category__body .image {
     margin-right: 10px;
     font-size: 12px;
 }
+
+/** css injector **/
+
+.editor-content ul {
+    font-size: 15px;
+    margin-bottom: 1em;
+}
+
+.modal .form-control {
+    padding: 10px 17px !important;
+}
+
+.modal .form-group {
+    margin-bottom: 15px;
+}
+
+.modal [type="submit"] {
+    text-transform: uppercase;
+}
+
+.modal-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333;
+}
+
+.nav.nav-tabs li a, .nav.nav-tabs li a:focus, .nav.nav-tabs li.active a, .nav.nav-tabs li.active a:hover, .nav.nav-tabs li.active a:focus {
+    padding: 10px 20px;
+}
+
+.icon--circle {
+    border: 1px solid #565656;
+}
+
+.content-block--light {
+    background-color: #fff;
+    padding-top: 0;
+}
+
+.category__body h3,
+.category__body .h3 {
+    margin-bottom: 20px;
+}
+
+.content-block--without-padding-top {
+    padding-bottom: 0;
+}
