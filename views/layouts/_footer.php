@@ -6,6 +6,7 @@
  * Time: 11:34 AM
  */
 
+use pantera\leads\widgets\form\LeadForm;
 use pantera\content\widgets\block\Block;
 use yii\web\View;
 
@@ -20,7 +21,13 @@ use yii\web\View;
                     <div class="creative_header_address">
                         <div class="single_header_address">
                             <div class="creative_header_icon">
-                                <i class="fa fa-phone"></i>
+                                <?= LeadForm::widget([
+                                    'key' => 'callMe',
+                                    'text' => '<i class="fa fa-phone"></i>',
+                                    'options' => [
+                                        'class' => '',
+                                    ],
+                                ]) ?>
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Телефон</h3>
@@ -29,7 +36,13 @@ use yii\web\View;
                         </div>
                         <div class="single_header_address">
                             <div class="creative_header_icon">
-                                <i class="fa fa-phone"></i>
+                                <?= LeadForm::widget([
+                                    'key' => 'callMe',
+                                    'text' => '<i class="fa fa-phone"></i>',
+                                    'options' => [
+                                        'class' => '',
+                                    ],
+                                ]) ?>
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Бесплатная консультация</h3>
@@ -37,9 +50,9 @@ use yii\web\View;
                             </div>
                         </div>
                         <div class="single_header_address">
-                            <div class="creative_header_icon">
+                            <a href="/contacts" class="creative_header_icon">
                                 <i class="fa fa-map-marker"></i>
-                            </div>
+                            </a>
                             <div class="creative_header_address_text">
                                 <h3>Главный офис</h3>
                                 <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->settings->get('address', 'contacts')) ?></a>
@@ -57,9 +70,9 @@ use yii\web\View;
                     </div>
                     <div class="creative_header_address">
                         <div class="single_header_address">
-                            <div class="creative_header_icon">
+                            <a href="mailto:<?= Yii::$app->settings->get('email', 'contacts') ?>" class="creative_header_icon">
                                 <i class="fa fa-envelope"></i>
-                            </div>
+                            </a>
                             <div class="creative_header_address_text">
                                 <h3>Электронная почта</h3>
                                 <a href="mailto:<?= Yii::$app->settings->get('email', 'contacts') ?>" style="font-size: 13px;"><?= Yii::$app->settings->get('email', 'contacts') ?></a>

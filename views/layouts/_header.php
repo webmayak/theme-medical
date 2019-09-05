@@ -9,6 +9,7 @@
 use yii\helpers\Html;
 use yii\web\View;
 use pantera\content\widgets\block\Block;
+use pantera\leads\widgets\form\LeadForm;
 
 /* @var $this View */
 ?>
@@ -32,7 +33,13 @@ use pantera\content\widgets\block\Block;
                         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                             <div class="single_header_address first">
                                 <div class="creative_header_icon">
-                                    <i class="fa fa-phone"></i>
+                                    <?= LeadForm::widget([
+                                        'key' => 'callMe',
+                                        'text' => '<i class="fa fa-phone"></i>',
+                                        'options' => [
+                                            'class' => '',
+                                        ],
+                                    ]) ?>
                                 </div>
                                 <div class="creative_header_address_text">
                                     <h3>Телефон</h3>
@@ -43,7 +50,13 @@ use pantera\content\widgets\block\Block;
                         <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
                             <div class="single_header_address" style="position: relative; left: -30px;">
                                 <div class="creative_header_icon">
-                                    <i class="fa fa-phone"></i>
+                                    <?= LeadForm::widget([
+                                        'key' => 'callMe',
+                                        'text' => '<i class="fa fa-phone"></i>',
+                                        'options' => [
+                                            'class' => '',
+                                        ],
+                                    ]) ?>
                                 </div>
                                 <div class="creative_header_address_text">
                                     <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
@@ -53,9 +66,9 @@ use pantera\content\widgets\block\Block;
                         </div>
                         <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
                             <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
-                                <div class="creative_header_icon">
+                                <a href="/contacts" class="creative_header_icon">
                                     <i class="fa fa-map-marker"></i>
-                                </div>
+                                </a>
                                 <div class="creative_header_address_text">
                                     <h3>Главный офис</h3>
                                     <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->settings->get('address', 'contacts')) ?></a>
