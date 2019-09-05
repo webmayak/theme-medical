@@ -53,7 +53,16 @@ $this->context->layout = '//front';
     </div>
 </div>
 
-<?= $this->render('@theme/views/_text_about') ?>
+<div class="content-block">
+    <div class="container">
+        <div class="content-block__body">
+            <?= Block::widget([
+                'position' => 'text_about',
+            ]) ?>
+        </div>
+    </div>
+</div>
+
 <?= $this->render('@theme/views/_features') ?>
 
 <div class="content-block content-block--main-catalog">
