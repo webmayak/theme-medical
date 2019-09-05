@@ -3509,6 +3509,10 @@ header .top-panel__email .fa {
     border-radius: 4px;
 }
 
+.product-main-image img {
+    max-width: 100%;
+}
+
 .product-description {
     margin-top: 20px;
 }
