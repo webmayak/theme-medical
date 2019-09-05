@@ -17,14 +17,55 @@ use yii\web\View;
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 first">
-                    <?= Block::widget([
-                        'position' => 'footer1',
-                    ]) ?>
+                    <div class="creative_header_address">
+                        <div class="single_header_address">
+                            <div class="creative_header_icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="creative_header_address_text">
+                                <h3>Телефон</h3>
+                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_city', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_city', 'contacts') ?></a>
+                            </div>
+                        </div>
+                        <div class="single_header_address">
+                            <div class="creative_header_icon">
+                                <i class="fa fa-phone"></i>
+                            </div>
+                            <div class="creative_header_address_text">
+                                <h3>Бесплатная консультация</h3>
+                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_mobile', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_mobile', 'contacts') ?></a>
+                            </div>
+                        </div>
+                        <div class="single_header_address">
+                            <div class="creative_header_icon">
+                                <i class="fa fa-map-marker"></i>
+                            </div>
+                            <div class="creative_header_address_text">
+                                <h3>Главный офис</h3>
+                                <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->settings->get('address', 'contacts')) ?></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
-                    <?= Block::widget([
-                        'position' => 'footer2',
-                    ]) ?>
+                    <div class="bottom-panel__icons hidden-sm hidden-xs">
+                        <a href="<?= Yii::$app->settings->get('social_facebook', 'contacts') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_whatsapp', 'contacts') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_youtube', 'contacts') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_instagram', 'contacts') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_vkontakte', 'contacts') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
+                    </div>
+                    <div class="creative_header_address">
+                        <div class="single_header_address">
+                            <div class="creative_header_icon">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <div class="creative_header_address_text">
+                                <h3>Электронная почта</h3>
+                                <a href="mailto:<?= Yii::$app->settings->get('email', 'contacts') ?>" style="font-size: 13px;"><?= Yii::$app->settings->get('email', 'contacts') ?></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-sm-6 col-md-3">
                     <div class="footer-menu">

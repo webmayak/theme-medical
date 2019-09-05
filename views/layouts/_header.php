@@ -29,15 +29,52 @@ use pantera\content\widgets\block\Block;
                 </div>
                 <div class="col-md-8 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
-                        <?= Block::widget([
-                            'position' => 'header_contacts',
-                        ]) ?>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address first">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+                                    <h3>Телефон</h3>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_city', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_city', 'contacts') ?></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address" style="position: relative; left: -30px;">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-phone"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+                                    <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_mobile', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_mobile', 'contacts') ?></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                            <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
+                                <div class="creative_header_icon">
+                                    <i class="fa fa-map-marker"></i>
+                                </div>
+                                <div class="creative_header_address_text">
+                                    <h3>Главный офис</h3>
+                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->settings->get('address', 'contacts')) ?></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
-                    <?= Block::widget([
-                        'position' => 'header_socials',
-                    ]) ?>
+                    <div class="top-panel__icons">
+                        <a href="<?= Yii::$app->settings->get('social_facebook', 'contacts') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_whatsapp', 'contacts') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_youtube', 'contacts') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_instagram', 'contacts') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
+                        <a href="<?= Yii::$app->settings->get('social_vkontakte', 'contacts') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
+                    </div>
+                    <div class="top-panel__email">
+                        <i class="fa fa-envelope"></i> <a href="mailto:<?= Yii::$app->settings->get('email', 'contacts') ?>" style="font-size: 13px;"><?= Yii::$app->settings->get('email', 'contacts') ?></a>
+                    </div>
                 </div>
             </div>
         </div>
