@@ -27,7 +27,7 @@ use yii\web\View;
                     </a>
                 </li>
                 <?php
-                $catalogIsActive = preg_match('/^catalog/', Yii::$app->request->pathInfo) || preg_match('/^brands/', Yii::$app->request->pathInfo);
+                $catalogIsActive = preg_match('/^(catalog|brands|documenty-certificaty-rezultaty-himicheskih-issledovanii)/', Yii::$app->request->pathInfo);
                 $brandsIsActive = preg_match('/^brands/', Yii::$app->request->pathInfo);
                 ?>
                 <li class="<?= $catalogIsActive ? 'active' : '' ?>" id="main-menu-catalog">
@@ -44,8 +44,11 @@ use yii\web\View;
                         <li>
                             <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-vich']) ?>">Препараты от ВИЧ</a>
                         </li>
-                        <li class="<?= $brandsIsActive ? 'active' : '' ?>">
-                            <a href="<?= Url::to(['/brands']) ?>">Бренды</a>
+                        <li>
+                            <a href="<?= Url::to(['/brands']) ?>">Список брендов</a>
+                        </li>
+                        <li>
+                            <a href="<?= Url::to(['/documenty-certificaty-rezultaty-himicheskih-issledovanii']) ?>">Сертификаты и документы</a>
                         </li>
                     </ul>
                     <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>

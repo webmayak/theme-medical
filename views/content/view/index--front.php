@@ -96,7 +96,7 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block">
-	<div class="content-block__title text-center">Сертификаты на препараты</div>
+	<div class="content-block__title text-center">Сертификаты, результаты химических исследований</div>
 	<div class="certificates">
 		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
 		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
@@ -104,6 +104,7 @@ $this->context->layout = '//front';
 		<a href="/uploads/elfinder/certificates/sofo-natko.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofo-natko.jpg" alt="" /></a>
 		<a href="/uploads/elfinder/certificates/sofovir.jpg" data-fancybox="certificates"><img src="/uploads/elfinder/certificates/sofovir.jpg" alt="" /></a>
 	</div>
+    <div class="certificates-block__button"><a href="/documenty-certificaty-rezultaty-himicheskih-issledovanii" class="btn btn-lg btn-primary">Все документы и сертификаты</a></div>
 </div>
 
 <div class="content-block">
