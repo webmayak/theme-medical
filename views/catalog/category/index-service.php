@@ -10,6 +10,7 @@ use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
 use frontend\widgets\leads\LeadForm;
+use frontend\widgets\videoList\VideoList;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
@@ -136,6 +137,15 @@ $this->params['breadcrumbs'][] = $model->name;
     </div>
     <?php endif; ?>
 </div>
+
+<?php if ($videos = $model->present()->getRelationCategoryByTypeKey('video')) : ?>
+<div class="content-block content-block--products__video">
+    <div class="h2">Видео</div>
+    <?= VideoList::widget([
+        'models' => $videos,
+    ]) ?>
+</div>
+<?php endif; ?>
 
 <?php if ($model->childrenActive) : ?>
     <div class="main-catalog__subset">

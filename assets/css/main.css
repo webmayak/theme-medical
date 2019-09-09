@@ -3859,3 +3859,11 @@ body[class*="page-brands-"] .category__body .image {
 .content-block--without-padding-top {
     padding-bottom: 0;
 }
+
+.content-block--products__video {
+    margin-bottom: 40px;
+}
+
+.content-block--products__video .h2 {
+    margin-bottom: 0;
+}
