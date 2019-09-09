@@ -19,7 +19,7 @@ use yii\widgets\MaskedInput;
 <div class="question">
     <div class="row">
         <div class="col-md-5">
-            <div class="question__title">
+            <div class="question__title hidden-sm hidden-xs">
                 На Ваш вопрос ответит квалифицированный специалист с большим опытом работы.
             </div>
         </div>

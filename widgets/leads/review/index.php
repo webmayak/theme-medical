@@ -6,14 +6,13 @@
  * Time: 1:43 PM
  */
 
-use frontend\widgets\leads\request\LeadRequest;
+use frontend\themes\medical\widgets\leads\review\LeadReview;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;
-use yii\widgets\MaskedInput;
 
 /* @var $this View */
-/* @var $model LeadRequest */
+/* @var $model LeadReview */
 /* @var $key string */
 ?>
 <?php $form = ActiveForm::begin([
@@ -26,7 +25,7 @@ use yii\widgets\MaskedInput;
 <div class="question">
     <div class="row">
         <div class="col-md-5">
-            <div class="question__title">
+            <div class="question__title hidden-sm hidden-xs">
                 На Ваш вопрос ответит квалифицированный специалист с большим опытом работы.
             </div>
         </div>
@@ -35,21 +34,17 @@ use yii\widgets\MaskedInput;
                 <form>
                     <div class="form-group">
                         <?= $form->field($model, 'name')->textInput([
-                            'placeholder' => 'Ваше имя',
+                            'placeholder' => 'Ваше Имя',
                         ])->label(false) ?>
                     </div>
                     <div class="form-group">
-                        <?= $form->field($model, 'phone')->widget(MaskedInput::class, [
-                            'mask' => '+7 (999) 999-99-99',
-                            'options' => [
-                                'placeholder' => 'Ваш номер телефона',
-                                'class' => 'form-control',
-                            ],
+                        <?= $form->field($model, 'location')->textInput([
+                            'placeholder' => 'Ваша страна, город',
                         ])->label(false); ?>
                     </div>
                     <div class="form-group">
-                        <?= $form->field($model, 'email')->textInput([
-                            'placeholder' => 'Ваш E-mail',
+                        <?= $form->field($model, 'scheme')->textInput([
+                            'placeholder' => 'Ваша схема лечения',
                         ])->label(false) ?>
                     </div>
                     <div class="form-group">

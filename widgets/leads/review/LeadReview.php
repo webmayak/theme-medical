@@ -6,24 +6,23 @@
  * Time: 2:37 PM
  */
 
-namespace frontend\widgets\leads\review;
+namespace frontend\themes\medical\widgets\leads\review;
 
 use pantera\leads\models\Lead;
 
 class LeadReview extends Lead
 {
     public $name;
-    public $phone;
-    public $email;
+    public $location;
+    public $scheme;
     public $comment;
 
     public function rules()
     {
         $rules = parent::rules();
         $rules[] = ['name', 'required'];
-        $rules[] = ['phone', 'required'];
-        $rules[] = ['email', 'required'];
-        $rules[] = ['email', 'email'];
+        $rules[] = ['location', 'required'];
+        $rules[] = ['scheme', 'required'];
         $rules[] = ['comment', 'required'];
         return $rules;
     }
@@ -32,8 +31,8 @@ class LeadReview extends Lead
     {
         $labels = parent::attributeLabels();
         $labels['name'] = 'Ваше имя';
-        $labels['phone'] = 'Ваш номер телефона';
-        $labels['email'] = 'Ваш E-mail';
+        $labels['location'] = 'Ваша страна, город';
+        $labels['scheme'] = 'Ваша схема лечения';
         $labels['comment'] = 'Ваш комментарий';
         return $labels;
     }
