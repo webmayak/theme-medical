@@ -3,6 +3,7 @@
 use frontend\themes\medical\AppAsset;
 use frontend\widgets\megaMenu\MegaMenu;
 use frontend\widgets\twigRender\TwigRender;
+use pantera\leads\widgets\form\LeadForm;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
@@ -45,6 +46,22 @@ $this->beginPage();
     <?= TwigRender::widget([
         'text' => $content,
     ]) ?>
+</div>
+<div class="section-subcribe">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="section-subcribe__title">Подпишитесь на наши новости</div>
+                <div class="section-subcribe__hint">Рекомендации по лечению, новые препараты, истории успешного лечения и другое!</div>
+            </div>
+            <div class="col-md-6">
+                <?= LeadForm::widget([
+                    'key' => 'subscribe',
+                    'mode' => LeadForm::MODE_INLINE,
+                ]) ?>
+            </div>
+        </div>
+    </div>
 </div>
 <?php
 if ($this->beginCache('footer', [
