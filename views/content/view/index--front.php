@@ -52,7 +52,14 @@ $this->context->layout = '//front';
         </div>
     </div>
 </div>
-
+<?= LeadForm::widget([
+    'key' => 'iDoctor',
+    'text' => 'Я врач - желаю сотрудничать'
+]) ?>
+<?= LeadForm::widget([
+    'key' => 'getRecommendations',
+    'text' => 'Получить рекомендации по лечению гепатита С'
+]) ?>
 <div class="content-block">
     <div class="container">
         <div class="content-block__body">
