@@ -34,14 +34,14 @@ use yii\helpers\Html;
 		<?= $model->description ?>
 	</div>
 	<?php endif; ?>
-	<?php if ($model->media && $model->media->issetMedia() && preg_match('/image/', $model->media->type)) : ?>
+	<?php if (!empty($model->media[0]) && $model->media[0]->issetMedia() && preg_match('/image/', $model->media[0]->type)) : ?>
 	<div class="review-item__image">
-		<a href="<?= $model->media->image() ?>" data-fancybox="reviews">
-			<img class="img-thumbnail" src="<?= $model->media->image(200, 120, false) ?>" alt="Отзыв - <?= Html::encode($model->name) ?>" />
+		<a href="<?= $model->media[0]->image() ?>" data-fancybox="reviews">
+			<img class="img-thumbnail" src="<?= $model->media[0]->image(200, 120, false) ?>" alt="Отзыв - <?= Html::encode($model->name) ?>" />
 		</a>
 	</div>
 	<?php endif; ?>
-	<?php if ($model->media && $model->media->issetMedia() && preg_match('/audio/', $model->media->type)) : ?>
+	<?php if (!empty($model->media[0]) && $model->media[0]->issetMedia() && preg_match('/audio/', $model->media[0]->type)) : ?>
 	<div class="review-item__audio">
 		<div class="review-item__audio-left">
 			<div class="review-item__label"><i class="fa fa-volume-up"></i> Аудио - отзыв</div>
@@ -49,7 +49,7 @@ use yii\helpers\Html;
 		</div>
 		<div class="review-item__audio-right">
 			<audio controls id="audio-<?= $model->id ?>">
-			  <source src="<?= $model->media->url ?>" type="<?= $model->media->type ?>">
+			  <source src="<?= $model->media[0]->url ?>" type="<?= $model->media[0]->type ?>">
 			  Ваш браузер не поддерживает вопроизведение аудиофайлов этого формата.
 			</audio>
 		</div>
