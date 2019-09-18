@@ -61,6 +61,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <a href="/">
                         <img src="/images/logo.svg" alt="Индиавир" id="logo" />
                     </a>
+                    <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
                 </div>
                 <div class="col-md-8 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
