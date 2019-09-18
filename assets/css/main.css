@@ -3996,6 +3996,7 @@ body[class*="page-brands-"] .category__body .image {
     margin-right: 7px;
 }
 
+.geolocation__dropdown .btn,
 .geolocation__dropdown button {
     font-size: 13px;
     padding: 1px 10px 2px 10px;
