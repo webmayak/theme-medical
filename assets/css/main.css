@@ -576,7 +576,7 @@ ul, ol {
 /********* HEADER **********/
 
 header .top-panel {
-    padding: 35px 0 20px 0;
+    padding: 20px 0;
     position: relative;
 }
 
@@ -3984,4 +3984,74 @@ body[class*="page-brands-"] .category__body .image {
       -moz-box-shadow: 0 0 0 0 rgba(255,199,0, 0);
       box-shadow: 0 0 0 0 rgba(255,199,0, 0);
   }
+}
+
+.top-controls {
+    background: #f7f7f7;
+    font-size: 13px;
+}
+
+.geolocation__dropdown-header {
+    display: inline-block;
+    margin-right: 7px;
+}
+
+.geolocation__dropdown button {
+    font-size: 13px;
+    padding: 1px 10px 2px 10px;
+}
+
+.geolocation__dropdown button,
+.geolocation__dropdown button:hover,
+.geolocation__dropdown button:active,
+.geolocation__dropdown button:focus {
+    color: #fff;
+    background-color: #15C9CD !important;
+    border-color: #15C9CD !important;
+}
+
+.geolocation__dropdown .caret {
+    margin-left: 5px;
+    position: relative;
+    top: 1px;
+}
+
+.top-controls__left {
+    padding: 4px 0;
+}
+
+.top-controls__right {
+    text-align: right;
+    font-size: 0;
+}
+
+.top-controls__right a {
+    display: inline-block;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 13px;
+}
+
+.top-controls__right a + a {
+    margin-left: 20px;
+}
+
+.top-controls__right a span {
+    text-decoration: underline;
+    color: #04b6ba;
+}
+
+.top-controls__right a:hover span {
+    text-decoration: none;
+}
+
+.top-panel__logo-text {
+    font-size: 10px;
+    margin-right: -60px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: -.02em;
+    position: relative;
+    top: 6px;
+    color: #8C8C8C;
 }

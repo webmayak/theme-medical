@@ -10,9 +10,43 @@ use yii\helpers\Html;
 use yii\web\View;
 use pantera\content\widgets\block\Block;
 use pantera\leads\widgets\form\LeadForm;
+use pantera\geolocation\widgets\geolocation\Geolocation;
 
 /* @var $this View */
 ?>
+<div class="top-controls">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-5">
+                <div class="top-controls__left">
+                    <?= Geolocation::widget([
+                        'labelYourLocation' => 'Ваш город:',
+                        'labelLocationNotDetected' => 'не указан',
+                        'labelChangeLocation' => 'Выбрать город',
+                    ]) ?>
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-7">
+                <div class="top-controls__right">
+                    <?= LeadForm::widget([
+                        'key' => 'iDoctor',
+                        'text' => 'Я врач<span class="hidden-sm hidden-xs"> - желаю сотрудничать</span>',
+                        'options' => [
+                            'class' => '',
+                        ],
+                    ]) ?>
+                    <?= LeadForm::widget([
+                        'key' => 'getRecommendations',
+                        'text' => 'Получить рекомендации по лечению гепатита С',
+                        'options' => [
+                            'class' => '',
+                        ],
+                    ]) ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <header>
     <div class="container">
         <div class="top-panel">

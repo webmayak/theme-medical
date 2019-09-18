@@ -12,7 +12,6 @@ use frontend\themes\medical\widgets\videoList\VideoList;
 use pantera\content\models\ContentPage;
 use pantera\content\widgets\block\Block;
 use pantera\content\widgets\slider\Slider;
-use pantera\geolocation\widgets\geolocation\Geolocation;
 use pantera\leads\widgets\form\LeadForm;
 use yii\web\View;
 
@@ -53,19 +52,7 @@ $this->context->layout = '//front';
         </div>
     </div>
 </div>
-<?= LeadForm::widget([
-    'key' => 'iDoctor',
-    'text' => 'Я врач - желаю сотрудничать'
-]) ?>
-<?= LeadForm::widget([
-    'key' => 'getRecommendations',
-    'text' => 'Получить рекомендации по лечению гепатита С'
-]) ?>
-<?= Geolocation::widget([
-    'labelYourLocation' => 'Ваш город:',
-    'labelLocationNotDetected' => 'не указан',
-    'labelChangeLocation' => 'Выбрать город',
-]) ?>
+
 <div class="content-block">
     <div class="container">
         <div class="content-block__body">

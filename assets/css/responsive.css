@@ -1050,4 +1050,8 @@
     .news-page__image img {
         width: 100%;
     }
+    .top-controls__left,
+    .top-controls__right {
+        text-align: center;
+    }
 }
