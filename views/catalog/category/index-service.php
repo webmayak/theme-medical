@@ -138,15 +138,6 @@ $this->params['breadcrumbs'][] = $model->name;
     <?php endif; ?>
 </div>
 
-<?php if ($videos = $model->present()->getRelationCategoryByTypeKey('video')) : ?>
-<div class="content-block content-block--products__video">
-    <div class="h2">Видео</div>
-    <?= VideoList::widget([
-        'models' => $videos,
-    ]) ?>
-</div>
-<?php endif; ?>
-
 <?php if ($model->childrenActive) : ?>
     <div class="main-catalog__subset">
         <?= CategoryList::widget([
@@ -160,6 +151,15 @@ $this->params['breadcrumbs'][] = $model->name;
             ],
         ]) ?>
     </div>
+<?php endif; ?>
+
+<?php if ($videos = $model->present()->getRelationCategoryByTypeKey('video')) : ?>
+<div class="content-block content-block--products__video">
+    <div class="h2">Видео</div>
+    <?= VideoList::widget([
+        'models' => $videos,
+    ]) ?>
+</div>
 <?php endif; ?>
 
 <?= $this->render('@theme/views/_fast-consult') ?>
