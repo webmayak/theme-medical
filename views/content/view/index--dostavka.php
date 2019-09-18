@@ -22,7 +22,7 @@ $this->params['breadcrumbs'][] = $model->title;
 <?php endif; ?>
 <div class="editor-content editor-content__page">
 	<div class="text-center">
-		<img src="/images/map-dostavka.svg" alt="Доставка препаратов от гепатита С">
+		<img src="/images/map-dostavka.svg" alt="Доставка препаратов от гепатита С" style="max-width: 100%;"/>
 	</div>
 	<style>
 		#trackgo_widget_wrapper {
