@@ -77,7 +77,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 </div>
                                 <div class="creative_header_address_text">
                                     <h3>Телефон</h3>
-                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_city', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_city', 'contacts') ?></a>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 </div>
                                 <div class="creative_header_address_text">
                                     <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
-                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->settings->get('phone_mobile', 'contacts')) ?>"><?= Yii::$app->settings->get('phone_mobile', 'contacts') ?></a>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 </a>
                                 <div class="creative_header_address_text">
                                     <h3>Главный офис</h3>
-                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->settings->get('address', 'contacts')) ?></a>
+                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
                                 </div>
                             </div>
                         </div>
@@ -113,14 +113,14 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                 </div>
                 <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
                     <div class="top-panel__icons">
-                        <a href="<?= Yii::$app->settings->get('social_facebook', 'contacts') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
-                        <a href="<?= Yii::$app->settings->get('social_whatsapp', 'contacts') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
-                        <a href="<?= Yii::$app->settings->get('social_youtube', 'contacts') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
-                        <a href="<?= Yii::$app->settings->get('social_instagram', 'contacts') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
-                        <a href="<?= Yii::$app->settings->get('social_vkontakte', 'contacts') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_vkontakte') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
                     </div>
                     <div class="top-panel__email">
-                        <i class="fa fa-envelope"></i> <a href="mailto:<?= Yii::$app->settings->get('email', 'contacts') ?>" style="font-size: 13px;"><?= Yii::$app->settings->get('email', 'contacts') ?></a>
+                        <i class="fa fa-envelope"></i> <a href="mailto:<?= Yii::$app->contactsManager->get('email') ?>" style="font-size: 13px;"><?= Yii::$app->contactsManager->get('email') ?></a>
                     </div>
                 </div>
             </div>
