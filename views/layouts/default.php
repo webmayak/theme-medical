@@ -63,15 +63,7 @@ $this->beginPage();
         </div>
     </div>
 </div>
-<?php
-if ($this->beginCache('footer', [
-    'enabled' => Yii::$app->settings->get('htmlCache', 'default') === '1',
-    'duration' => 60 * 60 * 24,
-])) {
-    echo $this->render('_footer');
-    $this->endCache();
-}
-?>
+<?= $this->render('_footer') ?>
 <?php $this->endBody() ?>
 <?= Yii::$app->settings->get('script', 'default') ?>
 </body>
