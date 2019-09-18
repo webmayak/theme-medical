@@ -8,14 +8,13 @@ class LeadGetRecommendations extends Lead
 {
     public $name;
     public $phone;
-    public $city;
+    public $email;
 
     public function rules()
     {
         $rules = parent::rules();
         $rules[] = ['name', 'required'];
         $rules[] = ['phone', 'required'];
-        $rules[] = ['city', 'required'];
         return $rules;
     }
 
@@ -24,7 +23,7 @@ class LeadGetRecommendations extends Lead
         $labels = parent::attributeLabels();
         $labels['name'] = 'Имя';
         $labels['phone'] = 'Номер телефона';
-        $labels['city'] = 'Город';
+        $labels['email'] = 'E-mail';
         return $labels;
     }
 }

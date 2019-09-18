@@ -1,13 +1,13 @@
 <?php
 
-use frontend\themes\medical\widgets\leads\iDoctor\LeadIDoctor;
+use frontend\themes\medical\widgets\leads\getRecommendations\LeadGetRecommendations;
 use yii\helpers\Html;
 use yii\web\View;
 use yii\widgets\ActiveForm;
 use yii\widgets\MaskedInput;
 
 /* @var $this View */
-/* @var $model LeadIDoctor */
+/* @var $model LeadGetRecommendations */
 /* @var $key string */
 $this->title = 'Получить рекомендации по лечению гепатита С';
 ?>
@@ -28,8 +28,8 @@ $this->title = 'Получить рекомендации по лечению г
         'class' => 'form-control',
     ],
 ])->label(false); ?>
-<?= $form->field($model, 'city')->textInput([
-    'placeholder' => $model->getAttributeLabel('city'),
+<?= $form->field($model, 'email')->textInput([
+    'placeholder' => $model->getAttributeLabel('email'),
 ])->label(false); ?>
 <?= Html::submitButton(Html::tag('span', 'Получить рекомендации', [
     'class' => 'ladda-label',
