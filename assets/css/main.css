@@ -3145,15 +3145,29 @@ small, .small {
     line-height: 1.4em;
 }
 
-.review-item__audio {
+.review-item__audio-item {
     display: flex;
 }
 
-.review-item__text + .review-item__image,
-.review-item__text + .review-item__audio {
+.review-item__image-item {
+    display: inline-block;
+}
+
+.review-item__image-item + .review-item__image-item {
+    margin-left: 5px;
+}
+
+.review-item__text + .review-item__image-item,
+.review-item__text + .review-item__audio-item {
     padding-top: 15px;
     margin-top: 15px;
     border-top: 1px solid #15C9CD;
+}
+
+.review-item__audio-item + .review-item__audio-item {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #e5e5e5;
 }
 
 .review-item__audio-left {
@@ -3164,6 +3178,12 @@ small, .small {
     width: calc(100% - 140px);
     margin-left: 20px;
     padding-top: 5px;
+}
+
+.review-item__images + .review-item__audios {
+    margin-top: 15px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e5e5;
 }
 
 .review-item__label {
