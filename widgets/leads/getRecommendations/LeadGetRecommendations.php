@@ -15,6 +15,7 @@ class LeadGetRecommendations extends Lead
         $rules = parent::rules();
         $rules[] = ['name', 'required'];
         $rules[] = ['phone', 'required'];
+        $rules[] = ['email', 'email'];
         return $rules;
     }
 
