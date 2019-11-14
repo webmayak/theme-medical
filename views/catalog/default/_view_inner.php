@@ -33,19 +33,19 @@ use yii\web\View;
     <?php endif; ?>
     <div class="catalog-item__prices">
         <div class="row">
-            <?php if ($price_prepay = $model->present()->getAttributeValueByKey('price_prepay')): ?>
+            <?php if ($price_fast_delivery = $model->present()->getAttributeValueByKey('price_fast_delivery')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Цена по предоплате:</span>
-                    <span class="price-value"><?= $price_prepay ?></span>
+                    <span class="price-label">Быстрая доставка, 3-4 дня:</span>
+                    <span class="price-value"><?= $price_fast_delivery ?></span>
                 </div>
             </div>
             <?php endif; ?>
-            <?php if ($price_afterpay = $model->present()->getAttributeValueByKey('price_afterpay')): ?>
+            <?php if ($price_india_delivery = $model->present()->getAttributeValueByKey('price_india_delivery')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Цена при получении:</span>
-                    <span class="price-value"><?= $price_afterpay ?></span>
+                    <span class="price-label">Доставка из Индии:</span>
+                    <span class="price-value"><?= $price_india_delivery ?></span>
                 </div>
             </div>
             <?php endif; ?>

@@ -45,16 +45,16 @@ $form = ActiveForm::begin([
                     'class' => 'product-small__name',
                 ]) ?>
                 <ul class="product-small__options">
-                    <?php if ($price_prepay = $product->present()->getAttributeValueByKey('price_prepay')): ?>
+                    <?php if ($price_fast_delivery = $product->present()->getAttributeValueByKey('price_fast_delivery')): ?>
                     <li>
-                        Цена по предоплате:
-                        <span class="product-small__option-value"><?= $price_prepay ?></span>
+                        Быстрая доставка, 3-4 дня:
+                        <span class="product-small__option-value"><?= $price_fast_delivery ?></span>
                     </li>
                     <?php endif; ?>
-                    <?php if ($price_afterpay = $product->present()->getAttributeValueByKey('price_afterpay')): ?>
+                    <?php if ($price_india_delivery = $product->present()->getAttributeValueByKey('price_india_delivery')): ?>
                     <li>
-                        Цена при получении:
-                        <span class="product-small__option-value"><?= $price_afterpay ?></span>
+                        Доставка из Индии:
+                        <span class="product-small__option-value"><?= $price_india_delivery ?></span>
                     </li>
                     <?php endif; ?>
                     <?php if ($price_of_1 = $product->present()->getAttributeValueByKey('price_of_1')): ?>
