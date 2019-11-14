@@ -57,18 +57,6 @@ use yii\web\View;
                     ]) ?>
                     <?php $this->endCache(); endif; ?>
                 </li>
-                <?php if (0): ?>
-                <li class="<?= preg_match('/^price/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/price']) ?>">
-                        Цена
-                    </a>
-                </li>
-                <?php endif; ?>
-                <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/article']) ?>">
-                        О гепатите и ВИЧ
-                    </a>
-                </li>
                 <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/lechenie']) ?>">
                         Лечение
@@ -90,26 +78,6 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
-                <?php if (0): ?>
-                <?php
-                $okompaniiIsActive = preg_match('/^o-kompanii/', Yii::$app->request->pathInfo);
-                $sotrudnikiIsActive = preg_match('/^o-kompanii\/nashi-sotrudniki/', Yii::$app->request->pathInfo);
-                $docsIsActive = preg_match('/^o-kompanii\/dokumenty/', Yii::$app->request->pathInfo);
-                ?>
-                <li class="<?= $okompaniiIsActive || $sotrudnikiIsActive ? 'active' : '' ?>">
-                    <a class="navtext" href="<?= Url::to(['/o-kompanii']) ?>">
-                        О нас
-                    </a>
-                    <ul class="sub-menu">
-                        <li class="<?= $sotrudnikiIsActive ? 'active' : '' ?>">
-                            <a href="<?= Url::to(['/o-kompanii/nashi-sotrudniki']) ?>">Наша команда</a>
-                        </li>
-                        <li class="<?= $docsIsActive ? 'active' : '' ?>">
-                            <a class="navtext" href="<?= Url::to(['/o-kompanii/dokumenty']) ?>">Лицензии и сертификаты</a>
-                        </li>
-                    </ul>
-                </li>
-                <?php endif; ?>
                 <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/reviews']) ?>">Отзывы</a>
                 </li>
@@ -122,6 +90,11 @@ use yii\web\View;
                 <li class="<?= Yii::$app->request->pathInfo === 'dostavka' ? 'active' : '' ?>">
                     <a href="<?= Url::to(['/dostavka']) ?>" class="navtext">
                         Доставка
+                    </a>
+                </li>
+                <li class="<?= preg_match('/^article$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
+                    <a class="navtext" href="<?= Url::to(['/optovym-klientam']) ?>">
+                        Оптовым клиентам
                     </a>
                 </li>
                 <li class="<?= Yii::$app->request->pathInfo === 'video' ? 'active' : '' ?>">
