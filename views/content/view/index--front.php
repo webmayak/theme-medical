@@ -153,6 +153,13 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<div class="content-block content-block--instagram">
+    <div class="h2 content-block__title text-center">Мы в Instagram</div>
+    <div class="container">
+        <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="https://cdn.lightwidget.com/widgets/1066cabb99c554a8a5816f0ede4bd0bb.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>  
+    </div>
+</div>
+
 <?php if ($model->body || $model->seo->h1): ?>
     <div class="content-block content-block--frontpage-content">
         <div class="container">

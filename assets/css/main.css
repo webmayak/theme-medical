@@ -4056,3 +4056,8 @@ body[class*="page-brands-"] .category__body .image {
     top: 6px;
     color: #8C8C8C;
 }
+
+.content-block--instagram {
+    padding-top: 20px !important;
+    margin-bottom: 40px;
+}
