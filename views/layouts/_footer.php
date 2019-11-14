@@ -31,7 +31,17 @@ use yii\web\View;
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Телефон</h3>
-                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
+                                <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
+                                <?php else: ?>
+                                    <?= LeadForm::widget([
+                                        'key' => 'callMe',
+                                        'text' => Yii::$app->contactsManager->get('phone_city'),
+                                        'options' => [
+                                            'class' => '',
+                                        ],
+                                    ]) ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="single_header_address">
@@ -46,7 +56,17 @@ use yii\web\View;
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Бесплатная консультация</h3>
-                                <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
+                                <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
+                                <?php else: ?>
+                                    <?= LeadForm::widget([
+                                        'key' => 'callMe',
+                                        'text' => Yii::$app->contactsManager->get('phone_mobile'),
+                                        'options' => [
+                                            'class' => '',
+                                        ],
+                                    ]) ?>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="single_header_address">
