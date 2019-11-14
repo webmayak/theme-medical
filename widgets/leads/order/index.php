@@ -69,6 +69,12 @@ $form = ActiveForm::begin([
                         <span class="product-small__option-value"><?= $price_of_12 ?></span>
                     </li>
                     <?php endif; ?>
+                    <?php if ($price = $product->present()->getAttributeValueByKey('price')): ?>
+                    <li>
+                        Цена:
+                        <span class="product-small__option-value"><?= $price ?></span>
+                    </li>
+                    <?php endif; ?>
                 </ul>
             </div>
             <div class="product-small__content-right col-md-3">

@@ -45,6 +45,9 @@ use yii\web\View;
                             <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-vich']) ?>">Препараты от ВИЧ</a>
                         </li>
                         <li>
+                            <a href="<?= Url::to(['/catalog/prochie-preparaty']) ?>">Прочие препараты</a>
+                        </li>
+                        <li>
                             <a href="<?= Url::to(['/brands']) ?>">Список брендов</a>
                         </li>
                         <li>

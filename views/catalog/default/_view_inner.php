@@ -65,6 +65,14 @@ use yii\web\View;
                 </div>
             </div>
             <?php endif; ?>
+            <?php if ($price = $model->present()->getAttributeValueByKey('price')): ?>
+            <div class="col-xs-6">
+                <div class="catalog-item__price">
+                    <span class="price-label">Цена:</span>
+                    <span class="price-value"><?= $price ?></span>
+                </div>
+            </div>
+            <?php endif; ?>
         </div>
     </div>
     <div class="catalog-item__button">
