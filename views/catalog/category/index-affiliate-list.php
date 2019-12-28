@@ -10,10 +10,9 @@ use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
 use frontend\components\ContactsManager;
+use pantera\content\widgets\block\Block;
 use yii\helpers\Html;
 use yii\web\View;
-
-$this->context->layout = '//contacts';
 
 $this->params['breadcrumbs'] = [];
 foreach ($model->parents as $parent) {
@@ -50,6 +49,13 @@ $this->params['breadcrumbs'][] = $model->name;
     </div>
 </div>
 
+<div class="content-block content-block__contacts-map" style="padding-top: 30px;">
+	<h2 class="affiliates-list__title" style="margin-bottom: 20px;">
+		<?= ($affiliate = Yii::$app->contactsManager->affiliate) ? "{$affiliate->name} — наш офис на карте" : 'Наш офис на карте' ?>
+	</h2>
+    <?= Yii::$app->contactsManager->get('contacts_map') ?>
+</div>
+
 <?php if ($model->childrenActive) : ?>
     <div class="content-block content-block--affiliates">
         <h2 class="affiliates-list__title">Наши филиалы</h2>
@@ -61,3 +67,7 @@ $this->params['breadcrumbs'][] = $model->name;
         ]) ?>
     </div>
 <?php endif; ?>
+
+<div class="content-block">
+	<?= $this->render('@theme/views/_fast-consult') ?>
+</div>
