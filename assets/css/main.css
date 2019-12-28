@@ -1906,10 +1906,6 @@ footer a:hover, footer a:focus {
     margin-bottom: 25px;
 }
 
-.wsmenu {
-    height: auto !important;
-}
-
 .wsmenu > .wsmenu-list > li.active > .navtext:before,
 .wsmenu > .wsmenu-list > li.active + li > .navtext:before {
     content: none;

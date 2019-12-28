@@ -121,6 +121,11 @@
         padding-bottom: 0;
         overflow: visible !important;
     }
+
+    .wsmenu {
+        height: auto !important;
+    }
+    
     .wsmenu > .wsmenu-list > li > .wsshoptabing > .wsshopwp {
         min-height: 400px;
     }
