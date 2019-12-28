@@ -8,11 +8,8 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
-use frontend\widgets\portfolioSlider\PortfolioSlider;
-use frontend\widgets\teamList\TeamList;
 use frontend\widgets\twigRender\TwigRender;
-use frontend\widgets\videoList\VideoList;
-use pantera\leads\widgets\form\LeadForm;
+use frontend\components\ContactsManager;
 use yii\helpers\Html;
 use yii\web\View;
 
@@ -39,7 +36,7 @@ $this->params['breadcrumbs'][] = $model->name;
         <div class="row">
             <div class="col-md-8 col-sm-12 col-xs-12">
                 <?= TwigRender::widget([
-                    'text' => $model->description,
+                    'text' => Yii::$app->contactsManager->getContactsPageText() ?: $model->description,
                 ]) ?>
             </div>
             <?php if ($hasMedia) : ?>
