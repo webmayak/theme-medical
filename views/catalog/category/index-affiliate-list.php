@@ -49,12 +49,25 @@ $this->params['breadcrumbs'][] = $model->name;
     </div>
 </div>
 
-<div class="content-block content-block__contacts-map" style="padding-top: 30px;">
-	<h2 class="affiliates-list__title" style="margin-bottom: 20px;">
-		<?= ($affiliate = Yii::$app->contactsManager->affiliate) ? "{$affiliate->name} — наш офис на карте" : 'Наш офис на карте' ?>
-	</h2>
-    <?= Yii::$app->contactsManager->get('contacts_map') ?>
-</div>
+<?php if ($affiliate = Yii::$app->contactsManager->affiliate) : ?>
+	<?php if ($affiliate_contacts_map = Yii::$app->contactsManager->get('contacts_map')) : ?>
+		<div class="content-block content-block__contacts-map" style="padding-top: 30px;">
+			<h2 class="affiliates-list__title" style="margin-bottom: 20px;">
+				<?= Html::encode($affiliate->name) ?> — наш офис на карте
+			</h2>
+		    <?= $affiliate_contacts_map ?>
+		</div>
+	<?php endif; ?>
+<?php else: ?>
+	<div class="content-block content-block__contacts-map" style="padding-top: 30px;">
+		<h2 class="affiliates-list__title" style="margin-bottom: 20px;">
+			Наш офис на карте
+		</h2>
+	    <?= Block::widget([
+	        'position' => 'contacts_map',
+	    ]) ?>
+	</div>
+<?php endif; ?>
 
 <?php if ($model->childrenActive) : ?>
     <div class="content-block content-block--affiliates">
