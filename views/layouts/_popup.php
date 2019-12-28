@@ -6,7 +6,7 @@ use yii\web\View;
 
 $block = ContentBlock::find()->andWhere(['status' => ContentBlock::STATUS_ACTIVE, 'position' => 'special_popup'])->one();
 if (!$block) return;
-if (empty(trim(strip_tags($block->body)))) return;
+if (strpos($block->body, 'img') === false && empty(trim(strip_tags($block->body)))) return;
 $blockContentHash = md5("{$block->title}{$block->body}");
 if (!empty($_COOKIE['special_popup_hash']) && ($_COOKIE['special_popup_hash']==$blockContentHash)) return;
 
