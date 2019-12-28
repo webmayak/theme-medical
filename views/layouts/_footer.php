@@ -31,17 +31,19 @@ use yii\web\View;
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Телефон</h3>
-                                <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
-                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
-                                <?php else: ?>
-                                    <?= LeadForm::widget([
-                                        'key' => 'callMe',
-                                        'text' => Yii::$app->contactsManager->get('phone_city'),
-                                        'options' => [
-                                            'class' => '',
-                                        ],
-                                    ]) ?>
-                                <?php endif; ?>
+                                <div class="creative_header_address_list">
+                                    <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
+                                    <?php else: ?>
+                                        <?= LeadForm::widget([
+                                            'key' => 'callMe',
+                                            'text' => Yii::$app->contactsManager->get('phone_city'),
+                                            'options' => [
+                                                'class' => '',
+                                            ],
+                                        ]) ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="single_header_address">
@@ -56,17 +58,27 @@ use yii\web\View;
                             </div>
                             <div class="creative_header_address_text">
                                 <h3>Бесплатная консультация</h3>
-                                <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
-                                    <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
-                                <?php else: ?>
-                                    <?= LeadForm::widget([
-                                        'key' => 'callMe',
-                                        'text' => Yii::$app->contactsManager->get('phone_mobile'),
-                                        'options' => [
-                                            'class' => '',
-                                        ],
-                                    ]) ?>
-                                <?php endif; ?>
+                                <div class="creative_header_address_list">
+                                    <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
+                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile_hiv')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile_hiv') ?> <span class="small text-red">— по ВИЧ</span></a>
+                                    <?php else: ?>
+                                        <?= LeadForm::widget([
+                                            'key' => 'callMe',
+                                            'text' => Yii::$app->contactsManager->get('phone_mobile'),
+                                            'options' => [
+                                                'class' => '',
+                                            ],
+                                        ]) ?>
+                                        <?= LeadForm::widget([
+                                            'key' => 'callMe',
+                                            'text' => Yii::$app->contactsManager->get('phone_mobile_hiv') . ' <span class="small text-red">— по ВИЧ</span>',
+                                            'options' => [
+                                                'class' => '',
+                                            ],
+                                        ]) ?>
+                                    <?php endif; ?>
+                                </div>
                             </div>
                         </div>
                         <div class="single_header_address">
@@ -75,7 +87,9 @@ use yii\web\View;
                             </a>
                             <div class="creative_header_address_text">
                                 <h3>Главный офис</h3>
-                                <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                <div class="creative_header_address_list">
+                                    <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                </div>
                             </div>
                         </div>
                     </div>

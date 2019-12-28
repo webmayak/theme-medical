@@ -77,23 +77,25 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                     ]) ?>
                                 </div>
                                 <div class="creative_header_address_text">
-                                    <h3>Телефон</h3>
-                                    <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
-                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
-                                    <?php else: ?>
-                                        <?= LeadForm::widget([
-                                            'key' => 'callMe',
-                                            'text' => Yii::$app->contactsManager->get('phone_city'),
-                                            'options' => [
-                                                'class' => '',
-                                            ],
-                                        ]) ?>
-                                    <?php endif; ?>
+                                    <div class="h3">Телефон</div>
+                                    <div class="creative_header_address_list">
+                                        <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                            <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><?= Yii::$app->contactsManager->get('phone_city') ?></a>
+                                        <?php else: ?>
+                                            <?= LeadForm::widget([
+                                                'key' => 'callMe',
+                                                'text' => Yii::$app->contactsManager->get('phone_city'),
+                                                'options' => [
+                                                    'class' => '',
+                                                ],
+                                            ]) ?>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
-                            <div class="single_header_address" style="position: relative; left: -30px;">
+                            <div class="single_header_address second">
                                 <div class="creative_header_icon">
                                     <?= LeadForm::widget([
                                         'key' => 'callMe',
@@ -104,29 +106,41 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                     ]) ?>
                                 </div>
                                 <div class="creative_header_address_text">
-                                    <h3 style="margin-right: -30px;">Бесплатная&nbsp;консультация</h3>
-                                    <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
-                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
-                                    <?php else: ?>
-                                        <?= LeadForm::widget([
-                                            'key' => 'callMe',
-                                            'text' => Yii::$app->contactsManager->get('phone_mobile'),
-                                            'options' => [
-                                                'class' => '',
-                                            ],
-                                        ]) ?>
-                                    <?php endif; ?>
+                                    <div class="h3">Бесплатная&nbsp;консультация</div>
+                                    <div class="creative_header_address_list">
+                                        <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
+                                            <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
+                                            <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile_hiv')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile_hiv') ?> <span class="small text-red">— по ВИЧ</span></a>
+                                        <?php else: ?>
+                                            <?= LeadForm::widget([
+                                                'key' => 'callMe',
+                                                'text' => Yii::$app->contactsManager->get('phone_mobile'),
+                                                'options' => [
+                                                    'class' => '',
+                                                ],
+                                            ]) ?>
+                                            <?= LeadForm::widget([
+                                                'key' => 'callMe',
+                                                'text' => Yii::$app->contactsManager->get('phone_mobile_hiv') . ' <span class="small text-red">— по ВИЧ</span>',
+                                                'options' => [
+                                                    'class' => '',
+                                                ],
+                                            ]) ?>
+                                        <?php endif; ?>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-4 col-xs-12">
-                            <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
+                            <div class="single_header_address third">
                                 <a href="/contacts" class="creative_header_icon">
                                     <i class="fa fa-map-marker"></i>
                                 </a>
                                 <div class="creative_header_address_text">
-                                    <h3>Главный офис</h3>
-                                    <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                    <div class="h3">Главный офис</div>
+                                    <div class="creative_header_address_list">
+                                        <a href="/contacts"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

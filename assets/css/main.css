@@ -3446,19 +3446,20 @@ small, .small {
 
 /************/
 
-header .creative_header_address_text > h3 {
+header .creative_header_address_text > .h3 {
     font-size: 12px;
     color: #007376;
     padding-top: 5px;
     font-weight: 600;
     margin-bottom: 5px;
+    margin-top: 0;
 }
 
-header .creative_header_address_text > a {
+header .creative_header_address_list > a {
     color: #8C8C8C;
     text-decoration: none;
-    max-width: calc(100% - 51px);
     display: inline-block;
+    font-size: 13px;
 }
 
 header .creative_header_icon i {
@@ -4045,4 +4046,33 @@ body[class*="page-brands-"] .category__body .image {
 .content-block--instagram {
     padding-top: 20px !important;
     margin-bottom: 40px;
+}
+
+.single_header_address.second {
+    position: relative;
+    left: -30px;
+    margin-right: -30px;
+}
+
+.single_header_address.third {
+    position: relative;
+    left: -20px;
+    margin-right: -35px;
+}
+
+.single_header_address.second .creative_header_icon {
+    min-height: 60px;
+}
+
+.single_header_address .creative_header_address_list a {
+    display: block;
+}
+
+.creative_header_address_list small,
+.creative_header_address_list .small {
+    font-size: 10px;
+}
+
+.text-red {
+    color: #fc6868 !important;
 }
