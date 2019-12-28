@@ -57,15 +57,15 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
             </span>
             <?php endif; ?>
             <div class="row">
-                <div class="col-md-2 col-lg-3 top-panel__col-logo">
+                <div class="col-md-3 col-lg-3 top-panel__col-logo">
                     <a href="/">
                         <img src="/images/logo.svg" alt="Индиавир" id="logo" />
                     </a>
                     <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
                 </div>
-                <div class="col-md-8 col-lg-6 top-panel__col-contacts">
+                <div class="col-md-6 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
-                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
                             <div class="single_header_address first">
                                 <div class="creative_header_icon">
                                     <?= LeadForm::widget([
@@ -92,7 +92,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-4 col-md-6 col-sm-4 col-xs-12">
                             <div class="single_header_address" style="position: relative; left: -30px;">
                                 <div class="creative_header_icon">
                                     <?= LeadForm::widget([
@@ -119,20 +119,20 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4  col-md-4 col-sm-4 col-xs-12">
+                        <div class="col-lg-4 col-md-12 col-sm-4 col-xs-12">
                             <div class="single_header_address ctrp" style="position: relative; left: -20px; margin-right: -35px;">
                                 <a href="/contacts" class="creative_header_icon">
                                     <i class="fa fa-map-marker"></i>
                                 </a>
                                 <div class="creative_header_address_text">
                                     <h3>Главный офис</h3>
-                                    <a href="/contacts" style="font-size: 13px; line-height: 1.6em; display: inline-block;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
+                                    <a href="/contacts" style="font-size: 13px;"><?= nl2br(Yii::$app->contactsManager->get('address')) ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-lg-3 top-panel__col-buttons text-right">
+                <div class="col-md-3 col-lg-3 top-panel__col-buttons text-right">
                     <div class="top-panel__icons">
                         <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
                         <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>

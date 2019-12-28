@@ -626,6 +626,7 @@ header #logo {
 
 .footer-middle #logo {
     margin-bottom: 30px;
+    max-width: 100%;
 }
 
 .top-panel__label {
@@ -645,21 +646,6 @@ header #logo {
 
     .top-panel__col-buttons {
         width: 20%;
-    }
-}
-
-@media (min-width: 960px) and (max-width: 1199px) {
-    .top-panel__col-logo {
-        width: 20%;
-    }
-
-    .top-panel__col-contacts {
-        width: 63%;
-        padding-left: 3%;
-    }
-
-    .top-panel__col-buttons {
-        width: 17%;
     }
 }
 
@@ -1918,6 +1904,10 @@ footer a:hover, footer a:focus {
 .portfolio-page__price {
     font-size: 16px;
     margin-bottom: 25px;
+}
+
+.wsmenu {
+    height: auto !important;
 }
 
 .wsmenu > .wsmenu-list > li.active > .navtext:before,
@@ -3471,6 +3461,8 @@ header .creative_header_address_text > h3 {
 header .creative_header_address_text > a {
     color: #8C8C8C;
     text-decoration: none;
+    max-width: calc(100% - 51px);
+    display: inline-block;
 }
 
 header .creative_header_icon i {
@@ -3888,6 +3880,7 @@ body[class*="page-brands-"] .category__body .image {
 
 .certificates-block__button {
     text-align: center;
+    position: relative;
 }
 
 .certificates-block__button .btn {

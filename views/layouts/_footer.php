@@ -17,7 +17,7 @@ use yii\web\View;
     <div class="footer-middle">
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-md-3 first">
+                <div class="col-sm-4 col-md-3 first">
                     <div class="creative_header_address">
                         <div class="single_header_address">
                             <div class="creative_header_icon">
@@ -80,7 +80,7 @@ use yii\web\View;
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="bottom-panel__icons hidden-sm hidden-xs">
                         <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
                         <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
@@ -100,14 +100,14 @@ use yii\web\View;
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
+                <div class="col-sm-4 col-md-3">
                     <div class="footer-menu">
 	                    <?= Block::widget([
 	                        'position' => 'footer3',
 	                    ]) ?>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3 last">
+                <div class="col-sm-12 col-md-3 last">
                     <?= Block::widget([
                         'position' => 'footer4',
                     ]) ?>
