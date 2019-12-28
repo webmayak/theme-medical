@@ -1,6 +1,6 @@
 <div class="fast-consult__block">
     <div class="row">
-		<div class="col-md-4">
+		<div class="col-md-4 col-sm-6">
 			<div class="fast-consult">
 	    		<div class="fast-consult__icon">
 					<img src="/images/icon-phone-bg.svg">
@@ -11,7 +11,7 @@
 	        	</div>
 	        </div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 col-sm-6">
 			<div class="fast-consult">
 	    		<div class="fast-consult__icon">
 	    			<img src="/images/icon-wa.svg">
@@ -22,7 +22,7 @@
 	        	</div>
 	        </div>
 		</div>
-		<div class="col-md-4">
+		<div class="col-md-4 col-sm-12">
 			<div class="fast-consult__social-icons">
 	    		<a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
 	    		<a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>

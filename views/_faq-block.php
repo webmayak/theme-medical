@@ -8,7 +8,7 @@ $faqs = CatalogCategory::findOne(111)->getChildrenActive()->limit(4)->all();
 ?><div class="faq-block">
 	<div class="row">
 		<?php foreach ($faqs as $faq): ?>
-		<div class="col-md-3">
+		<div class="col-md-3 col-sm-6">
 			<div class="faq-block-item">
 				<div class="faq-block-item__question">
 					<div class="faq-block-item__question-title">
