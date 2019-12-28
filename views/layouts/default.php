@@ -64,6 +64,7 @@ $this->beginPage();
     </div>
 </div>
 <?= $this->render('_footer') ?>
+<?= $this->render('_popup') ?>
 <?php $this->endBody() ?>
 <?= Yii::$app->settings->get('script', 'default') ?>
 </body>
