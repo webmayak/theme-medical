@@ -61,7 +61,13 @@ use yii\web\View;
                                 <div class="creative_header_address_list">
                                     <?php if (Yii::$app->devicedetect->isMobile() || Yii::$app->devicedetect->isTablet()): ?>
                                         <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile') ?></a>
-                                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_mobile_hiv')) ?>"><?= Yii::$app->contactsManager->get('phone_mobile_hiv') ?> <span class="small text-red">— по ВИЧ</span></a>
+                                        <?php if ($phone_mobile_hiv = (
+                                            ($affiliate = Yii::$app->contactsManager->affiliate)
+                                            ? $affiliate->present()->getAttributeValueByKey('phone_mobile_hiv')
+                                            : false
+                                        )): ?>
+                                            <a href="tel:<?= preg_replace('/[^0-9\+]/', '', $phone_mobile_hiv) ?>"><?= $phone_mobile_hiv ?> <span class="small text-red">— по ВИЧ</span></a>
+                                        <?php endif; ?>
                                     <?php else: ?>
                                         <?= LeadForm::widget([
                                             'key' => 'callMe',
@@ -70,13 +76,19 @@ use yii\web\View;
                                                 'class' => '',
                                             ],
                                         ]) ?>
-                                        <?= LeadForm::widget([
-                                            'key' => 'callMe',
-                                            'text' => Yii::$app->contactsManager->get('phone_mobile_hiv') . ' <span class="small text-red">— по ВИЧ</span>',
-                                            'options' => [
-                                                'class' => '',
-                                            ],
-                                        ]) ?>
+                                        <?php if ($phone_mobile_hiv = (
+                                            ($affiliate = Yii::$app->contactsManager->affiliate)
+                                            ? $affiliate->present()->getAttributeValueByKey('phone_mobile_hiv')
+                                            : false
+                                        )): ?>
+                                            <?= LeadForm::widget([
+                                                'key' => 'callMe',
+                                                'text' => $phone_mobile_hiv . ' <span class="small text-red">— по ВИЧ</span>',
+                                                'options' => [
+                                                    'class' => '',
+                                                ],
+                                            ]) ?>
+                                        <?php endif; ?>
                                     <?php endif; ?>
                                 </div>
                             </div>
