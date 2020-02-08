@@ -13,6 +13,7 @@ if ((Yii::$app->controller->id === 'site' && Yii::$app->controller->action->id =
         'href' => Url::canonical(),
     ]);
 }
+
 $this->registerLinkTag([
     'rel' => 'icon',
     'type' => 'icon',
