@@ -48,4 +48,13 @@ $tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
     <?php endif; ?>
 </div>
 
+<?php if ($contacts_map = $model->present()->getAttributeValueByKey('contacts_map')) : ?>
+    <div class="content-block content-block__contacts-map" style="padding-top: 30px;">
+        <h2 class="affiliates-list__title" style="margin-bottom: 20px;">
+            <?= Html::encode($model->name) ?> — наш офис на карте
+        </h2>
+        <?= $contacts_map ?>
+    </div>
+<?php endif; ?>
+
 <?= $this->render('@theme/views/_fast-consult') ?>
