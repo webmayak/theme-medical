@@ -36,7 +36,7 @@ use yii\web\View;
             <?php if ($price_fast_delivery = $model->present()->getAttributeValueByKey('price_fast_delivery')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Быстрая доставка, 3-4 дня:</span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_fast_delivery')->name) ?>:</span>
                     <span class="price-value"><?= $price_fast_delivery ?></span>
                 </div>
             </div>
@@ -44,7 +44,7 @@ use yii\web\View;
             <?php if ($price_india_delivery = $model->present()->getAttributeValueByKey('price_india_delivery')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Доставка из Индии:</span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_india_delivery')->name) ?>:</span>
                     <span class="price-value"><?= $price_india_delivery ?></span>
                 </div>
             </div>
@@ -52,7 +52,7 @@ use yii\web\View;
             <?php if ($price_of_1 = $model->present()->getAttributeValueByKey('price_of_1')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Цена 1 банки:</span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_of_1')->name) ?>:</span>
                     <span class="price-value"><?= $price_of_1 ?></span>
                 </div>
             </div>
@@ -60,7 +60,7 @@ use yii\web\View;
             <?php if ($price_of_12 = $model->present()->getAttributeValueByKey('price_of_12')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Цена 12 банок:</span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_of_12')->name) ?>:</span>
                     <span class="price-value"><?= $price_of_12 ?></span>
                 </div>
             </div>
@@ -68,7 +68,7 @@ use yii\web\View;
             <?php if ($price = $model->present()->getAttributeValueByKey('price')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label">Цена:</span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price')->name) ?>:</span>
                     <span class="price-value"><?= $price ?></span>
                 </div>
             </div>
