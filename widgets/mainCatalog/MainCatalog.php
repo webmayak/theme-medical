@@ -23,7 +23,7 @@ class MainCatalog extends \yii\base\Widget
     {
         parent::run();
         $dataProvider = new ArrayDataProvider([
-            'allModels' => $this->root->getChildren()->limit($this->limit)->all(),
+            'allModels' => $this->root->getChildren()->isActive()->limit($this->limit)->all(),
             'pagination' => false,
         ]);
         return ListView::widget([
