@@ -33,35 +33,35 @@ use yii\web\View;
     <?php endif; ?>
     <div class="catalog-item__prices">
         <div class="row">
-            <?php if ($price_fast_delivery = $model->present()->getAttributeValueByKey('price_fast_delivery')): ?>
+            <?php if ($price_gepc_1 = $model->present()->getAttributeValueByKey('price_gepc_1')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_fast_delivery')->name) ?>:</span>
-                    <span class="price-value"><?= $price_fast_delivery ?></span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_1')->name) ?>:</span>
+                    <span class="price-value"><?= $price_gepc_1 ?></span>
                 </div>
             </div>
             <?php endif; ?>
-            <?php if ($price_india_delivery = $model->present()->getAttributeValueByKey('price_india_delivery')): ?>
+            <?php if ($price_gepc_2 = $model->present()->getAttributeValueByKey('price_gepc_2')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_india_delivery')->name) ?>:</span>
-                    <span class="price-value"><?= $price_india_delivery ?></span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_2')->name) ?>:</span>
+                    <span class="price-value"><?= $price_gepc_2 ?></span>
                 </div>
             </div>
             <?php endif; ?>
-            <?php if ($price_of_1 = $model->present()->getAttributeValueByKey('price_of_1')): ?>
+            <?php if ($price_gepb_hiv_1 = $model->present()->getAttributeValueByKey('price_gepb_hiv_1')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_of_1')->name) ?>:</span>
-                    <span class="price-value"><?= $price_of_1 ?></span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_1')->name) ?>:</span>
+                    <span class="price-value"><?= $price_gepb_hiv_1 ?></span>
                 </div>
             </div>
             <?php endif; ?>
-            <?php if ($price_of_12 = $model->present()->getAttributeValueByKey('price_of_12')): ?>
+            <?php if ($price_gepb_hiv_2 = $model->present()->getAttributeValueByKey('price_gepb_hiv_2')): ?>
             <div class="col-xs-6">
                 <div class="catalog-item__price">
-                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_of_12')->name) ?>:</span>
-                    <span class="price-value"><?= $price_of_12 ?></span>
+                    <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_2')->name) ?>:</span>
+                    <span class="price-value"><?= $price_gepb_hiv_2 ?></span>
                 </div>
             </div>
             <?php endif; ?>
