@@ -29,7 +29,6 @@ foreach ($model->parents as $parent) {
     }
 }
 $this->params['breadcrumbs'][] = $model->name;
-$tseny = $model->present()->getRelationCategoryByTypeKey('tseny');
 ?>
 <div class="content-block">
     <h1 class="title-home"><?= Yii::$app->seo->getH1() ?></h1>
