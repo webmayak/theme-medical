@@ -37,7 +37,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     ]) ?>
                     <?= LeadForm::widget([
                         'key' => 'getRecommendations',
-                        'text' => 'Получить рекомендации по лечению гепатита С',
+                        'text' => 'Заказать обратный звонок',
                         'options' => [
                             'class' => '',
                         ],

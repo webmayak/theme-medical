@@ -9,7 +9,7 @@ use yii\widgets\MaskedInput;
 /* @var $this View */
 /* @var $model LeadGetRecommendations */
 /* @var $key string */
-$this->title = 'Получить рекомендации по лечению гепатита С';
+$this->title = 'Заказать обратный звонок';
 ?>
 <?php $form = ActiveForm::begin([
     'id' => 'lead-call-me-form',
@@ -31,10 +31,10 @@ $this->title = 'Получить рекомендации по лечению г
 <?= $form->field($model, 'email')->textInput([
     'placeholder' => $model->getAttributeLabel('email'),
 ])->label(false); ?>
-<?= Html::submitButton(Html::tag('span', 'Получить рекомендации', [
+<?= Html::submitButton(Html::tag('span', 'Жду звонка!', [
     'class' => 'ladda-label',
 ]), [
-    'class' => 'btn btn-primary btn-lg ladda-button',
+    'class' => 'btn btn-primary ladda-button',
     'data' => [
         'style' => 'zoom-in'
     ],
