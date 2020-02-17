@@ -3548,9 +3548,8 @@ header .top-panel__email .fa {
 }
 
 .product-small {
-    display: flex;
-    align-items: center;
     margin-bottom: 15px;
+    padding-bottom: 15px;
 }
 
 .product-small_bottom-border {
@@ -3562,22 +3561,8 @@ header .top-panel__email .fa {
     margin-right: 25px;
 }
 
-.product-small__content {
-    display: flex;
-    flex: 1;
-}
-
-.product-small__content-left, .product-small__content-right {
-    display: flex;
-    flex-direction: column;
-}
-
 .product-small__content-right {
     font-size: 13px;
-}
-
-.product-small__content-left {
-    margin-right: 50px;
 }
 
 .product-small__name {
