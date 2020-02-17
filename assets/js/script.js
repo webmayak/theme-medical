@@ -105,5 +105,6 @@ $(document).on('pjax:complete', function () {
 });
 
 $.goup({
-    bottomOffset: 50
+    bottomOffset: 'calc(50vh - 30px)',
+    locationOffset: 35
 });

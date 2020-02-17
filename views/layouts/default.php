@@ -77,6 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <?= $this->render('_footer') ?>
 <?= $this->render('_popup') ?>
+<a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" class="wa-float" title="Написать нам в WhatsApp" target="_blank"><i class="fa fa-whatsapp"></i></a>
 <?php $this->endBody() ?>
 <?= Yii::$app->settings->get('script', 'default') ?>
 </body>

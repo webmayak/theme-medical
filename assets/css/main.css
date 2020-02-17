@@ -4076,3 +4076,30 @@ body[class*="page-brands-"] .category__body .image {
 .text-red {
     color: #fc6868 !important;
 }
+
+.wa-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 36px;
+    box-shadow: 0 4px 10px rgba(0,0,0,.3);
+    z-index: 100;
+}
+
+.wa-float i {
+    margin-top:11px;
+    color: #fff;
+}
+
+@media (max-width: 767px) {
+    .wa-float {
+        bottom: 15px;
+        right: 15px;
+    }
+}
