@@ -4,6 +4,11 @@ use common\modules\catalog\models\CatalogCategory;
 use yii\helpers\Html;
 use yii\web\View;
 
+// для препаратов от гепатита С не выводим цены
+if ($model->type->key == 'service') {
+    return;
+}
+
 /* @var $this View */
 /* @var $model CatalogCategory */
 ?><div class="catalog-item__prices">
