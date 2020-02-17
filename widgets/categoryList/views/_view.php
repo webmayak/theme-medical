@@ -36,14 +36,6 @@ use yii\web\View;
         </ul>
     <?php endif; ?>
     <div class="category-item__content-bottom">
-        <?php if ($model->present()->getPrice()) : ?>
-            <div class="price">
-                ЦЕНА:
-                <div class="price__value">
-                    <?= $model->present()->getPrice() ?>
-                </div>
-            </div>
-        <?php endif; ?>
         <div class="category-item__actions">
             <a href="<?= $model->present()->getUrl() ?>" class="btn btn-primary btn--width-lg">
                 Подробнее
