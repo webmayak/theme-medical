@@ -44,38 +44,7 @@ $form = ActiveForm::begin([
                 <?= Html::a($product->name, $product->present()->getUrl(), [
                     'class' => 'product-small__name',
                 ]) ?>
-                <ul class="product-small__options">
-                    <?php if ($price_fast_delivery = $product->present()->getAttributeValueByKey('price_fast_delivery')): ?>
-                    <li>
-                        Быстрая доставка, 3-4 дня:
-                        <span class="product-small__option-value"><?= $price_fast_delivery ?></span>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($price_india_delivery = $product->present()->getAttributeValueByKey('price_india_delivery')): ?>
-                    <li>
-                        Доставка из Индии:
-                        <span class="product-small__option-value"><?= $price_india_delivery ?></span>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($price_of_1 = $product->present()->getAttributeValueByKey('price_of_1')): ?>
-                    <li>
-                        Цена 1 банки:
-                        <span class="product-small__option-value"><?= $price_of_1 ?></span>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($price_of_12 = $product->present()->getAttributeValueByKey('price_of_12')): ?>
-                    <li>
-                        Цена 12 банок:
-                        <span class="product-small__option-value"><?= $price_of_12 ?></span>
-                    </li>
-                    <?php endif; ?>
-                    <?php if ($price = $product->present()->getAttributeValueByKey('price')): ?>
-                    <li>
-                        Цена:
-                        <span class="product-small__option-value"><?= $price ?></span>
-                    </li>
-                    <?php endif; ?>
-                </ul>
+                <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_prices', ['model' => $product]) ?>
             </div>
             <div class="product-small__content-right col-md-3">
                 <span class="product-small__amount-label">

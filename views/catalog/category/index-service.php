@@ -1,18 +1,10 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/4/18
- * Time: 11:58 AM
- */
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\medical\widgets\categoryList\CategoryList;
 use frontend\widgets\twigRender\TwigRender;
-use frontend\widgets\leads\LeadForm;
 use frontend\widgets\videoList\VideoList;
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\web\View;
 
 $this->params['breadcrumbs'] = [];
@@ -64,58 +56,13 @@ $this->params['breadcrumbs'][] = $model->name;
                     <?= nl2br($announce) ?>
                 </div>
                 <?php endif; ?>
-                <div class="catalog-item__prices">
-                    <div class="row">
-                        <?php if ($price_gepc_1 = $model->present()->getAttributeValueByKey('price_gepc_1')): ?>
-                        <div class="col-xs-6">
-                            <div class="catalog-item__price">
-                                <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_1')->name) ?>:</span>
-                                <span class="price-value"><?= $price_gepc_1 ?></span>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <?php if ($price_gepc_2 = $model->present()->getAttributeValueByKey('price_gepc_2')): ?>
-                        <div class="col-xs-6">
-                            <div class="catalog-item__price">
-                                <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_2')->name) ?>:</span>
-                                <span class="price-value"><?= $price_gepc_2 ?></span>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <?php if ($price_gepb_hiv_1 = $model->present()->getAttributeValueByKey('price_gepb_hiv_1')): ?>
-                        <div class="col-xs-6">
-                            <div class="catalog-item__price">
-                                <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_1')->name) ?>:</span>
-                                <span class="price-value"><?= $price_gepb_hiv_1 ?></span>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <?php if ($price_gepb_hiv_2 = $model->present()->getAttributeValueByKey('price_gepb_hiv_2')): ?>
-                        <div class="col-xs-6">
-                            <div class="catalog-item__price">
-                                <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_2')->name) ?>:</span>
-                                <span class="price-value"><?= $price_gepb_hiv_2 ?></span>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                        <?php if ($price = $model->present()->getAttributeValueByKey('price')): ?>
-                        <div class="col-xs-6">
-                            <div class="catalog-item__price">
-                                <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price')->name) ?>:</span>
-                                <span class="price-value"><?= $price ?></span>
-                            </div>
-                        </div>
-                        <?php endif; ?>
-                    </div>
-                </div>
+                
+                <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_prices', ['model' => $model]) ?>
+
                 <div class="catalog-item__button">
-                    <?= LeadForm::widget([
-                        'key' => 'order',
-                        'text' => 'Заказать',
-                        'options' => [
-                            'class' => 'btn btn-primary btn-buy btn-block btn-lg',
-                            'href' => Url::to(['/leads/default/modal', 'key' => 'order', 'productId' => $model->id]),
-                        ],
+                    <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_buy_btn', [
+                        'model' => $model,
+                        'class' => 'btn btn-primary btn-buy btn-block btn-lg',
                     ]) ?>
                 </div>
             </div>
