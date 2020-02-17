@@ -1170,4 +1170,10 @@
     .review-item__audio-right audio {
         max-width: 100%;
     }
+    .product-description img {
+        width: auto !important;
+        height: auto !important;
+        max-width: 100%;
+        border: 1px solid #e5e5e5;
+    }
 }
