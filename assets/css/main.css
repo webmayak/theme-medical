@@ -2691,7 +2691,7 @@ small, .small {
 }
 
 .chemical-research {
-    background: url(../images/chemical-research-bg.png) center #0482AA;
+    background: url(../images/chemical-research-bg.jpg) center #0482AA;
     background-repeat: no-repeat;
     padding-top: 40px !important;
     padding-bottom: 40px;
@@ -2820,7 +2820,7 @@ small, .small {
 
 .footer-middle {
     padding: 40px 0px;
-    background: url(../images/footer-bg.png) center top;
+    background: url(../images/footer-bg.jpg) center top;
     background-repeat: no-repeat;
     background-size: cover;
 }
