@@ -1,19 +1,15 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 9/18/18
- * Time: 11:00 AM
- */
 
 use pantera\content\models\ContentPage;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\web\View;
 
-$body = trim(html_entity_decode($model->body));
-$body = trim(strip_tags($model->body));
-$body = trim(str_replace('&nbsp;', '', $body));
+$body = html_entity_decode($model->body);
+$body = strip_tags($model->body);
+$body = str_replace('&nbsp;', ' ', $body);
+$body = preg_replace('/\s+/', ' ', $body);
+$body = trim($body);
 
 $title = "{$model->title} - ИНДИАВИР";
 $description = mb_substr($body, 0, 300, 'utf-8') . (mb_strlen($body, 'utf-8') > 300 ? '...' : '');
