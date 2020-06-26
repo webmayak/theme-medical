@@ -44,8 +44,8 @@ $this->context->layout = '//front';
                         <li>выгодные условия рассрочки</li>
                     </ul>
                     <div class="slider-block__icons">
-                        <a href="tel:+79136505577"><img src="/images/icon-phone-alt.svg" alt="Phone"></a>
-                        <a href="https://api.whatsapp.com/send?phone=79136505577"><img src="/images/icon-wa-alt.svg" alt="WhatsApp"></a>
+                        <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><img src="/images/icon-phone-alt.svg" alt="Phone"></a>
+                        <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>"><img src="/images/icon-wa-alt.svg" alt="WhatsApp"></a>
                     </div>
                 </div>
             </div>
