@@ -50,6 +50,9 @@ use yii\web\View;
                         <li>
                             <a href="<?= Url::to(['/brands']) ?>">Список брендов</a>
                         </li>
+                        <li>
+                            <a href="<?= Url::to(['/documenty-certificaty-rezultaty-himicheskih-issledovanii']) ?>">Сертификаты и документы</a>
+                        </li>
                     </ul>
                     <?php if (0 && $this->beginCache('megamenu-dropdown', ['duration' => 86400])): ?>
                     <?= $this->render('_dropdown', [
