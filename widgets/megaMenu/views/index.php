@@ -62,7 +62,7 @@ use yii\web\View;
                 </li>
                 <li class="<?= preg_match('/^lechenie/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/lechenie']) ?>">
-                        Лечение
+                        Рекомендации ВОЗ
                     </a>
                 </li>
                 <li class="<?= preg_match('/^news$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
