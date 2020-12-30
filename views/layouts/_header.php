@@ -160,7 +160,6 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                 </div>
                 <div class="col-md-3 col-lg-3 top-panel__col-buttons text-right">
                     <div class="top-panel__icons">
-                        <a href="<?= Yii::$app->contactsManager->get('social_facebook') ?>" target="_blank"><img src="/images/icon-fb.svg"></a>
                         <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
                         <a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
                         <a href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
