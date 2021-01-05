@@ -36,7 +36,7 @@ use yii\web\View;
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-tse']) ?>">Препараты от Гепатита C</a>
+                            <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-c']) ?>">Препараты от Гепатита C</a>
                         </li>
                         <li>
                             <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-b']) ?>">Препараты от Гепатита B</a>
