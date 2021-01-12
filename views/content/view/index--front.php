@@ -67,6 +67,8 @@ $this->context->layout = '//front';
 
 <div class="content-block content-block--main-catalog">
     <div class="container">
+
+        <?php if (0): ?>
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-c">Препараты для лечения гепатита C</a></h3>
         <div class="main-catalog__subset">
             <?= MainCatalog::widget([
@@ -74,6 +76,7 @@ $this->context->layout = '//front';
                 'limit' => 3,
             ]) ?>
         </div>
+        <?php endif; ?>
         
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-b">Препараты для лечения гепатита В</a></h3>
         <div class="main-catalog__subset">

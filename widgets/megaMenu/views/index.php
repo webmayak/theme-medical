@@ -35,9 +35,11 @@ use yii\web\View;
                         Каталог
                     </a>
                     <ul class="sub-menu">
+                        <?php if (0): ?>
                         <li>
                             <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-c']) ?>">Препараты от Гепатита C</a>
                         </li>
+                        <?php endif; ?>
                         <li>
                             <a href="<?= Url::to(['/catalog/preparaty-dlya-lechenia-gepatita-b']) ?>">Препараты от Гепатита B</a>
                         </li>
