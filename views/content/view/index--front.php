@@ -68,15 +68,13 @@ $this->context->layout = '//front';
 <div class="content-block content-block--main-catalog">
     <div class="container">
 
-        <?php if (0): ?>
-        <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-c">Препараты для лечения гепатита C</a></h3>
+        <h3 class="main-catalog__subtitle">Препараты для лечения гепатита C</h3>
         <div class="main-catalog__subset">
             <?= MainCatalog::widget([
                 'root' => CatalogCategory::findOne(386),
-                'limit' => 3,
+                'limit' => 999,
             ]) ?>
         </div>
-        <?php endif; ?>
         
         <h3 class="main-catalog__subtitle"><a href="/catalog/preparaty-dlya-lechenia-gepatita-b">Препараты для лечения гепатита В</a></h3>
         <div class="main-catalog__subset">
