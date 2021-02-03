@@ -36,10 +36,12 @@ $hasImage = $model->media && $model->media->issetMedia();
 
         <div class="catalog-item__button">
             <a class="btn btn-primary" href="<?= $model->present()->getUrl() ?>">Подробнее</a>
+            <?php if (0): ?>
             <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_buy_btn', [
                 'model' => $model,
                 'class' => 'btn btn-primary btn-buy',
             ]) ?>
+            <?php endif; ?>
         </div>
     </div>
 </div>

@@ -59,12 +59,14 @@ $this->params['breadcrumbs'][] = $model->name;
                 
                 <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_prices', ['model' => $model]) ?>
 
+                <?php if (0): ?>
                 <div class="catalog-item__button">
                     <?= Yii::$app->controller->renderPartial('@frontend/themes/medical/views/catalog/default/_buy_btn', [
                         'model' => $model,
                         'class' => 'btn btn-primary btn-buy btn-block btn-lg',
                     ]) ?>
                 </div>
+                <?php endif; ?>
             </div>
 
             <?php if ($brands = $model->present()->getRelationCategoryByTypeKey('brand')) : ?>
