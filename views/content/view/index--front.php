@@ -65,6 +65,7 @@ $this->context->layout = '//front';
 
 <?= $this->render('@theme/views/_features') ?>
 
+<?php if (0): ?>
 <div class="content-block content-block--main-catalog">
     <div class="container">
 
@@ -95,6 +96,7 @@ $this->context->layout = '//front';
 		<?= $this->render('@theme/views/_fast-consult') ?>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="content-block">
 	<div class="container">
