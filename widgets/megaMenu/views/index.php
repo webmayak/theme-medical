@@ -92,6 +92,7 @@ use yii\web\View;
                 <li class="<?= $faqIsActive ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/faq']) ?>">Вопрос-ответ</a>
                 </li>
+                <?php if (0): ?>
                 <li class="<?= Yii::$app->request->pathInfo === 'dostavka' ? 'active' : '' ?>">
                     <a href="<?= Url::to(['/dostavka']) ?>" class="navtext">
                         Доставка
@@ -102,6 +103,7 @@ use yii\web\View;
                         Оптовым клиентам
                     </a>
                 </li>
+                <?php endif; ?>
                 <li class="<?= Yii::$app->request->pathInfo === 'video' ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/video']) ?>">                        
                         Видео
