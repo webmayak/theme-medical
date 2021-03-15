@@ -96,8 +96,8 @@ echo $form->field($model, 'comment')->textarea([
 
 ?>
 <div class="text-right">
-    <small class="pull-left text-left" style="padding-top: 5px;">После получения заявки мы свяжемся с Вами<br/>и уточним условия доставки и оплаты</small>
-    <?php echo Html::submitButton(Html::tag('span', 'Заказать', [
+    <small class="pull-left text-left" style="padding-top: 5px;">После получения заявки мы с вами свяжемся</small>
+    <?php echo Html::submitButton(Html::tag('span', 'Отправить', [
         'class' => 'ladda-label',
     ]), [
         'class' => 'btn btn-primary ladda-button btn-lg',
