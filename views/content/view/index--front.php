@@ -109,6 +109,10 @@ $this->context->layout = '//front';
 	</div>
 </div>
 
+<div class="container">
+    <?= $this->render('@theme/views/_fast-consult') ?>
+</div>
+
 <div class="content-block content-block--fillwidth-bg">
 	<div class="container">
 		<div class="row">
