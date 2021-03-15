@@ -79,6 +79,8 @@ $this->params['breadcrumbs'][] = $model->name;
                 <?php endforeach; ?>
             </div>
             <?php endif; ?>
+
+            <div class="dblclick-area" data-id="pw72Gs9v" style="margin: 30px 0 0;">loading..</div>
             
             <?php if ($relatedProducts = $model->parent->getChildrenActive()->andWhere(['!=', 'id', $model->id])->all()): ?>
             <div class="product-related-products">
