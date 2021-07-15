@@ -63,9 +63,10 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<?php if (0): ?>
+
 <?= $this->render('@theme/views/_features') ?>
 
-<?php if (0): ?>
 <div class="content-block content-block--main-catalog">
     <div class="container">
 
