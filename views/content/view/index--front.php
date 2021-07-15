@@ -38,10 +38,10 @@ $this->context->layout = '//front';
                 <div class="slider-block__info">
                     <div class="h3">НАШИ ПРЕИМУЩЕСТВА:</div>
                     <ul>
-                        <li>безопасная сделка</li>
-                        <li>быстрая доставка</li>
-                        <li>доступная цена</li>
-                        <li>выгодные условия рассрочки</li>
+                        <li>консультирование</li>
+                        <li>информационные услуги</li>
+                        <li>доверяют более 25 городов</li>
+                        <li>по России и странам СНГ</li>
                     </ul>
                     <div class="slider-block__icons">
                         <a href="tel:<?= preg_replace('/[^0-9\+]/', '', Yii::$app->contactsManager->get('phone_city')) ?>"><img src="/images/icon-phone-alt.svg" alt="Phone"></a>
@@ -53,6 +53,8 @@ $this->context->layout = '//front';
     </div>
 </div>
 
+<?php if (0): ?>
+
 <div class="content-block">
     <div class="container">
         <div class="content-block__body">
@@ -62,8 +64,6 @@ $this->context->layout = '//front';
         </div>
     </div>
 </div>
-
-<?php if (0): ?>
 
 <?= $this->render('@theme/views/_features') ?>
 
