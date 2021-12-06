@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: singletonn
- * Date: 10/16/18
- * Time: 11:33 AM
- */
 
 use yii\helpers\Html;
 use yii\web\View;
@@ -61,7 +55,7 @@ use pantera\geolocation\widgets\geolocation\Geolocation;
                     <a href="/">
                         <img src="/images/logo.svg" alt="Индиавир" id="logo" />
                     </a>
-                    <small class="top-panel__logo-text">Препараты от Гепатита и ВИЧ из Индии</small>
+                    <small class="top-panel__logo-text"><?= Yii::$app->settings->get('default.slogan') ?></small>
                 </div>
                 <div class="col-md-6 col-lg-6 top-panel__col-contacts">
                     <div class="creative_header_address">
