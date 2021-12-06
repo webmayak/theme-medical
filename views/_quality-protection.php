@@ -4,7 +4,6 @@ use pantera\content\widgets\block\Block;
 
 ?><div class="content-block">
 	<div class="container">
-		<div class="content-block__title text-center">Вы защищены от подделок</div>
 		<div class="brands text-center">
 			<?= Block::widget([
 	            'position' => 'brands',
