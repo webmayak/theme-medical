@@ -31,7 +31,7 @@ class AppAsset extends AssetBundle
         'js/jquery.goup.min.js',
         'js/js.cookie.js',
         'js/script.js',
-        'http://dblclick.ru/widget.js',
+        '//dblclick.ru/widget.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
