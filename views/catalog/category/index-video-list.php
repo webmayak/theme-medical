@@ -2,6 +2,7 @@
 
 use common\modules\catalog\models\CatalogCategory;
 use frontend\themes\medical\widgets\videoList\VideoList;
+use frontend\widgets\twigRender\TwigRender;
 use yii\web\View;
 
 /* @var $this View */
