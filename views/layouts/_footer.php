@@ -108,10 +108,11 @@ use yii\web\View;
                 </div>
                 <div class="col-sm-4 col-md-3">
                     <div class="bottom-panel__icons hidden-sm hidden-xs">
-                        <a href="<?= Yii::$app->contactsManager->get('social_whatsapp') ?>" target="_blank"><img src="/images/icon-wa.svg"></a>
-                        <a href="<?= Yii::$app->contactsManager->get('social_youtube') ?>" target="_blank"><img src="/images/icon-youtube.svg"></a>
-                        <a href="<?= Yii::$app->contactsManager->get('social_instagram') ?>" target="_blank"><img src="/images/icon-instagram.svg"></a>
-                        <a href="<?= Yii::$app->contactsManager->get('social_vkontakte') ?>" target="_blank"><img src="/images/icon-vk.svg"></a>
+                        <?php if ($social_whatsapp = Yii::$app->contactsManager->get('social_whatsapp')):  ?><a href="<?= $social_whatsapp ?>" target="_blank"><img src="/images/icon-wa.svg"></a><?php endif; ?>
+                        <?php if ($social_telegram = Yii::$app->contactsManager->get('social_telegram')):  ?><a href="<?= $social_telegram ?>" target="_blank"><img src="/images/icon-tg.svg"></a><?php endif; ?>
+                        <?php if ($social_youtube = Yii::$app->contactsManager->get('social_youtube')):   ?><a href="<?= $social_youtube ?>" target="_blank"><img src="/images/icon-youtube.svg"></a><?php endif; ?>
+                        <?php if ($social_instagram = Yii::$app->contactsManager->get('social_instagram')): ?><a href="<?= $social_instagram ?>" target="_blank"><img src="/images/icon-instagram.svg"></a><?php endif; ?>
+                        <?php if ($social_vkontakte = Yii::$app->contactsManager->get('social_vkontakte')): ?><a href="<?= $social_vkontakte ?>" target="_blank"><img src="/images/icon-vk.svg"></a><?php endif; ?>
                     </div>
                     <div class="creative_header_address">
                         <div class="single_header_address">
@@ -127,9 +128,9 @@ use yii\web\View;
                 </div>
                 <div class="col-sm-4 col-md-3">
                     <div class="footer-menu">
-	                    <?= Block::widget([
-	                        'position' => 'footer3',
-	                    ]) ?>
+                        <?= Block::widget([
+                            'position' => 'footer3',
+                        ]) ?>
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-3 last">
