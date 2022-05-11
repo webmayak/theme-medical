@@ -19,6 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'summary' => false,
         'itemView' => '_view',
+        'emptyText' => false,
         'itemOptions' => [
             'class' => 'specials-item',
         ],
