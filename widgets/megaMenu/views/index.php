@@ -67,6 +67,7 @@ use yii\web\View;
                         Рекомендации ВОЗ
                     </a>
                 </li>
+                <?php if (0): ?>
                 <li class="<?= preg_match('/^news$/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/news']) ?>">
                         Новости
@@ -83,6 +84,7 @@ use yii\web\View;
                         </li>
                     </ul>
                 </li>
+                <?php endif; ?>
                 <li class="<?= preg_match('/^reviews/', Yii::$app->request->pathInfo) ? 'active' : '' ?>">
                     <a class="navtext" href="<?= Url::to(['/reviews']) ?>">Отзывы</a>
                 </li>
