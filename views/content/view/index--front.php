@@ -94,20 +94,20 @@ $this->context->layout = '//front';
             ]) ?>
         </div>
 
-		<?= $this->render('@theme/views/_fast-consult') ?>
+        <?= $this->render('@theme/views/_fast-consult') ?>
     </div>
 </div>
 <?php endif; ?>
 
 <div class="content-block">
-	<div class="container">
-		<div class="content-block__title text-center">Задать вопрос врачу</div>
+    <div class="container">
+        <div class="content-block__title text-center">Задать вопрос врачу</div>
         <?= LeadForm::widget([
             'key' => 'question-row',
             'mode' => LeadForm::MODE_INLINE,
         ]) ?>
-		<?= $this->render('@theme/views/_faq-block') ?>
-	</div>
+        <?= $this->render('@theme/views/_faq-block') ?>
+    </div>
 </div>
 
 <div class="container">
@@ -115,29 +115,29 @@ $this->context->layout = '//front';
 </div>
 
 <div class="content-block content-block--fillwidth-bg">
-	<div class="container">
+    <div class="container">
         <?= Block::widget([
             'position' => 'hepatit_therapy_scheme',
         ]) ?>
         <?php if (0): ?>
-		<div class="row">
-			<div class="col-md-6">
-				<a href="/uploads/elfinder/lechenie-1.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-1.jpg" alt="" class="img-responsive" /></a>
-			</div>
-			<div class="col-md-6">
-				<a href="/uploads/elfinder/lechenie-2.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-2.jpg" alt="" class="img-responsive" /></a>
-			</div>
-		</div>
+        <div class="row">
+            <div class="col-md-6">
+                <a href="/uploads/elfinder/lechenie-1.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-1.jpg" alt="" class="img-responsive" /></a>
+            </div>
+            <div class="col-md-6">
+                <a href="/uploads/elfinder/lechenie-2.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-2.jpg" alt="" class="img-responsive" /></a>
+            </div>
+        </div>
         <?php endif; ?>
-	</div>
+    </div>
 </div>
 
 <?= $this->render('@theme/views/_quality-protection') ?>
 
 <?php if (0): ?>
 <div class="content-block">
-	<div class="h2 content-block__title text-center">Химические исследования</div>
-	<?= Block::widget([
+    <div class="h2 content-block__title text-center">Химические исследования</div>
+    <?= Block::widget([
         'position' => 'chemical_research',
     ]) ?>
 </div>
