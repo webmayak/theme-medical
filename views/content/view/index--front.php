@@ -116,6 +116,10 @@ $this->context->layout = '//front';
 
 <div class="content-block content-block--fillwidth-bg">
 	<div class="container">
+        <?= Block::widget([
+            'position' => 'hepatit_therapy_scheme',
+        ]) ?>
+        <?php if (0): ?>
 		<div class="row">
 			<div class="col-md-6">
 				<a href="/uploads/elfinder/lechenie-1.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-1.jpg" alt="" class="img-responsive" /></a>
@@ -124,6 +128,7 @@ $this->context->layout = '//front';
 				<a href="/uploads/elfinder/lechenie-2.jpg" data-fancybox="lechenie"><img src="/uploads/elfinder/lechenie-2.jpg" alt="" class="img-responsive" /></a>
 			</div>
 		</div>
+        <?php endif; ?>
 	</div>
 </div>
 
