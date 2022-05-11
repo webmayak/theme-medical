@@ -33,6 +33,10 @@ $this->params['breadcrumbs'][] = $this->title;
     ],
 ]) ?>
 
+<?= Block::widget([
+    'position' => 'reviews_page_bottom',
+]) ?>
+
 <section class="review-form-wrapper">
     <?= LeadForm::widget([
         'mode' => LeadForm::MODE_INLINE,
