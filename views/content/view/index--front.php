@@ -146,11 +146,16 @@ $this->context->layout = '//front';
 <div class="content-block content-block--video">
     <div class="h2 content-block__title text-center" style="margin-bottom: 0px;">Видео о нас</div>
     <div class="container">
+        <?= Block::widget([
+            'position' => 'video_about',
+        ]) ?>
+        <?php if (0): ?>
         <div class="front-page-video-holder">
             <?= VideoList::widget([
                 'models' => CatalogCategory::findOne(110)->getChildrenActive()->limit(6)->all(),
             ]) ?>
         </div>
+        <?php endif; ?>
     </div>
 </div>
 
