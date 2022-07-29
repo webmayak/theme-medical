@@ -117,6 +117,7 @@ use yii\web\View;
                             </div>
                         </div>
                     </div>
+                    <iframe src="https://yandex.ru/sprav/widget/rating-badge/89194793102" width="150" height="50" frameborder="0" style="margin-top: 20px;"></iframe>
                 </div>
                 <div class="col-sm-4 col-md-3">
                     <div class="footer-menu">
