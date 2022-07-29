@@ -12,7 +12,7 @@ $hasImage = $model->media && $model->media->issetMedia();
 <div class="catalog-item<?= $hasImage ? ' with-image' : ' no-image' ?>">
     <?php if ($hasImage) : ?>
     <div class="catalog-item__image">
-        <a href="<?= $model->present()->getUrl() ?>"><?= Html::img($model->media->image(340, 276), ['alt'=>$model->name]); ?></a>
+        <a href="<?= $model->present()->getUrl() ?>"><?= Html::img($model->media->image(680, 552), ['alt'=>$model->name]); ?></a>
     </div>
     <?php endif; ?>
     <div class="catalog-item__info">
