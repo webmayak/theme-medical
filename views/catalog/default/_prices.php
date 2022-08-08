@@ -9,11 +9,21 @@ if ($model->type->key == 'service') {
     return;
 }
 
+$price_gepc_1 = $model->present()->getAttributeValueByKey('price_gepc_1');
+$price_gepc_2 = $model->present()->getAttributeValueByKey('price_gepc_2');
+$price_gepb_hiv_1 = $model->present()->getAttributeValueByKey('price_gepb_hiv_1');
+$price_gepb_hiv_2 = $model->present()->getAttributeValueByKey('price_gepb_hiv_2');
+$price = $model->present()->getAttributeValueByKey('price');
+
+$hasPrices = $price_gepc_1 || $price_gepc_2 || $price_gepb_hiv_1 || $price_gepb_hiv_2 || $price;
+
+if (!$hasPrices) return;
+
 /* @var $this View */
 /* @var $model CatalogCategory */
 ?><div class="catalog-item__prices">
     <div class="row">
-        <?php if ($price_gepc_1 = $model->present()->getAttributeValueByKey('price_gepc_1')): ?>
+        <?php if ($price_gepc_1): ?>
         <div class="col-xs-6">
             <div class="catalog-item__price">
                 <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_1')->name) ?>:</span>
@@ -21,7 +31,7 @@ if ($model->type->key == 'service') {
             </div>
         </div>
         <?php endif; ?>
-        <?php if ($price_gepc_2 = $model->present()->getAttributeValueByKey('price_gepc_2')): ?>
+        <?php if ($price_gepc_2): ?>
         <div class="col-xs-6">
             <div class="catalog-item__price">
                 <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepc_2')->name) ?>:</span>
@@ -29,7 +39,7 @@ if ($model->type->key == 'service') {
             </div>
         </div>
         <?php endif; ?>
-        <?php if ($price_gepb_hiv_1 = $model->present()->getAttributeValueByKey('price_gepb_hiv_1')): ?>
+        <?php if ($price_gepb_hiv_1): ?>
         <div class="col-xs-6">
             <div class="catalog-item__price">
                 <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_1')->name) ?>:</span>
@@ -37,7 +47,7 @@ if ($model->type->key == 'service') {
             </div>
         </div>
         <?php endif; ?>
-        <?php if ($price_gepb_hiv_2 = $model->present()->getAttributeValueByKey('price_gepb_hiv_2')): ?>
+        <?php if ($price_gepb_hiv_2): ?>
         <div class="col-xs-6">
             <div class="catalog-item__price">
                 <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price_gepb_hiv_2')->name) ?>:</span>
@@ -45,7 +55,7 @@ if ($model->type->key == 'service') {
             </div>
         </div>
         <?php endif; ?>
-        <?php if ($price = $model->present()->getAttributeValueByKey('price')): ?>
+        <?php if ($price): ?>
         <div class="col-xs-6">
             <div class="catalog-item__price">
                 <span class="price-label"><?= Html::encode($model->present()->getAttributeByKey('price')->name) ?>:</span>
